@@ -130,3 +130,6 @@ dmypy.json
 
 # Geckodriver.exe and logs
 /geckodriver*
+
+# Intellij IDE settings
+.idea/
