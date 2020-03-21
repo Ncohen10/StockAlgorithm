@@ -1,0 +1,3 @@
+alpha_vantage
+bs4
+selenium
