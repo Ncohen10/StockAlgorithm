@@ -3,6 +3,7 @@ from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.firefox.options import Options
 from selenium.common.exceptions import *
+import time
 
 
 class seleniumStockScraper:
@@ -21,18 +22,25 @@ class seleniumStockScraper:
         )
         self.yahooURL = yahooURL
 
+    def page_has_loaded(self):
+        page_state = self.driver.execute_script('return document.readyState;')
+        if page_state == "complete": print("Done loading")
+        return page_state == 'complete'
+
     # Goes to the Yahoo finance page
     def __visitYahoo(self, yahooScreenURL: str) -> None:
-        timeout = 15  # max time in seconds to wait for element to appear
+        timeout = 10  # max time in seconds to wait for element to appear
         changeButton = "th.Ta\(end\):nth-child(4) > span:nth-child(1)"  # CSS Selector path of "change" button on Yahoo
         stockListings = "tr.simpTblRow:nth-child(1) > td:nth-child(1) > a:nth-child(2)"
         self.driver.get(yahooScreenURL)
-        WebDriverWait(self.driver, timeout).until(
-            lambda x: x.find_element_by_css_selector(changeButton))  # wait for changeButton to load
+        WebDriverWait(self.driver, timeout).until(   # wait for changeButton to load
+            lambda x: x.find_element_by_css_selector(changeButton) and self.page_has_loaded())
+        time.sleep(3)  # Need to add this since clicking on buttons doesn't do anything even though the page is fully loaded. Due to Yahoo website design...
         print("wait 1 complete")
         self.driver.find_element_by_css_selector(changeButton).click()
-        WebDriverWait(self.driver, timeout).until(
-            lambda x: x.find_element_by_css_selector(changeButton))  # wait again after pressing once...
+        WebDriverWait(self.driver, timeout).until(  # wait again after pressing once...
+            lambda x: x.find_element_by_css_selector(changeButton) and self.page_has_loaded())
+        time.sleep(3)
         print("wait 2 complete")
         self.driver.find_element_by_css_selector(changeButton).click()
         WebDriverWait(self.driver, timeout).until(
