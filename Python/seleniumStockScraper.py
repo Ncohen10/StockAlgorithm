@@ -22,24 +22,21 @@ class seleniumStockScraper:
         )
         self.yahooURL = yahooURL
 
-    def page_has_loaded(self):
-        page_state = self.driver.execute_script('return document.readyState;')
-        if page_state == "complete": print("Done loading")
-        return page_state == 'complete'
-
     # Goes to the Yahoo finance page
-    def __visitYahoo(self, yahooScreenURL: str) -> None:
+    def _visitYahoo(self, yahooScreenURL: str) -> None:
         timeout = 10  # max time in seconds to wait for element to appear
         changeButton = "th.Ta\(end\):nth-child(4) > span:nth-child(1)"  # CSS Selector path of "change" button on Yahoo
         stockListings = "tr.simpTblRow:nth-child(1) > td:nth-child(1) > a:nth-child(2)"
         self.driver.get(yahooScreenURL)
         WebDriverWait(self.driver, timeout).until(   # wait for changeButton to load
-            lambda x: x.find_element_by_css_selector(changeButton) and self.page_has_loaded())
-        time.sleep(3)  # Need to add this since clicking on buttons doesn't do anything even though the page is fully loaded. Due to Yahoo website design...
+            lambda x: x.find_element_by_css_selector(changeButton))
+        # Need to hard-code wait times since clicking on button doesn't do anything even though the page is fully loaded.
+        # Due to Yahoo website design...
+        time.sleep(3)
         print("wait 1 complete")
         self.driver.find_element_by_css_selector(changeButton).click()
         WebDriverWait(self.driver, timeout).until(  # wait again after pressing once...
-            lambda x: x.find_element_by_css_selector(changeButton) and self.page_has_loaded())
+            lambda x: x.find_element_by_css_selector(changeButton))
         time.sleep(3)
         print("wait 2 complete")
         self.driver.find_element_by_css_selector(changeButton).click()
@@ -47,7 +44,7 @@ class seleniumStockScraper:
             lambda x: x.find_element_by_css_selector(stockListings))  # Now wait for stock tickers to load
 
     # Gets stocks from Yahoo finance page
-    def __selectTickers(self) -> list:
+    def _selectTickers(self) -> list:
         tickerCount = 1
         tickers = []
         while tickerCount <= 25:  # There are up to 25 stocks listed per page on Yahoo
@@ -64,8 +61,8 @@ class seleniumStockScraper:
         return tickers
 
     def generateTickers(self) -> list:
-        self.__visitYahoo(self.yahooURL)
-        tickerList = self.__selectTickers()
+        self._visitYahoo(self.yahooURL)
+        tickerList = self._selectTickers()
         return tickerList
 
 
@@ -74,3 +71,5 @@ if __name__ == '__main__':
                                       "../geckodriver.exe",
                                       "https://finance.yahoo.com/screener/predefined/growth_technology_stocks")
     print(webScraper.generateTickers())
+
+# ['STNE', 'SMAR', 'SHOP', 'ZS', 'PAGS', 'EGHT', 'PS', 'RNG', 'COUP', 'OKTA', 'YEXT', 'MLNX', 'PAYC', 'ALRM', 'QTWO', 'OLED', 'HMI', 'OPRA', 'OCFT']
