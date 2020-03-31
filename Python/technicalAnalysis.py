@@ -19,14 +19,15 @@ class technicalAnalysis:
         currentEMA = dictOfEMA[next(iter(dictOfEMA))]["EMA"]  # get first key from json/EMA dict
         return currentEMA
 
+    def getPrice(self, symbol: str):
 
 if __name__ == '__main__':
     ta = technicalAnalysis("MA6YR6D5TVXK1W67")
-    # scraper = seleniumStockScraper("C:\\Program Files\\Mozilla Firefox\\firefox.exe",
-    #                                   "../geckodriver.exe",
-    #                                   "https://finance.yahoo.com/screener/predefined/growth_technology_stocks")
-    # ticks = scraper.generateTickers()
-    ticks = "SHOP"
+    scraper = seleniumStockScraper("C:\\Program Files\\Mozilla Firefox\\firefox.exe",
+                                      "../geckodriver.exe",
+                                      "https://finance.yahoo.com/screener/predefined/growth_technology_stocks")
+    ticks = scraper.generateTickers()[0]
+    # ticks = "SHOP"
     print(ta.equityEMA(symbol=ticks, interval="daily", timePeriod="20"))
     print(ta.equityEMA(symbol=ticks, interval="daily", timePeriod="50"))
 

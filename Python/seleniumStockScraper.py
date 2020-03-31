@@ -32,12 +32,12 @@ class seleniumStockScraper:
             lambda x: x.find_element_by_css_selector(changeButton))
         # Need to hard-code wait times since clicking on button doesn't do anything even though the page is fully loaded.
         # Due to Yahoo website design...
-        time.sleep(3)
+        time.sleep(5)
         print("wait 1 complete")
         self.driver.find_element_by_css_selector(changeButton).click()
         WebDriverWait(self.driver, timeout).until(  # wait again after pressing once...
             lambda x: x.find_element_by_css_selector(changeButton))
-        time.sleep(3)
+        time.sleep(5)
         print("wait 2 complete")
         self.driver.find_element_by_css_selector(changeButton).click()
         WebDriverWait(self.driver, timeout).until(
@@ -46,9 +46,10 @@ class seleniumStockScraper:
     # Gets stocks from Yahoo finance page
     def _selectTickers(self) -> list:
         tickerCount = 1
+        attempts = 0
         tickers = []
         while tickerCount <= 25:  # There are up to 25 stocks listed per page on Yahoo
-            try:
+            try:  # try to select ticker css elements
                 tickerObj = self.driver.find_elements_by_css_selector(
                     "tr.simpTblRow:nth-child(" + str(tickerCount) + ") > td:nth-child(1) > a:nth-child(2)")
                 tickerCount += 1
@@ -57,6 +58,13 @@ class seleniumStockScraper:
             except (NoSuchElementException, ElementNotInteractableException):
                 print("Amount of tickers found: {}".format(tickerCount - 1))
                 raise Exception("Wasn't able to find a ticker.")
+            except StaleElementReferenceException:
+                if attempts == 3:
+                    raise
+                else:
+                    attempts += 1
+                    pass
+
         print(tickers)
         return tickers
 
