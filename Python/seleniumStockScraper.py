@@ -13,7 +13,7 @@ class seleniumStockScraper:
         self.profile = webdriver.FirefoxProfile()
         self.profile.set_preference('permissions.default.desktop-notification', 1)
         self.options = Options()
-        self.options.headless = False
+        self.options.headless = True
         self.driver = webdriver.Firefox(
             firefox_binary=self.binary,
             firefox_profile=self.profile,
@@ -30,7 +30,7 @@ class seleniumStockScraper:
         self.driver.get(yahooScreenURL)
         WebDriverWait(self.driver, timeout).until(   # wait for changeButton to load
             lambda x: x.find_element_by_css_selector(changeButton))
-        # Need to hard-code wait times since clicking on button doesn't do anything even though the page is fully loaded.
+        # Need to hardcode wait times since clicking on button doesn't do anything even though the page is fully loaded
         # Due to Yahoo website design...
         time.sleep(5)
         print("wait 1 complete")
