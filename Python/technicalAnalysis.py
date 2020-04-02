@@ -21,7 +21,7 @@ class technicalAnalysis:
             return []
         EMAList = []
         for EMA in dictOfEMA:
-            currentEMA = dictOfEMA[EMA]["EMA"]  # get first key from json/EMA dict, then get its EMA.
+            currentEMA = float(dictOfEMA[EMA]["EMA"])  # get first key from json/EMA dict, then get its EMA.
             EMAList.append(currentEMA)
         return EMAList
 
@@ -61,13 +61,23 @@ class technicalAnalysis:
 
 if __name__ == '__main__':
     ta = technicalAnalysis("MA6YR6D5TVXK1W67")
-    # scraper = seleniumStockScraper("C:\\Program Files\\Mozilla Firefox\\firefox.exe",
-    #                                "../geckodriver.exe",
-    #                                "https://finance.yahoo.com/screener/predefined/growth_technology_stocks")
-    # ticks = scraper.generateTickers()
-    ticks = ["IBM"]
-    tEMA = ta.getEMA(ticks[0], "20")
-    fEMA = ta.getEMA(ticks[0], "50")
-    priceHistory = ta.getPrice(ticks[0])
-    isCrossover = ta.testCrossover(tEMA, fEMA, priceHistory)
-    print(isCrossover)
+    scraper = seleniumStockScraper("C:\\Program Files\\Mozilla Firefox\\firefox.exe",
+                                   "../geckodriver.exe",
+                                   "https://finance.yahoo.com/screener/predefined/growth_technology_stocks")
+    ticks = scraper.generateTickers()
+    count = 0
+    for stock in ticks:
+        if count % 5 == 0 and count != 0: time.sleep(65)
+        tEMA = ta.getEMA(stock, "20")
+        count += 1
+        if count % 5 == 0: time.sleep(65)
+        fEMA = ta.getEMA(stock, "50")
+        count += 1
+        if count % 5 == 0: time.sleep(65)
+        priceHistory = ta.getPrice(stock)
+        count += 1
+        if tEMA > fEMA:
+            print("Testing: {}".format(stock))
+            isCrossover = ta.testCrossover(tEMA, fEMA, priceHistory)
+            if isCrossover:
+                print("FOUND CROSSOVER!")
