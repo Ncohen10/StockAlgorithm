@@ -28,19 +28,19 @@ class seleniumStockScraper:
         changeButton = "th.Ta\(end\):nth-child(4) > span:nth-child(1)"  # CSS Selector path of "change" button on Yahoo
         stockListings = "tr.simpTblRow:nth-child(1) > td:nth-child(1) > a:nth-child(2)"
         self.driver.get(yahooScreenURL)
-        # WebDriverWait(self.driver, timeout).until(   # wait for changeButton to load
-        #     lambda x: x.find_element_by_css_selector(changeButton))
-        # # Need to hardcode wait times since clicking on button doesn't do anything even though the page is fully loaded
-        # # Due to Yahoo website design...
-        # time.sleep(10)
-        # self.driver.find_element_by_css_selector(changeButton).click()
-        # WebDriverWait(self.driver, timeout).until(  # wait again after pressing once...
-        #     lambda x: x.find_element_by_css_selector(changeButton))
-        # time.sleep(10)
-        # self.driver.find_element_by_css_selector(changeButton).click()
-        # WebDriverWait(self.driver, timeout).until(
-        #     lambda x: x.find_element_by_css_selector(stockListings))  # Now wait for stock tickers to load
-        time.sleep(20)
+        WebDriverWait(self.driver, timeout).until(   # wait for changeButton to load
+            lambda x: x.find_element_by_css_selector(changeButton))
+        # Need to hardcode wait times since clicking on button doesn't do anything even though the page is fully loaded
+        # Due to Yahoo website design...
+        time.sleep(10)
+        self.driver.find_element_by_css_selector(changeButton).click()
+        WebDriverWait(self.driver, timeout).until(  # wait again after pressing once...
+            lambda x: x.find_element_by_css_selector(changeButton))
+        time.sleep(10)
+        self.driver.find_element_by_css_selector(changeButton).click()
+        WebDriverWait(self.driver, timeout).until(
+            lambda x: x.find_element_by_css_selector(stockListings))  # Now wait for stock tickers to load
+        time.sleep(10)
 
     # Gets stocks from Yahoo finance page
     def _selectTickers(self) -> list:

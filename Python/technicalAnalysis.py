@@ -1,5 +1,6 @@
 import requests
 import time
+import datetime
 from Python.seleniumStockScraper import seleniumStockScraper
 
 
@@ -8,7 +9,7 @@ class technicalAnalysis:
     def __init__(self, api_key):
         self.ALPHA_VANTAGE_API_KEY = api_key
 
-    def getEMA(self, symbol: str, timePeriod: str, interval: str = "daily") -> list:  # Only set up for equity
+    def getEMA(self, symbol: str, timePeriod: str, interval: str = "daily") -> dict:  # Only set up for equity
         resp = requests.get("https://www.alphavantage.co/query?function=EMA&symbol="
                             + symbol + "&interval=" + interval + "&time_period=" + timePeriod +
                             "&series_type=open&apikey=" + self.ALPHA_VANTAGE_API_KEY)
@@ -18,7 +19,7 @@ class technicalAnalysis:
         dictOfEMA = data.get("Technical Analysis: EMA")
         return dictOfEMA
 
-    def getPrice(self, symbol: str) -> list:
+    def getPrice(self, symbol: str) -> dict:
         resp = requests.get("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol="
                             + symbol + "&interval=1min&apikey=" + self.ALPHA_VANTAGE_API_KEY)
         if resp.status_code != 200:
@@ -28,28 +29,32 @@ class technicalAnalysis:
         return dictOfPrices
 
     @staticmethod
-    def recentCrossover(twentyEMA: list, fiftyEMA: list, prices: list) -> bool:
+    def isRecentCrossover(twentyEMA: dict, fiftyEMA: dict, prices: dict) -> bool:
         day = 0
         numDays = 50
+        curDate = datetime.date.today()
         while day <= numDays:
-            if twentyEMA[day] > fiftyEMA[day]:
-                if prices[day] > twentyEMA[day]:
-                    print("{} is price. Greater than EMA ({}) at day {}".format(prices[day], twentyEMA[day], day))
+            if twentyEMA[curDate] > fiftyEMA[curDate]:
+                if prices[curDate] > twentyEMA[curDate]:
+                    print("{} is price. Greater than EMA ({}) at day {}".format(prices[curDate], twentyEMA[curDate], curDate))
                 else:
-                    print("{} is price. LESS than EMA ({}) at day {}".format(prices[day], twentyEMA[day], day))
+                    print("{} is price. LESS than EMA ({}) at day {}".format(prices[curDate], twentyEMA[curDate], curDate))
                 return True
+            day += 1
+            curDate -= datetime.timedelta(1)
         return False
 
     @staticmethod
-    def isPotentialCrossover(twentyEMA: list, fiftyEMA: list, prices: list):
+    def isPotentialCrossover(twentyEMA: dict, fiftyEMA: dict) -> bool:
+        curDate = datetime.date.today()
         if not twentyEMA or not fiftyEMA:
             print("One or more EMAs are empty")
             return False
-        if twentyEMA[0] > fiftyEMA[0]:
+        if twentyEMA[curDate] > fiftyEMA[curDate]:
             return False
-        diff = abs(fiftyEMA[0] - twentyEMA[0])
+        diff = (fiftyEMA[curDate] - twentyEMA[curDate]) // fiftyEMA[curDate]
         tolerance = 0.05
-        if diff // max(fiftyEMA[0], twentyEMA[0]) <= tolerance:  # if difference is within 5%
+        if diff <= tolerance:  # if difference is within 5%
             print("within range")
             return True
         return False
@@ -61,23 +66,24 @@ if __name__ == '__main__':
                                    "../geckodriver.exe",
                                    "https://finance.yahoo.com/screener/predefined/growth_technology_stocks")
     ticks = scraper.generateTickers()
-    print(ticks)
     count = 0
+    today = datetime.date.today()
     for stock in ticks:
-        if count % 5 == 0: time.sleep(65)
+        if count % 5 == 0: time.sleep(62)
+        count += 1
         tEMA = ta.getEMA(stock, "20")
+        if count % 5 == 0: time.sleep(62)
         count += 1
-        if count % 5 == 0: time.sleep(65)
         fEMA = ta.getEMA(stock, "50")
+        if count % 5 == 0: time.sleep(62)
         count += 1
-        if count % 5 == 0: time.sleep(65)
-        priceHistory = ta.getPrice(stock)
-        count += 1
+        priceDict = ta.getPrice(stock)
         print("testing: {}".format(stock))
-        if tEMA: print("tEMA: {}".format(tEMA[0]))
-        if fEMA: print("fEMA: {}".format(fEMA[0]))
-        if priceHistory: print("price: {}".format(priceHistory[0]))
-        if tEMA and fEMA and tEMA[0] > fEMA[0]:
-            isCrossover = ta.recentCrossover(tEMA, fEMA, priceHistory)
-            if isCrossover:
-                print("FOUND CROSSOVER!")
+        print("price: {}".format(priceDict[today]))
+        print("twenty EMA: {}".format(tEMA[today]))
+        print("fifty EMA: {}".format(fEMA[today]))
+        if ta.isRecentCrossover(tEMA, fEMA, priceDict):
+            print("{} is a recent crossover!".format(stock))
+        if ta.isPotentialCrossover(tEMA, fEMA):
+            print("{} is a potential crossover!".format(stock))
+        print("\n")
