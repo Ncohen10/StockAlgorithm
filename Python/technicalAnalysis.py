@@ -23,7 +23,7 @@ class technicalAnalysis:
             print("getEMA() is returning an empty dictionary for some reason. May be too many API calls.")
         return dictOfEMA
 
-    def getPrice(self, symbol: str) -> dict:
+    def getPrice(self, symbol: str) -> dict:  #TODO - make sure the API call is correct
         resp = requests.get("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol="
                             + symbol + "&interval=1min&apikey=" + self.ALPHA_VANTAGE_API_KEY)
         if resp.status_code != 200:
@@ -35,7 +35,7 @@ class technicalAnalysis:
 
 
     @staticmethod
-    def isRecentCrossover(twentyEMA: dict, fiftyEMA: dict, prices: dict) -> bool:
+    def checkTripleCrossover(twentyEMA: dict, fiftyEMA: dict, prices: dict) -> bool:
         numDays = 50
         ema_iter = iter(twentyEMA)
         cur_date = next(ema_iter)
@@ -56,9 +56,9 @@ class technicalAnalysis:
             if cur_date not in fiftyEMA or cur_date not in prices:
                 cur_date = next(ema_iter)
                 continue
-            cur_twenty_ema = twentyEMA[cur_date]["4. close"]
-            cur_fifty_ema = fiftyEMA[cur_date]["4. close"]
-            cur_price = prices[cur_date]["4. close"]
+            cur_twenty_ema = float(twentyEMA[cur_date]["4. close"])
+            cur_fifty_ema = float(fiftyEMA[cur_date]["4. close"])
+            cur_price = float(prices[cur_date]["4. close"])
             dipFound = False
             crossovers = 0
             # Triple crossover strategy code
@@ -80,13 +80,28 @@ class technicalAnalysis:
 
     @staticmethod
     def isPotentialCrossover(twentyEMA: dict, fiftyEMA: dict) -> bool:
-        curDate = next(iter(twentyEMA))
         if not twentyEMA or not fiftyEMA:
-            print("One or more EMAs are empty")
+            print("At least 1 EMA dict is empty")
             return False
-        if twentyEMA[curDate]['4. close'] > fiftyEMA[curDate]['4. close']:
+        ema_iter = iter(twentyEMA)
+        curDate = next(ema_iter)
+        if curDate not in fiftyEMA:
+            commonDateFound = False
+            for day in range(3):
+                curDate = next(ema_iter)
+                if curDate in fiftyEMA:
+                    commonDateFound = True
+                    break
+            if not commonDateFound:
+                print("No shared date for twenty EMA and fifty EMA within past 3 days.")
+                return False
+        print(twentyEMA[curDate])
+        latest_twenty_ema = float(twentyEMA[curDate]["EMA"])
+        latest_fifty_ema = float(fiftyEMA[curDate]["EMA"])
+
+        if latest_twenty_ema > latest_fifty_ema:
             return False
-        diff = (fiftyEMA[curDate]['4. close'] - twentyEMA[curDate]['4. close']) // fiftyEMA[curDate]
+        diff = (latest_fifty_ema - latest_twenty_ema) // latest_fifty_ema
         tolerance = 0.05
         if diff <= tolerance:  # if difference is within 5%
             print("within range")
@@ -98,13 +113,15 @@ if __name__ == '__main__':
     ta = technicalAnalysis("MA6YR6D5TVXK1W67")
     # p = ta.getPrice("IBM")
     tEMA = ta.getEMA("IBM", "20")
-    print(ta.isRecentCrossover(tEMA, tEMA, {}))
-
+    print(ta.isPotentialCrossover(tEMA, tEMA))
+    print(ta.checkTripleCrossover(tEMA, tEMA, {}))
+    #
     # scraper = seleniumStockScraper("C:\\Program Files\\Mozilla Firefox\\firefox.exe",
     #                                "../geckodriver.exe",
     #                                "https://finance.yahoo.com/screener/predefined/growth_technology_stocks")
     # att = 0
     # fail = True
+    # ticks = []
     # while att < 5:
     #     try:
     #         ticks = scraper.generateTickers()
@@ -114,7 +131,6 @@ if __name__ == '__main__':
     #     else:
     #         break
     # count = 0
-    # today = str(datetime.date.today())
     # print(ticks)
     # for stock in ticks:
     #     if count % 5 == 0: time.sleep(62)
