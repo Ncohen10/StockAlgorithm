@@ -18,7 +18,7 @@ class seleniumStockScraper:
             firefox_binary=self.binary,
             firefox_profile=self.profile,
             firefox_options=self.options,
-            executable_path=geckoPath  # download/install GD and drag it into the selenium_stuff directory
+            executable_path=geckoPath  # download/install GD and drag it into the selenium_stuff directory maybe
         )
         self.yahooURL = yahooURL
 
