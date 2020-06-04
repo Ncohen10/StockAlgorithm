@@ -18,6 +18,9 @@ class technicalAnalysis:
             raise Exception("Error in request to Alpha Vantage. Response was:\n {}".format(resp))
         data = resp.json()
         dictOfEMA = data.get("Technical Analysis: EMA")
+        if not dictOfEMA:
+            print(resp.status_code)
+            print("getEMA() is returning an empty dictionary for some reason. May be too many API calls.")
         return dictOfEMA
 
     def getPrice(self, symbol: str) -> dict:
@@ -36,13 +39,20 @@ class technicalAnalysis:
         numDays = 50
         ema_iter = iter(twentyEMA)
         cur_date = next(ema_iter)
-        # strip timestamp from current date
-        cur_date = dt.datetime.strptime(cur_date, "%Y-%m-%d %H:%M:%S").date()
+        print(cur_date)
+        # if timestamp is attached to current date
+        if len(cur_date) > 10:
+            # Remove timestamp and transform into a datetime object
+            cur_date = dt.datetime.strptime(cur_date, "%Y-%m-%d %H:%M:%S").date()
+        else:
+            cur_date = dt.datetime.strptime(cur_date, "%Y-%m-%d").date()
         # end date is current date - numDays
-        end_date = cur_date - dt.timedelta(numDays)
+        end_date = str(cur_date - dt.timedelta(numDays))
+        cur_date = str(cur_date)
 
+        # Only check for last numDays amount of days
         while cur_date > end_date:
-            # Ensure that date is in fifty EMA and in prices
+            # Ensure that given date is in fifty EMA and in prices
             if cur_date not in fiftyEMA or cur_date not in prices:
                 cur_date = next(ema_iter)
                 continue
@@ -63,7 +73,7 @@ class technicalAnalysis:
             if crossovers == 3:
                 print("TRIPLE CROSSOVER IDENTIFIED !!!")
                 return True
-            cur_date = next(ema_iter)
+            cur_date = next(str(ema_iter))
 
         # no triple crossover found within specified time period.
         return False
