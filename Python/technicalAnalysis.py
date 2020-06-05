@@ -19,7 +19,8 @@ class technicalAnalysis:
         data = resp.json()
         dictOfEMA = data.get("Technical Analysis: EMA")
         if not dictOfEMA:
-            print(resp.status_code)
+            print(resp)
+            print(data)
             print("getEMA() is returning an empty dictionary for some reason. May be too many API calls.")
         return dictOfEMA
 
@@ -32,14 +33,11 @@ class technicalAnalysis:
         dictOfPrices = data.get("Time Series (Daily)")
         return dictOfPrices
 
-
-
     @staticmethod
-    def checkTripleCrossover(twentyEMA: dict, fiftyEMA: dict, prices: dict) -> bool:
+    def isTripleCrossover(twentyEMA: dict, fiftyEMA: dict, prices: dict) -> bool:
         numDays = 50
         ema_iter = iter(twentyEMA)
         cur_date = next(ema_iter)
-        print(cur_date)
         # if timestamp is attached to current date
         if len(cur_date) > 10:
             # Remove timestamp and transform into a datetime object
@@ -49,21 +47,20 @@ class technicalAnalysis:
         # end date is current date - numDays
         end_date = str(cur_date - dt.timedelta(numDays))
         cur_date = str(cur_date)
-
+        dipFound = False
         # Only check for last numDays amount of days
         while cur_date > end_date:
             # Ensure that given date is in fifty EMA and in prices
             if cur_date not in fiftyEMA or cur_date not in prices:
                 cur_date = next(ema_iter)
+                print("Continuing. Date not found in both twenty and fifty EMA.")
                 continue
-            cur_twenty_ema = float(twentyEMA[cur_date]["4. close"])
-            cur_fifty_ema = float(fiftyEMA[cur_date]["4. close"])
+            cur_twenty_ema = float(twentyEMA[cur_date]["EMA"])
+            cur_fifty_ema = float(fiftyEMA[cur_date]["EMA"])
             cur_price = float(prices[cur_date]["4. close"])
-            dipFound = False
             crossovers = 0
             # Triple crossover strategy code
             if cur_twenty_ema < cur_fifty_ema:
-                print("Not a triple crossover")
                 return False
             if cur_price < cur_twenty_ema:
                 dipFound = True
@@ -71,17 +68,19 @@ class technicalAnalysis:
                 dipFound = False
                 crossovers += 1
             if crossovers == 3:
-                print("TRIPLE CROSSOVER IDENTIFIED !!!")
+                print("Buy")
                 return True
             cur_date = next(str(ema_iter))
 
         # no triple crossover found within specified time period.
         return False
 
+
+    # Checks if the
     @staticmethod
     def isPotentialCrossover(twentyEMA: dict, fiftyEMA: dict) -> bool:
         if not twentyEMA or not fiftyEMA:
-            print("At least 1 EMA dict is empty")
+            print("How is this happening")
             return False
         ema_iter = iter(twentyEMA)
         curDate = next(ema_iter)
@@ -101,9 +100,11 @@ class technicalAnalysis:
 
         if latest_twenty_ema > latest_fifty_ema:
             return False
-        diff = (latest_fifty_ema - latest_twenty_ema) // latest_fifty_ema
-        tolerance = 0.05
-        if diff <= tolerance:  # if difference is within 5%
+        # Ensure the difference of the fifty and twenty ema are within 5% of eachother
+        diff = abs(latest_fifty_ema - latest_twenty_ema) // latest_fifty_ema
+        print("difference of twenty and fifty EMA: {}".format(diff))
+        tolerance = 0.05  # Make higher to be less selective but also have less accurate predictions
+        if diff <= tolerance:
             print("within range")
             return True
         return False
@@ -112,42 +113,55 @@ class technicalAnalysis:
 if __name__ == '__main__':
     ta = technicalAnalysis("MA6YR6D5TVXK1W67")
     # p = ta.getPrice("IBM")
-    tEMA = ta.getEMA("IBM", "20")
-    print(ta.isPotentialCrossover(tEMA, tEMA))
-    print(ta.checkTripleCrossover(tEMA, tEMA, {}))
-    #
-    # scraper = seleniumStockScraper("C:\\Program Files\\Mozilla Firefox\\firefox.exe",
-    #                                "../geckodriver.exe",
-    #                                "https://finance.yahoo.com/screener/predefined/growth_technology_stocks")
-    # att = 0
-    # fail = True
-    # ticks = []
-    # while att < 5:
-    #     try:
-    #         ticks = scraper.generateTickers()
-    #     except Exception:
-    #         att += 1
-    #         print("Failed. Attempts={}".format(att))
-    #     else:
-    #         break
-    # count = 0
-    # print(ticks)
-    # for stock in ticks:
-    #     if count % 5 == 0: time.sleep(62)
-    #     count += 1
-    #     tEMA = ta.getEMA(stock, "20")
-    #     if count % 5 == 0: time.sleep(62)
-    #     count += 1
-    #     fEMA = ta.getEMA(stock, "50")
-    #     if count % 5 == 0: time.sleep(62)
-    #     count += 1
-    #     priceDict = ta.getPrice(stock)
-    #     print("testing: {}".format(stock))
-    #     print("price: {}".format(priceDict[today]))
-    #     print("twenty EMA: {}".format(tEMA[today]))
-    #     print("fifty EMA: {}".format(fEMA[today]))
-    #     if ta.isRecentCrossover(tEMA, fEMA, priceDict):
-    #         print("{} is a recent crossover!".format(stock))
-    #     if ta.isPotentialCrossover(tEMA, fEMA):
-    #         print("{} is a potential crossover!".format(stock))
-    #     print("\n")
+    # tEMA = ta.getEMA("IBM", "20")
+    # print(ta.isPotentialCrossover(tEMA, tEMA))
+    # print(ta.checkTripleCrossover(tEMA, tEMA, {}))
+
+    scraper = seleniumStockScraper("C:\\Program Files\\Mozilla Firefox\\firefox.exe",
+                                   "../geckodriver.exe",
+                                   "https://finance.yahoo.com/screener/predefined/growth_technology_stocks")
+    att = 0
+    fail = True
+    ticks = []
+    while att < 10:
+        try:
+            scraper = seleniumStockScraper("C:\\Program Files\\Mozilla Firefox\\firefox.exe",
+                                           "../geckodriver.exe",
+                                           "https://finance.yahoo.com/screener/predefined/growth_technology_stocks")
+            ticks = scraper.generateTickers()
+        except Exception as e:
+            att += 1
+            print(e)
+            print("Scraper failed. Attempts={}".format(att))
+        else:
+            break
+    count = 0
+    print(ticks)
+    print('\n')
+    for stock in ticks:
+        if count % 5 == 0: time.sleep(70)
+        count += 1
+        tEMA = ta.getEMA(stock, "20")
+        if count % 5 == 0: time.sleep(70)
+        count += 1
+        fEMA = ta.getEMA(stock, "50")
+        if count % 5 == 0: time.sleep(70)
+        count += 1
+        priceDict = ta.getPrice(stock)
+        try:
+            currentPrice = priceDict[next(iter(priceDict))]
+            currentTEMA = tEMA[next(iter(tEMA))]
+            currentFEMA = fEMA[next(iter(fEMA))]
+
+            print("testing: {}".format(stock))
+            print("{}'s current prince is: {}".format(stock, currentPrice["4. close"]))
+            print("current twenty EMA is: {}".format(currentTEMA))
+            print("current fifty EMA is: {}".format(currentFEMA))
+        except Exception as e:
+            print(e)
+            pass
+        if ta.isPotentialCrossover(tEMA, fEMA) and ta.isTripleCrossover(tEMA, fEMA, priceDict):
+            print("{} IS A TRIPLE CROSSOVER!!! \t AHHHHJIJ".format(stock))
+        else:
+            print("{} does not pass crossover check".format(stock))
+        print("\n")
