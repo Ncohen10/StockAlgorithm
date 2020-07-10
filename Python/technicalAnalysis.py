@@ -9,7 +9,7 @@ class technicalAnalysis:
 
     def __init__(self, api_key):
         self.ALPHA_VANTAGE_API_KEY = api_key
-        self.boughtStocks = {} # map of stocks to price bought
+        self.boughtStocks = {"RNG": 261.0, "AMD": 55.71, "UMC": 2.44, "IMOS": 20.34, "VNET": 13.89}  # map of stocks to price bought
         self.soldStocks = {}  # map of stocks to price sold
         self.sellDip = set()  # Set of stocks that have experienced a sell dip.
 
@@ -125,6 +125,7 @@ class technicalAnalysis:
 
     def checkSell(self, twentyEMA: dict, fiftyEMA: dict, prices: dict):
         # TODO - Perhaps just sell when 20EMA crosses below 50EMA. Or when price trades below 20EMA/50EMA
+        # TODO - Deal with duplicate code.
         dipFound = False
         numDays = 100
         ema_iter = iter(twentyEMA)
@@ -152,7 +153,9 @@ class technicalAnalysis:
                     self.soldStocks[stock] = cur_price
                 if cur_price < cur_twenty_ema:
                     self.sellDip.add(stock)
-            """
+                cur_date = str(next(ema_iter))
+
+        """
             - Requirements:
                 - while 20 EMA < 50 EMA:
                     - prices dip below 20&50 EMA
@@ -168,54 +171,54 @@ if __name__ == '__main__':
     print(p)
     print(tEMA)
 
-    # att = 0
-    # fail = True
-    # ticks = []
-    # while att < 10:
-    #     try:
-    #         scraper = seleniumStockScraper("C:\\Program Files\\Mozilla Firefox\\firefox.exe",
-    #                                        "../geckodriver.exe",
-    #                                        "https://finance.yahoo.com/screener/predefined/growth_technology_stocks")
-    #         ticks = scraper.generateTickers()
-    #     except Exception as e:
-    #         att += 1
-    #         print(e)
-    #         print("Scraper failed. Attempts={}".format(att))
-    #     else:
-    #         break
-    #
-    # count = 0
-    # print(ticks)
-    # print('\n')
-    # for tick in ticks:
-    #     if count % 5 == 0: time.sleep(70)
-    #     count += 1
-    #     tEMA = ta.getEMA(tick, "20")
-    #     if count % 5 == 0: time.sleep(70)
-    #     count += 1
-    #     fEMA = ta.getEMA(tick, "50")
-    #     if count % 5 == 0: time.sleep(70)
-    #     count += 1
-    #     priceDict = ta.getPrice(tick)
-    #
-    #     currentPrice = priceDict[next(iter(priceDict))]
-    #     currentTEMA = tEMA[next(iter(tEMA))]
-    #     currentFEMA = fEMA[next(iter(fEMA))]
-    #
-    #     print("testing: {}".format(tick))
-    #     print("{}'s current prince is: {}".format(tick, currentPrice["4. close"]))
-    #     print("current 20 EMA is: {}".format(currentTEMA["EMA"]))
-    #     print("current fifty EMA is: {}".format(currentFEMA["EMA"]))
-    #
-    #     if ta.isPotentialCrossover(tEMA, fEMA):
-    #         print("{} is potential crossover".format(tick))
-    #         if ta.isTripleCrossover(tEMA, fEMA, priceDict):
-    #             ta.boughtStocks.append(tick)
-    #             print("{} IS A TRIPLE CROSSOVER!!! \t AHHHHJIJ".format(tick))
-    #         else:
-    #             print("{} Is not a triple crossover".format(tick))
-    #     else:
-    #         print("difference is not within tolerance".format(tick))
-    #     print("\n")
+    att = 0
+    fail = True
+    ticks = []
+    while att < 10:
+        try:
+            scraper = seleniumStockScraper("C:\\Program Files\\Mozilla Firefox\\firefox.exe",
+                                           "../geckodriver.exe",
+                                           "https://finance.yahoo.com/screener/predefined/growth_technology_stocks")
+            ticks = scraper.generateTickers()
+        except Exception as e:
+            att += 1
+            print(e)
+            print("Scraper failed. Attempts={}".format(att))
+        else:
+            break
+
+    count = 0
+    print(ticks)
+    print('\n')
+    for tick in ticks:
+        if count % 5 == 0: time.sleep(70)
+        count += 1
+        tEMA = ta.getEMA(tick, "20")
+        if count % 5 == 0: time.sleep(70)
+        count += 1
+        fEMA = ta.getEMA(tick, "50")
+        if count % 5 == 0: time.sleep(70)
+        count += 1
+        priceDict = ta.getPrice(tick)
+
+        currentPrice = priceDict[next(iter(priceDict))]
+        currentTEMA = tEMA[next(iter(tEMA))]
+        currentFEMA = fEMA[next(iter(fEMA))]
+
+        print("testing: {}".format(tick))
+        print("{}'s current prince is: {}".format(tick, currentPrice["4. close"]))
+        print("current 20 EMA is: {}".format(currentTEMA["EMA"]))
+        print("current fifty EMA is: {}".format(currentFEMA["EMA"]))
+
+        if ta.meetsCrossoverRequirements(tEMA, fEMA):
+            print("{} is potential crossover".format(tick))
+            if ta.isTripleCrossover(tEMA, fEMA, priceDict, tick):
+                print("{} IS A TRIPLE CROSSOVER!!! \t AHHHHJIJ".format(tick))
+            else:
+                print("{} Is not a triple crossover".format(tick))
+        else:
+            print("difference is not within tolerance".format(tick))
+        ta.checkSell(tEMA, fEMA, priceDict)
+        print("\n")
 
 #TODO - make function to check whether a given stock should be sold.
