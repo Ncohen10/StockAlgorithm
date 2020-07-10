@@ -123,7 +123,7 @@ class technicalAnalysis:
             return True
         return False
 
-    def checkSell(self, twentyEMA: dict, fiftyEMA: dict, prices: dict):
+    def checkSell(self, twentyEMA: dict, fiftyEMA: dict, prices: dict, stock: str):
         # TODO - Perhaps just sell when 20EMA crosses below 50EMA. Or when price trades below 20EMA/50EMA
         # TODO - Deal with duplicate code.
         dipFound = False
@@ -139,21 +139,22 @@ class technicalAnalysis:
         # end date is current date - numDays
         end_date = str(cur_date - dt.timedelta(numDays))
         cur_date = str(cur_date)
-        for stock in self.boughtStocks:
-            cur_twenty_ema = float(twentyEMA[cur_date]["EMA"])
-            cur_fifty_ema = float(fiftyEMA[cur_date]["EMA"])
-            cur_price = float(prices[cur_date]["4. close"])
-            while cur_twenty_ema < cur_fifty_ema:
-                # if stock has experienced a dip, and the price is >= current 20 EMA then SELL.
-                if (stock in self.sellDip) and (cur_price >= cur_twenty_ema):
-                    profit = self.boughtStocks[stock] - cur_price
-                    print("SEll {}!!!!".format(stock))
-                    print("Profit: {}".format(profit))
-                    del self.boughtStocks[stock]
-                    self.soldStocks[stock] = cur_price
-                if cur_price < cur_twenty_ema:
-                    self.sellDip.add(stock)
-                cur_date = str(next(ema_iter))
+        cur_twenty_ema = float(twentyEMA[cur_date]["EMA"])
+        cur_fifty_ema = float(fiftyEMA[cur_date]["EMA"])
+        cur_price = float(prices[cur_date]["4. close"])
+        while cur_date < end_date:
+            # if stock has experienced a dip, and the price is >= current 20 EMA then SELL.
+            if cur_twenty_ema > cur_fifty_ema:
+                return False
+            if (stock in self.sellDip) and (cur_price >= cur_twenty_ema):
+                profit = self.boughtStocks[stock] - cur_price
+                print("SEll {}!!!!".format(stock))
+                print("Profit: {}".format(profit))
+                del self.boughtStocks[stock]
+                self.soldStocks[stock] = cur_price
+            if cur_price < cur_twenty_ema:
+                self.sellDip.add(stock)
+            cur_date = str(next(ema_iter))
 
         """
             - Requirements:
@@ -166,10 +167,10 @@ class technicalAnalysis:
 
 if __name__ == '__main__':
     ta = technicalAnalysis("MA6YR6D5TVXK1W67")
-    p = ta.getPrice("IBM")
-    tEMA = ta.getEMA("IBM", "20")
-    print(p)
-    print(tEMA)
+    # p = ta.getPrice("IBM")
+    # tEMA = ta.getEMA("IBM", "20")
+    # print(p)
+    # print(tEMA)
 
     att = 0
     fail = True
@@ -218,7 +219,7 @@ if __name__ == '__main__':
                 print("{} Is not a triple crossover".format(tick))
         else:
             print("difference is not within tolerance".format(tick))
-        ta.checkSell(tEMA, fEMA, priceDict)
+        ta.checkSell(tEMA, fEMA, priceDict, tick)
         print("\n")
 
 #TODO - make function to check whether a given stock should be sold.
