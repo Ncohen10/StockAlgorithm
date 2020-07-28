@@ -5,8 +5,9 @@ from selenium.common.exceptions import NoSuchWindowException, WebDriverException
 from WebScrapers.YahooSymbolScraper import YahooSymbolScraper
 
 
+class TechnicalAnalysis:
 
-class technicalAnalysis:
+    # TODO - Put Alphavantage API call methods into separate class.
 
     def __init__(self, api_key):
         self.ALPHA_VANTAGE_API_KEY = api_key
@@ -167,7 +168,7 @@ class technicalAnalysis:
 
 
 if __name__ == '__main__':
-    ta = technicalAnalysis("MA6YR6D5TVXK1W67")
+    ta = TechnicalAnalysis("MA6YR6D5TVXK1W67")
     # p = ta.getPrice("IBM")
     # tEMA = ta.getEMA("IBM", "20")
     # print(p)
