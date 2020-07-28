@@ -1,7 +1,8 @@
 import requests
 import time
 import datetime as dt
-from Python.seleniumStockScraper import seleniumStockScraper
+from selenium.common.exceptions import NoSuchWindowException, WebDriverException
+from WebScrapers.YahooSymbolScraper import YahooSymbolScraper
 
 
 
@@ -177,11 +178,11 @@ if __name__ == '__main__':
     ticks = []
     while att < 10:
         try:
-            scraper = seleniumStockScraper("C:\\Program Files\\Mozilla Firefox\\firefox.exe",
+            scraper = YahooSymbolScraper("C:\\Program Files\\Mozilla Firefox\\firefox.exe",
                                            "../geckodriver.exe",
                                            "https://finance.yahoo.com/screener/predefined/growth_technology_stocks")
             ticks = scraper.generateTickers()
-        except Exception as e:
+        except (NoSuchWindowException, WebDriverException) as e:
             att += 1
             print(e)
             print("Scraper failed. Attempts={}".format(att))

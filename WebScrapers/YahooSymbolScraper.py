@@ -6,7 +6,7 @@ from selenium.common.exceptions import *
 import time
 
 
-class seleniumStockScraper:
+class YahooSymbolScraper:
 
     def __init__(self, firefoxPath, geckoPath, yahooURL):  # Initialize selenium and url to visit
         self.binary = FirefoxBinary(firefoxPath)
