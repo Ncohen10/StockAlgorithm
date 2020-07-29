@@ -83,7 +83,7 @@ class TechnicalAnalysis:
                 # print("DIP")
                 # Buy at 3rd dip.
                 if crossovers == 2:
-                    # print("Buy")
+                    print("{} has been bought at {} on {}".format(tick, cur_price, cur_date))
                     self.boughtStocks[tick] = cur_price
                     return True
                 # New code between this and above comment
