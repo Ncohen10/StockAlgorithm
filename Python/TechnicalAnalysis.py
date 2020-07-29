@@ -135,6 +135,7 @@ class TechnicalAnalysis:
     def checkSell(self, twentyEMA: dict, fiftyEMA: dict, prices: dict, stock: str):
         # TODO - Perhaps just sell when 20EMA crosses below 50EMA. Or when price trades below 20EMA/50EMA
         # TODO - Deal with duplicate code.
+        # TODO - Maybe fix this?
         dipFound = False
         numDays = 100
         ema_iter = iter(twentyEMA)

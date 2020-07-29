@@ -11,6 +11,8 @@ class Backtesting:
         self.start_date = start_date
         self.end_date = end_date
         self.ta = TechnicalAnalysis("MA6YR6D5TVXK1W67")
+        self.total_profit = 0
+        self.force_sold_profit = 0
 
     def test_algorithm(self):
         api_call_count = 1
@@ -45,8 +47,12 @@ class Backtesting:
                     if self.ta.isTripleCrossover(cur_t_ema, cur_f_ema, cur_day_prices, tick=ticker):
                         print("{} has been bought".format(ticker))
                 if ticker in self.ta.boughtStocks:
-                    self.ta.checkSell(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, prices=cur_day_prices, stock=ticker)
+                    if self.ta.checkSell(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, prices=cur_day_prices, stock=ticker):
+                        print("{} has been sold".format(ticker))
+            if ticker in self.ta.boughtStocks:
+                self.force_sold_profit += self.force_sell(tick=ticker, prices_dict=prices)
         print("TOTAL PROFIT: {}".format(self.ta.profit))
+        print("TOTAL FORCE SOLD PROFIT: {}".format(self.force_sold_profit))
         return self.ta.profit
 
     def filter_dates(self, date_dict):
@@ -61,6 +67,12 @@ class Backtesting:
             if self.start_date <= date <= self.end_date:
                 date_filtered_dict[date] = date_dict[date]  # Map date to its original data
         return date_filtered_dict
+
+    def force_sell(self, tick, prices_dict):
+        last_day = max(prices_dict)
+        last_price = float(prices_dict[last_day]["4. close"])
+        total_stock_profit = (last_price - self.ta.boughtStocks[tick])
+        return total_stock_profit
 
     @staticmethod
     def stock_info_generator(date_dict):
