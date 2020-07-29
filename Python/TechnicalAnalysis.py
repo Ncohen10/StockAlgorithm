@@ -11,9 +11,11 @@ class TechnicalAnalysis:
 
     def __init__(self, api_key):
         self.ALPHA_VANTAGE_API_KEY = api_key
-        self.boughtStocks = {"RNG": 261.0, "AMD": 55.71, "UMC": 2.44, "IMOS": 20.34, "VNET": 13.89}  # map of stocks to price bought
+        # self.boughtStocks = {"RNG": 261.0, "AMD": 55.71, "UMC": 2.44, "IMOS": 20.34, "VNET": 13.89}  # map of stocks to price bought
+        self.boughtStocks = {}
         self.soldStocks = {}  # map of stocks to price sold
         self.sellDip = set()  # Set of stocks that have experienced a sell dip.
+        self.profit = 0
 
     def getEMA(self, symbol: str, timePeriod: str, interval: str = "daily") -> dict:  # Only set up for equity
         resp = requests.get("https://www.alphavantage.co/query?function=EMA&symbol="
@@ -29,16 +31,20 @@ class TechnicalAnalysis:
             print("getEMA() is returning an empty dictionary for some reason. May be too many API calls.")
         return dictOfEMA
 
-    def getPrice(self, symbol: str) -> dict:  # TODO - make sure the API call is correct
+    def getPrice(self, symbol: str, fullOutput=False) -> dict:  # TODO - make sure the API call is correct
+        output_size = "compact"
+        if fullOutput:
+            output_size = "full"
         resp = requests.get("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol="
-                            + symbol + "&interval=1min&apikey=" + self.ALPHA_VANTAGE_API_KEY)
+                            + symbol + "&outputsize=" + output_size +
+                            "&interval=1min&apikey=" + self.ALPHA_VANTAGE_API_KEY)
         if resp.status_code != 200:
             raise Exception("Error in request to Alpha Vantage. Response was:\n {}".format(resp))
         data = resp.json()
         dictOfPrices = data.get("Time Series (Daily)")
         return dictOfPrices
 
-    def isTripleCrossover(self, twentyEMA: dict, fiftyEMA: dict, prices: dict, stock: str) -> bool:
+    def isTripleCrossover(self, twentyEMA: dict, fiftyEMA: dict, prices: dict, tick: str) -> bool:
         """
         - Checks for triple crossover, assuming minimum requirements have been met.
         - If triple crossover is found, maps stock to buying price.
@@ -64,7 +70,7 @@ class TechnicalAnalysis:
             # Ensure that given date is in fifty EMA and in prices
             if cur_date not in fiftyEMA or cur_date not in prices:
                 cur_date = next(ema_iter)
-                print("Continuing. Date not found in both twenty and fifty EMA.")
+                # print("Continuing. Date not found in both twenty and fifty EMA.")
                 continue
             cur_twenty_ema = float(twentyEMA[cur_date]["EMA"])
             cur_fifty_ema = float(fiftyEMA[cur_date]["EMA"])
@@ -74,15 +80,15 @@ class TechnicalAnalysis:
                 return False
             if cur_price < cur_twenty_ema:  # Change this to TODO
                 dipFound = True
-                print("DIP")
+                # print("DIP")
                 # Buy at 3rd dip.
                 if crossovers == 2:
-                    print("Buy")
-                    self.boughtStocks[stock] = cur_price
+                    # print("Buy")
+                    self.boughtStocks[tick] = cur_price
                     return True
                 # New code between this and above comment
             elif dipFound and cur_price > cur_twenty_ema:
-                print("crossover 1")
+                # print("crossover 1")
                 dipFound = False
                 crossovers += 1
             # if crossovers == 3:
@@ -91,11 +97,12 @@ class TechnicalAnalysis:
             cur_date = str(next(ema_iter))
 
         # no triple crossover found within specified time period.
-        print("Ran out of days")
+        # print("Ran out of days")
         return False
 
-    @staticmethod
-    def meetsCrossoverRequirements(twentyEMA: dict, fiftyEMA: dict) -> bool:
+    def meetsCrossoverRequirements(self, twentyEMA: dict, fiftyEMA: dict, tick: str) -> bool:
+        if tick in self.boughtStocks:
+            return False
         if not twentyEMA or not fiftyEMA:
             print("How is this happening")
             return False
@@ -118,10 +125,10 @@ class TechnicalAnalysis:
         #     return False
         # Ensure the difference of the fifty and twenty ema are within 5% of eachother
         diff = abs(latest_fifty_ema - latest_twenty_ema) / latest_fifty_ema
-        print("difference of twenty and fifty EMA: {}".format(diff))
+        # print("difference of twenty and fifty EMA: {}".format(diff))
         tolerance = 0.05  # Make higher to be less selective but also have less accurate predictions
         if diff <= tolerance:
-            print("within tolerance")
+            # print("within tolerance")
             return True
         return False
 
@@ -149,9 +156,10 @@ class TechnicalAnalysis:
             if cur_twenty_ema > cur_fifty_ema:
                 return False
             if (stock in self.sellDip) and (cur_price >= cur_twenty_ema):
-                profit = self.boughtStocks[stock] - cur_price
+                stock_profit = self.boughtStocks[stock] - cur_price
+                self.profit += stock_profit
                 print("SEll {}!!!!".format(stock))
-                print("Profit: {}".format(profit))
+                print("Profit: {}".format(stock_profit))
                 del self.boughtStocks[stock]
                 self.soldStocks[stock] = cur_price
             if cur_price < cur_twenty_ema:
@@ -213,7 +221,7 @@ if __name__ == '__main__':
         print("current 20 EMA is: {}".format(currentTEMA["EMA"]))
         print("current fifty EMA is: {}".format(currentFEMA["EMA"]))
 
-        if ta.meetsCrossoverRequirements(tEMA, fEMA):
+        if ta.meetsCrossoverRequirements(tEMA, fEMA, tick):
             print("{} is potential crossover".format(tick))
             if ta.isTripleCrossover(tEMA, fEMA, priceDict, tick):
                 print("{} IS A TRIPLE CROSSOVER!!! \t AHHHHJIJ".format(tick))
