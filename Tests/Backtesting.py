@@ -15,7 +15,7 @@ class Backtesting:
         self.force_sold_profit = 0
 
     def test_algorithm(self):
-        api_call_count = 0
+        api_call_count = 1
         for ticker in self.test_tickers:
             if api_call_count % 5 == 0: time.sleep(70)
             api_call_count += 1
@@ -45,8 +45,10 @@ class Backtesting:
                     if self.ta.isTripleCrossover(cur_t_ema, cur_f_ema, cur_day_prices, tick=ticker):
                         print("{} has been bought".format(ticker))
                 if ticker in self.ta.boughtStocks:
-                    if self.ta.checkSell(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, prices=cur_day_prices, stock=ticker):
-                        print("{} has been sold".format(ticker))
+                    if self.ta.checkSellDip(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, prices=cur_day_prices, stock=ticker):
+                        print("{} found sold dip".format(ticker))
+                        if (self.ta.checkSellStock(twentyEMA=cur_t_ema, prices=cur_day_prices, tick=ticker)):
+                            print("yo sold")
             if ticker in self.ta.boughtStocks:
                 self.force_sold_profit += self.force_sell(tick=ticker, prices_dict=prices)
             print("\n")
