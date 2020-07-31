@@ -26,8 +26,6 @@ class TechnicalAnalysis:
         data = resp.json()
         dictOfEMA = data.get("Technical Analysis: EMA")
         if not dictOfEMA:
-            print(resp)
-            print(data)
             print("getEMA() is returning an empty dictionary for some reason. May be too many API calls.")
         return dictOfEMA
 
@@ -83,7 +81,7 @@ class TechnicalAnalysis:
                 # print("DIP")
                 # Buy at 3rd dip.
                 if crossovers == 2:
-                    print("{} has been bought at {} on {}".format(tick, cur_price, cur_date))
+                    print("{} has been bought at {} on {}\n".format(tick, cur_price, cur_date))
                     self.boughtStocks[tick] = cur_price
                     return True
                 # New code between this and above comment
@@ -146,15 +144,12 @@ class TechnicalAnalysis:
         if cur_date not in twentyEMA:
             # print("No common date")
             return False
-        else:
-            print("dfound")
-        cur_twenty_ema = twentyEMA[cur_date]
-        cur_price = prices[cur_date]
+        cur_twenty_ema = float(twentyEMA[cur_date]["EMA"])
+        cur_price = float(prices[cur_date]["4. close"])
         if tick in self.sellDip and cur_price >= cur_twenty_ema:
             stock_profit = self.boughtStocks[tick] - cur_price
             self.profit += stock_profit
-            print("SEll {}!!!!".format(tick))
-            print("Profit: {}".format(stock_profit))
+            print("{} has been sold at {} on {}".format(tick, cur_price, cur_date))
             del self.boughtStocks[tick]
             self.soldStocks[tick] = cur_price
             return True
@@ -241,39 +236,3 @@ if __name__ == '__main__':
             print("Scraper failed. Attempts={}".format(att))
         else:
             break
-
-    count = 0
-    print(ticks)
-    print('\n')
-    for tick in ticks:
-        if count % 5 == 0: time.sleep(70)
-        count += 1
-        tEMA = ta.getEMA(tick, "20")
-        if count % 5 == 0: time.sleep(70)
-        count += 1
-        fEMA = ta.getEMA(tick, "50")
-        if count % 5 == 0: time.sleep(70)
-        count += 1
-        priceDict = ta.getPrice(tick)
-
-        currentPrice = priceDict[next(iter(priceDict))]
-        currentTEMA = tEMA[next(iter(tEMA))]
-        currentFEMA = fEMA[next(iter(fEMA))]
-
-        print("testing: {}".format(tick))
-        print("{}'s current prince is: {}".format(tick, currentPrice["4. close"]))
-        print("current 20 EMA is: {}".format(currentTEMA["EMA"]))
-        print("current fifty EMA is: {}".format(currentFEMA["EMA"]))
-
-        if ta.meetsCrossoverRequirements(tEMA, fEMA, tick):
-            print("{} is potential crossover".format(tick))
-            if ta.isTripleCrossover(tEMA, fEMA, priceDict, tick):
-                print("{} IS A TRIPLE CROSSOVER!!! \t AHHHHJIJ".format(tick))
-            else:
-                print("{} Is not a triple crossover".format(tick))
-        else:
-            print("difference is not within tolerance".format(tick))
-
-        print("\n")
-
-#TODO - make function to check whether a given stock should be sold.
