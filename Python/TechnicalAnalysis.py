@@ -63,6 +63,13 @@ class TechnicalAnalysis:
         cur_date = str(cur_date)
         dipFound = False
         crossovers = 0
+        todays_date = max(prices)
+        if todays_date not in twentyEMA or todays_date not in fiftyEMA:
+            print("date not in 20 EMA or not in 50 EMA")
+            return False
+        todays_t_ema = float(twentyEMA[todays_date]["EMA"])
+        todays_f_ema = float(fiftyEMA[todays_date]["EMA"])
+        todays_price = float(prices[todays_date]["4. close"])
         # Only check for last numDays amount of days
         while cur_date > end_date:
             # Ensure that given date is in fifty EMA and in prices
@@ -78,24 +85,17 @@ class TechnicalAnalysis:
                 return False
             if cur_price < cur_twenty_ema:  # Change this to TODO
                 dipFound = True
-                # print("DIP")
-                # Buy at 3rd dip.
-                if crossovers == 2:
-                    print("{} has been bought at {} on {}\n".format(tick, cur_price, cur_date))
-                    self.boughtStocks[tick] = cur_price
-                    return True
                 # New code between this and above comment
             elif dipFound and cur_price > cur_twenty_ema:
                 # print("crossover 1")
                 dipFound = False
                 crossovers += 1
-            # if crossovers == 3:
-            #     print("Buy")
-            #     return True
+                # Buy at 3rd dip.
             cur_date = str(next(ema_iter))
-
-        # no triple crossover found within specified time period.
-        # print("Ran out of days")
+        if crossovers == 2 and todays_t_ema > todays_f_ema:
+            print("{} has been bought at {} on {}".format(tick, todays_price, cur_date))
+            self.boughtStocks[tick] = todays_price
+            return True
         return False
 
     def meetsCrossoverRequirements(self, twentyEMA: dict, fiftyEMA: dict, tick: str) -> bool:
@@ -147,6 +147,7 @@ class TechnicalAnalysis:
         cur_twenty_ema = float(twentyEMA[cur_date]["EMA"])
         cur_price = float(prices[cur_date]["4. close"])
         if tick in self.sellDip and cur_price >= cur_twenty_ema:
+            print('\n')
             stock_profit = cur_price - self.boughtStocks[tick]
             self.profit += stock_profit
             print("{} has been sold at {} on {}".format(tick, cur_price, cur_date))

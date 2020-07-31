@@ -41,14 +41,18 @@ class Backtesting:
                 cur_t_ema = next(twenty_ema_gen)
                 cur_f_ema = next(fifty_ema_gen)
                 cur_day_prices = next(price_gen)
+                # TODO - Unnecessary to do max()
+                # print("Results for day: {}".format(max(cur_day_prices)))
                 if self.ta.meetsCrossoverRequirements(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, tick=ticker):
                     self.ta.isTripleCrossover(cur_t_ema, cur_f_ema, cur_day_prices, tick=ticker)
                 if ticker in self.ta.boughtStocks:
                     self.ta.checkSellDip(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, prices=cur_day_prices, tick=ticker)
                     self.ta.checkSellStock(twentyEMA=cur_t_ema, prices=cur_day_prices, tick=ticker)
+                print('\n')
             if ticker in self.ta.boughtStocks:
                 self.force_sold_profit += self.force_sell(tick=ticker, prices_dict=prices)
-            print("\n")
+            print("New total profit: {}, New forced profit: {}".format(self.ta.profit, self.force_sold_profit))
+            print('\n')
         print("TOTAL PROFIT: {}".format(self.ta.profit))
         print("TOTAL FORCE SOLD PROFIT: {}".format(self.force_sold_profit))
         return self.ta.profit
@@ -70,7 +74,7 @@ class Backtesting:
         last_day = max(prices_dict)
         last_price = float(prices_dict[last_day]["4. close"])
         total_stock_profit = (last_price - self.ta.boughtStocks[tick])
-        print("{} sold on {} for {}".format(tick, last_day, last_price))
+        print("{} force sold on {} for {}".format(tick, last_day, last_price))
         return total_stock_profit
 
     @staticmethod
@@ -91,6 +95,10 @@ class Backtesting:
 
 
 if __name__ == '__main__':
-    t = ["IBM", "AMZN", "RNG", "AAPL", "AMD", "TSLA", "NVDA", "TUP", "GOOG"]
-    historical_test = Backtesting(test_tickers=["TSLA"], start_date="2013-01-01", end_date="2019-01-01")
+    t = ["A", "C", "T", "HOG", "HPQ",
+         "IBM", "AMZN", "RNG", "AAPL",
+         "AMD", "TSLA", "NVDA", "TUP",
+         "GOOG", "KO", "LUV", "MMM",
+         "MSFT", "INTC", "TGT", "WMT"]
+    historical_test = Backtesting(test_tickers=t, start_date="2013-01-01", end_date="2019-01-01")
     historical_test.test_algorithm()
