@@ -15,7 +15,7 @@ class Backtesting:
         self.force_sold_profit = 0
 
     def test_algorithm(self):
-        api_call_count = 0
+        api_call_count = 1
         for ticker in self.test_tickers:
             if api_call_count % 5 == 0: time.sleep(70)
             api_call_count += 1
@@ -42,7 +42,7 @@ class Backtesting:
                 cur_f_ema = next(fifty_ema_gen)
                 cur_day_prices = next(price_gen)
                 if self.ta.meetsCrossoverRequirements(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, tick=ticker):
-                    if self.ta.isTripleCrossover(cur_t_ema, cur_f_ema, cur_day_prices, tick=ticker):
+                    self.ta.isTripleCrossover(cur_t_ema, cur_f_ema, cur_day_prices, tick=ticker)
                 if ticker in self.ta.boughtStocks:
                     self.ta.checkSellDip(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, prices=cur_day_prices, tick=ticker)
                     self.ta.checkSellStock(twentyEMA=cur_t_ema, prices=cur_day_prices, tick=ticker)
@@ -80,7 +80,8 @@ class Backtesting:
         for count, day in enumerate(date_dict):
             data_up_to_date[day] = date_dict[day]
             if count > 100:
-                yield data_up_to_date
+                # TODO - Definitely a better way to do this.
+                yield dict(reversed(data_up_to_date.items()))
 
     """
     1) Given x amount of tickers, get historical data of tickers from alphavantage's API.

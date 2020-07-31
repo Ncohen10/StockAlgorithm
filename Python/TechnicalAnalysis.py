@@ -147,7 +147,7 @@ class TechnicalAnalysis:
         cur_twenty_ema = float(twentyEMA[cur_date]["EMA"])
         cur_price = float(prices[cur_date]["4. close"])
         if tick in self.sellDip and cur_price >= cur_twenty_ema:
-            stock_profit = self.boughtStocks[tick] - cur_price
+            stock_profit = cur_price - self.boughtStocks[tick]
             self.profit += stock_profit
             print("{} has been sold at {} on {}".format(tick, cur_price, cur_date))
             del self.boughtStocks[tick]
@@ -160,7 +160,7 @@ class TechnicalAnalysis:
         # TODO - Maybe fix this?
         numDays = 100
         # TODO - Make sure reversed() is correct
-        ema_iter = iter(reversed(twentyEMA))  # Be careful with this !!!
+        ema_iter = iter(twentyEMA)  # Be careful with this !!!
         cur_date = next(ema_iter)
         # if timestamp is attached to current date
         if len(cur_date) > 10:
