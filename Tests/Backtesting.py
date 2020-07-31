@@ -13,6 +13,7 @@ class Backtesting:
         self.ta = TechnicalAnalysis("MA6YR6D5TVXK1W67")
         self.total_profit = 0
         self.force_sold_profit = 0
+        self.cash = 100000
 
     def test_algorithm(self):
         api_call_count = 1
@@ -94,8 +95,8 @@ class Backtesting:
 
 
 if __name__ == '__main__':
-    t = ["A", "C", "T", "HOG", "HPQ",
-         "IBM", "AMZN", "RNG", "AAPL",
+    t = ["AMZN", "C", "T", "HOG", "HPQ",
+         "IBM", "A", "RNG", "AAPL",
          "AMD", "TSLA", "NVDA", "TUP",
          "GOOG", "KO", "LUV", "MMM",
          "MSFT", "INTC", "TGT", "WMT"]

@@ -49,7 +49,7 @@ class TechnicalAnalysis:
         - self.boughStock[stock] = price
         """
         # TODO - Instead of curPrice going below 20EMA, check if curPrice is x less than previous 1-3 days.
-        numDays = 100
+        numDays = 50
         ema_iter = iter(twentyEMA)
         cur_date = next(ema_iter)
         # if timestamp is attached to current date
@@ -147,7 +147,7 @@ class TechnicalAnalysis:
         cur_twenty_ema = float(twentyEMA[cur_date]["EMA"])
         cur_price = float(prices[cur_date]["4. close"])
         if tick in self.sellDip and cur_price >= cur_twenty_ema:
-            stock_profit = cur_price - self.boughtStocks[tick]
+            stock_profit = cur_price / (cur_price - self.boughtStocks[tick])
             self.profit += stock_profit
             print("{} has been sold at {} on {}\n".format(tick, cur_price, cur_date))
             del self.boughtStocks[tick]
@@ -158,7 +158,7 @@ class TechnicalAnalysis:
         # TODO - Perhaps just sell when 20EMA crosses below 50EMA. Or when price trades below 20EMA/50EMA
         # TODO - Deal with duplicate code.
         # TODO - Maybe fix this?
-        numDays = 100
+        numDays = 30
         # TODO - Make sure reversed() is correct
         ema_iter = iter(twentyEMA)  # Be careful with this !!!
         cur_date = next(ema_iter)
