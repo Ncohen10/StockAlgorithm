@@ -29,6 +29,8 @@ class Backtesting:
             api_call_count += 1
             prices = self.ta.getPrice(symbol=ticker, fullOutput=True)
             prices = self.filter_dates(prices)
+            print(prices)
+            print("delimiter")
 
             print("testing: {}".format(ticker))
             twenty_ema_gen = self.stock_info_generator(date_dict=twenty_ema)
@@ -45,10 +47,9 @@ class Backtesting:
                     if self.ta.isTripleCrossover(cur_t_ema, cur_f_ema, cur_day_prices, tick=ticker):
                         print("{} has been bought".format(ticker))
                 if ticker in self.ta.boughtStocks:
-                    if self.ta.checkSellDip(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, prices=cur_day_prices, stock=ticker):
-                        print("{} found sold dip".format(ticker))
-                        if (self.ta.checkSellStock(twentyEMA=cur_t_ema, prices=cur_day_prices, tick=ticker)):
-                            print("yo sold")
+                    self.ta.checkSellDip(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, prices=cur_day_prices, tick=ticker)
+                    if self.ta.checkSellStock(twentyEMA=cur_t_ema, prices=cur_day_prices, tick=ticker):
+                        print("yo sold")
             if ticker in self.ta.boughtStocks:
                 self.force_sold_profit += self.force_sell(tick=ticker, prices_dict=prices)
             print("\n")
@@ -93,5 +94,6 @@ class Backtesting:
 
 
 if __name__ == '__main__':
-    historical_test = Backtesting(test_tickers=["IBM", "AMZN", "RNG", "AAPL", "AMD", "TSLA", "NVDA", "TUP", "GOOG"], start_date="2013-01-01", end_date="2019-01-01")
+    t = ["IBM", "AMZN", "RNG", "AAPL", "AMD", "TSLA", "NVDA", "TUP", "GOOG"]
+    historical_test = Backtesting(test_tickers=["TSLA"], start_date="2013-01-01", end_date="2019-01-01")
     historical_test.test_algorithm()

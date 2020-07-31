@@ -136,15 +136,18 @@ class TechnicalAnalysis:
         if tick not in self.boughtStocks:
             return False
         cur_date = max(prices)
-        cur_date = next(iter(twentyEMA))
+        # cur_date = next(iter(twentyEMA))
         if len(cur_date) > 10:
             # Remove timestamp and transform into a datetime object
             cur_date = dt.datetime.strptime(cur_date, "%Y-%m-%d %H:%M:%S").date()
         else:
             cur_date = dt.datetime.strptime(cur_date, "%Y-%m-%d").date()
-        if cur_date not in prices:
-            print("No common date")
+        cur_date = str(cur_date)
+        if cur_date not in twentyEMA:
+            # print("No common date")
             return False
+        else:
+            print("dfound")
         cur_twenty_ema = twentyEMA[cur_date]
         cur_price = prices[cur_date]
         if tick in self.sellDip and cur_price >= cur_twenty_ema:
@@ -173,7 +176,9 @@ class TechnicalAnalysis:
         # end date is current date - numDays
         end_date = str(cur_date - dt.timedelta(numDays))
         cur_date = str(cur_date)
-        while cur_date < end_date:
+        # print("cur: {}".format(cur_date))
+        # print("end: {}".format(end_date))
+        while cur_date > end_date:
             if cur_date not in fiftyEMA or cur_date not in prices:
                 cur_date = next(ema_iter)
                 # print("Continuing. Date not found in both twenty and fifty EMA.")
@@ -182,10 +187,16 @@ class TechnicalAnalysis:
             cur_fifty_ema = float(fiftyEMA[cur_date]["EMA"])
             cur_price = float(prices[cur_date]["4. close"])
             if cur_twenty_ema > cur_fifty_ema:  # We won't want to sell if this is true
-                return False
+                if tick in self.sellDip:
+                    self.sellDip.remove(tick)
+                    return False
             if cur_price < cur_twenty_ema and cur_price < cur_fifty_ema:
                 self.sellDip.add(tick)
+                return True
             cur_date = str(next(ema_iter))
+        if tick in self.sellDip:
+            self.sellDip.remove(tick)
+            return False
 
         # dipFound = False
         # while cur_date < end_date:
@@ -205,12 +216,6 @@ class TechnicalAnalysis:
         #     #     self.sellDip.add(stock)
         #     cur_date = str(next(ema_iter))
 
-        """
-            - Requirements:
-                - while 20 EMA < 50 EMA:
-                    - prices dip below 20&50 EMA
-                    - sell once price rises to 20 EMA 
-            """
 
 
 
