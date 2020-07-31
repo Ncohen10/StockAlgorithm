@@ -44,11 +44,10 @@ class Backtesting:
                 # TODO - Unnecessary to do max()
                 # print("Results for day: {}".format(max(cur_day_prices)))
                 if self.ta.meetsCrossoverRequirements(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, tick=ticker):
-                    self.ta.isTripleCrossover(cur_t_ema, cur_f_ema, cur_day_prices, tick=ticker)
+                    self.ta.isTripleCrossover(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, prices=cur_day_prices, tick=ticker)
                 if ticker in self.ta.boughtStocks:
                     self.ta.checkSellDip(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, prices=cur_day_prices, tick=ticker)
                     self.ta.checkSellStock(twentyEMA=cur_t_ema, prices=cur_day_prices, tick=ticker)
-                print('\n')
             if ticker in self.ta.boughtStocks:
                 self.force_sold_profit += self.force_sell(tick=ticker, prices_dict=prices)
             print("New total profit: {}, New forced profit: {}".format(self.ta.profit, self.force_sold_profit))
@@ -85,7 +84,7 @@ class Backtesting:
             data_up_to_date[day] = date_dict[day]
             if count > 100:
                 # TODO - Definitely a better way to do this.
-                yield dict(reversed(data_up_to_date.items()))
+                yield dict(sorted(data_up_to_date.items(), reverse=True))
 
     """
     1) Given x amount of tickers, get historical data of tickers from alphavantage's API.

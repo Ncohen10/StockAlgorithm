@@ -93,7 +93,7 @@ class TechnicalAnalysis:
                 # Buy at 3rd dip.
             cur_date = str(next(ema_iter))
         if crossovers == 2 and todays_t_ema > todays_f_ema:
-            print("{} has been bought at {} on {}".format(tick, todays_price, cur_date))
+            print("{} has been bought at {} on {}".format(tick, todays_price, todays_date))
             self.boughtStocks[tick] = todays_price
             return True
         return False
@@ -147,10 +147,9 @@ class TechnicalAnalysis:
         cur_twenty_ema = float(twentyEMA[cur_date]["EMA"])
         cur_price = float(prices[cur_date]["4. close"])
         if tick in self.sellDip and cur_price >= cur_twenty_ema:
-            print('\n')
             stock_profit = cur_price - self.boughtStocks[tick]
             self.profit += stock_profit
-            print("{} has been sold at {} on {}".format(tick, cur_price, cur_date))
+            print("{} has been sold at {} on {}\n".format(tick, cur_price, cur_date))
             del self.boughtStocks[tick]
             self.soldStocks[tick] = cur_price
             return True
