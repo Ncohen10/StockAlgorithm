@@ -13,7 +13,8 @@ class Backtesting:
         self.ta = TechnicalAnalysis("MA6YR6D5TVXK1W67")
         self.total_profit = 0
         self.force_sold_profit = 0
-        self.cash = 100000
+        self.cash = 1000
+        self.invest_amount = 100
 
     def test_algorithm(self):
         api_call_count = 1
@@ -45,13 +46,19 @@ class Backtesting:
                 # TODO - Unnecessary to do max()
                 # print("Results for day: {}".format(max(cur_day_prices)))
                 if self.ta.meetsCrossoverRequirements(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, tick=ticker):
-                    self.ta.isTripleCrossover(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, prices=cur_day_prices, tick=ticker)
+                    if self.ta.isTripleCrossover(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, prices=cur_day_prices, tick=ticker):
+                        self.cash -= self.invest_amount
                 if ticker in self.ta.boughtStocks:
                     self.ta.checkSellDip(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, prices=cur_day_prices, tick=ticker)
-                    self.ta.checkSellStock(twentyEMA=cur_t_ema, prices=cur_day_prices, tick=ticker)
+                    profit_percent = self.ta.checkSellStock(twentyEMA=cur_t_ema, prices=cur_day_prices, tick=ticker)
+                    if profit_percent != 0:
+                        print(profit_percent)
+                        self.cash += (self.invest_amount * (1 + profit_percent))
+                        # self.ta.profit = self.cash - 100000
             if ticker in self.ta.boughtStocks:
-                self.force_sold_profit += self.force_sell(tick=ticker, prices_dict=prices)
-            print("New total profit: {}, New forced profit: {}".format(self.ta.profit, self.force_sold_profit))
+                self.cash += self.invest_amount
+               # self.force_sold_profit += self.force_sell(tick=ticker, prices_dict=prices)
+            print("New total cash: {}, New forced profit: {}".format(self.cash, self.force_sold_profit))
             print('\n')
         print("TOTAL PROFIT: {}".format(self.ta.profit))
         print("TOTAL FORCE SOLD PROFIT: {}".format(self.force_sold_profit))
@@ -95,10 +102,10 @@ class Backtesting:
 
 
 if __name__ == '__main__':
-    t = ["AMZN", "C", "T", "HOG", "HPQ",
-         "IBM", "A", "RNG", "AAPL",
-         "AMD", "TSLA", "NVDA", "TUP",
+    t = ["C", "T", "HOG", "HPQ",
+         "IBM", "A", "RNG",
+         "AMD", "TUP",
          "GOOG", "KO", "LUV", "MMM",
-         "MSFT", "INTC", "TGT", "WMT"]
-    historical_test = Backtesting(test_tickers=t, start_date="2013-01-01", end_date="2019-01-01")
+        "TGT", "WMT"]
+    historical_test = Backtesting(test_tickers=t, start_date="2019-01-01", end_date="2020-01-01")
     historical_test.test_algorithm()

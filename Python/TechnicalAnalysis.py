@@ -49,7 +49,7 @@ class TechnicalAnalysis:
         - self.boughStock[stock] = price
         """
         # TODO - Instead of curPrice going below 20EMA, check if curPrice is x less than previous 1-3 days.
-        numDays = 50
+        numDays = 20
         ema_iter = iter(twentyEMA)
         cur_date = next(ema_iter)
         # if timestamp is attached to current date
@@ -114,7 +114,7 @@ class TechnicalAnalysis:
                     commonDateFound = True
                     break
             if not commonDateFound:
-                print("No shared date for twenty EMA and fifty EMA within past 3 days.")
+                print("No shared date for twenty EMA and fifty EMA within past 5 days.")
                 return False
         latest_twenty_ema = float(twentyEMA[curDate]["EMA"])
         latest_fifty_ema = float(fiftyEMA[curDate]["EMA"])
@@ -130,9 +130,9 @@ class TechnicalAnalysis:
             return True
         return False
 
-    def checkSellStock(self, twentyEMA: dict, prices: dict, tick: str):
+    def checkSellStock(self, twentyEMA: dict, prices: dict, tick: str) -> float:
         if tick not in self.boughtStocks:
-            return False
+            return 0.0
         cur_date = max(prices)
         # cur_date = next(iter(twentyEMA))
         if len(cur_date) > 10:
@@ -143,16 +143,19 @@ class TechnicalAnalysis:
         cur_date = str(cur_date)
         if cur_date not in twentyEMA:
             # print("No common date")
-            return False
+            return 0.0
         cur_twenty_ema = float(twentyEMA[cur_date]["EMA"])
         cur_price = float(prices[cur_date]["4. close"])
         if tick in self.sellDip and cur_price >= cur_twenty_ema:
-            stock_profit = cur_price / (cur_price - self.boughtStocks[tick])
-            self.profit += stock_profit
+            if cur_price - self.boughtStocks[tick] == 0:
+                return 0.0
+            stock_profit = (cur_price - self.boughtStocks[tick]) / cur_price
+            # print("cur price: {}, bough[tick]: {}".format(cur_price, self.boughtStocks[tick]))
             print("{} has been sold at {} on {}\n".format(tick, cur_price, cur_date))
             del self.boughtStocks[tick]
             self.soldStocks[tick] = cur_price
-            return True
+            return stock_profit
+        return 0.0
 
     def checkSellDip(self, twentyEMA: dict, fiftyEMA: dict, prices: dict, tick: str):
         # TODO - Perhaps just sell when 20EMA crosses below 50EMA. Or when price trades below 20EMA/50EMA
@@ -184,7 +187,7 @@ class TechnicalAnalysis:
             if cur_twenty_ema > cur_fifty_ema:  # We won't want to sell if this is true
                 if tick in self.sellDip:
                     self.sellDip.remove(tick)
-                    return False
+                return False
             if cur_price < cur_twenty_ema and cur_price < cur_fifty_ema:
                 self.sellDip.add(tick)
                 return True
