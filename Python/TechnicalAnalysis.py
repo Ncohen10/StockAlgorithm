@@ -49,6 +49,8 @@ class TechnicalAnalysis:
         - self.boughStock[stock] = price
         """
         # TODO - Instead of curPrice going below 20EMA, check if curPrice is x less than previous 1-3 days.
+        if tick in self.boughtStocks:
+            return False
         numDays = 100
         ema_iter = iter(twentyEMA)
         cur_date = next(ema_iter)
@@ -71,7 +73,7 @@ class TechnicalAnalysis:
         todays_t_ema = float(twentyEMA[todays_date]["EMA"])
         todays_f_ema = float(fiftyEMA[todays_date]["EMA"])
         todays_price = float(prices[todays_date]["4. close"])
-        if todays_f_ema < todays_t_ema:
+        if todays_t_ema < todays_f_ema:
             return False
         # Only check for last numDays amount of days
         while cur_date > end_date:
@@ -95,13 +97,13 @@ class TechnicalAnalysis:
                 dipFound = False
                 crossovers += 1
                 # Buy at 3rd dip.
-            cur_date = prev_date
-            prev_date = str(next(ema_iter))
-            # is_buy = crossovers >= 2 # TODO - clean this up
             if crossovers >= 2:
                 print("{} has been bought at {} on {}".format(tick, todays_price, todays_date))
                 self.boughtStocks[tick] = todays_price
                 return True
+            cur_date = prev_date
+            prev_date = str(next(ema_iter))
+            # is_buy = crossovers >= 2 # TODO - clean this up
         return False
 
     def meetsCrossoverRequirements(self, twentyEMA: dict, fiftyEMA: dict, tick: str) -> bool:
@@ -148,7 +150,7 @@ class TechnicalAnalysis:
             cur_date = dt.datetime.strptime(cur_date, "%Y-%m-%d").date()
         cur_date = str(cur_date)
         if cur_date not in twentyEMA:
-            # print("No common date")
+            print("No common date")
             return 0.0
         cur_twenty_ema = float(twentyEMA[cur_date]["EMA"])
         cur_fifty_ema = float(fiftyEMA[cur_date]["EMA"])
@@ -156,7 +158,7 @@ class TechnicalAnalysis:
         if tick in self.sellDip and cur_price < cur_fifty_ema:
             if cur_price - self.boughtStocks[tick] == 0:
                 return 0.0
-            stock_profit = (cur_price - self.boughtStocks[tick]) / cur_price
+            stock_profit = (cur_price - self.boughtStocks[tick]) / self.boughtStocks[tick]
             # print("cur price: {}, bough[tick]: {}".format(cur_price, self.boughtStocks[tick]))
             print("{} has been sold at {} on {}\n".format(tick, cur_price, cur_date))
             del self.boughtStocks[tick]
@@ -170,7 +172,7 @@ class TechnicalAnalysis:
         # TODO - Maybe fix this?
         numDays = 30
         # TODO - Make sure reversed() is correct
-        ema_iter = iter(twentyEMA)  # Be careful with this !!!
+        ema_iter = iter(twentyEMA)
         cur_date = next(ema_iter)
         prev_date = next(ema_iter)
         # if timestamp is attached to current date
@@ -197,7 +199,7 @@ class TechnicalAnalysis:
                 if tick in self.sellDip:
                     self.sellDip.remove(tick)
                 return False
-            if cur_price < cur_twenty_ema or cur_price < cur_fifty_ema: # and cur_price < cur_fifty_ema:
+            if cur_price < cur_fifty_ema: # and cur_price < cur_fifty_ema:
                 self.sellDip.add(tick)
                 return True
             cur_date = str(next(ema_iter))
@@ -239,8 +241,8 @@ if __name__ == '__main__':
     while att < 10:
         try:
             scraper = YahooSymbolScraper("C:\\Program Files\\Mozilla Firefox\\firefox.exe",
-                                           "../geckodriver.exe",
-                                           "https://finance.yahoo.com/screener/predefined/growth_technology_stocks")
+                                         "../geckodriver.exe",
+                                         "https://finance.yahoo.com/screener/predefined/growth_technology_stocks")
             ticks = scraper.generateTickers()
         except (NoSuchWindowException, WebDriverException) as e:
             att += 1

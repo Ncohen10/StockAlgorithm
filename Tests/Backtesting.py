@@ -17,7 +17,7 @@ class Backtesting:
         self.invest_amount = 100
 
     def test_algorithm(self, test_tickers: List[str]):
-        api_call_count = 1
+        api_call_count = 0
         for ticker in test_tickers:
             if api_call_count % 5 == 0: time.sleep(70)
             api_call_count += 1
@@ -44,17 +44,15 @@ class Backtesting:
                 cur_f_ema = next(fifty_ema_gen)
                 cur_day_prices = next(price_gen)
                 # TODO - Unnecessary to do max()
-                # print("Results for day: {}".format(max(cur_day_prices)))
-                if self.ta.meetsCrossoverRequirements(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, tick=ticker):
-                    if self.ta.isTripleCrossover(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, prices=cur_day_prices, tick=ticker):
-                        self.cash -= self.invest_amount
+                # if self.ta.meetsCrossoverRequirements(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, tick=ticker):
+                if self.ta.isTripleCrossover(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, prices=cur_day_prices, tick=ticker):
+                    self.cash -= self.invest_amount
                 if ticker in self.ta.boughtStocks:
                     self.ta.checkSellDip(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, prices=cur_day_prices, tick=ticker)
-                    profit_percent = self.ta.checkSellStock(twentyEMA=cur_t_ema, prices=cur_day_prices, tick=ticker)
+                    profit_percent = self.ta.checkSellStock(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, prices=cur_day_prices, tick=ticker)
                     if profit_percent != 0:
                         print(profit_percent)
                         self.cash += (self.invest_amount * (1 + profit_percent))
-                        # self.ta.profit = self.cash - 100000
             if ticker in self.ta.boughtStocks:
                 self.cash += self.invest_amount
                 self.force_sold_profit += self.force_sell(tick=ticker, prices_dict=prices)
@@ -114,7 +112,7 @@ class Backtesting:
 
 
 if __name__ == '__main__':
-    historical_test = Backtesting(start_date="2019-01-01", end_date="2020-01-01")
+    historical_test = Backtesting(start_date="2013-01-01", end_date="2020-01-01")
     # tickers = historical_test.get_NYSE_ticks()
     tickers = ["C", "T", "HOG", "HPQ",
                "IBM", "A", "RNG",
