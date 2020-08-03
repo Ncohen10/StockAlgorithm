@@ -1,4 +1,5 @@
 import time
+import random
 from typing import List
 from Python.TechnicalAnalysis import TechnicalAnalysis
 
@@ -6,19 +7,18 @@ from Python.TechnicalAnalysis import TechnicalAnalysis
 class Backtesting:
 
     # dates must be in form "YYYY-MM-DD"
-    def __init__(self, test_tickers: List[str], start_date: str, end_date: str):
-        self.test_tickers = test_tickers
+    def __init__(self, start_date: str, end_date: str):
         self.start_date = start_date
         self.end_date = end_date
         self.ta = TechnicalAnalysis("MA6YR6D5TVXK1W67")
         self.total_profit = 0
-        self.force_sold_profit = 0
+        self.force_sold_profit = 1000
         self.cash = 1000
         self.invest_amount = 100
 
-    def test_algorithm(self):
+    def test_algorithm(self, test_tickers: List[str]):
         api_call_count = 1
-        for ticker in self.test_tickers:
+        for ticker in test_tickers:
             if api_call_count % 5 == 0: time.sleep(70)
             api_call_count += 1
             twenty_ema = self.ta.getEMA(symbol=ticker, timePeriod="20", interval="daily")
@@ -57,7 +57,7 @@ class Backtesting:
                         # self.ta.profit = self.cash - 100000
             if ticker in self.ta.boughtStocks:
                 self.cash += self.invest_amount
-               # self.force_sold_profit += self.force_sell(tick=ticker, prices_dict=prices)
+                self.force_sold_profit += self.force_sell(tick=ticker, prices_dict=prices)
             print("New total cash: {}, New forced profit: {}".format(self.cash, self.force_sold_profit))
             print('\n')
         print("TOTAL PROFIT: {}".format(self.ta.profit))
@@ -80,9 +80,21 @@ class Backtesting:
     def force_sell(self, tick, prices_dict):
         last_day = max(prices_dict)
         last_price = float(prices_dict[last_day]["4. close"])
-        total_stock_profit = (last_price - self.ta.boughtStocks[tick])
+        total_stock_profit = 1 + ((last_price - self.ta.boughtStocks[tick]) / last_price)
+        total_stock_profit *= self.invest_amount
         print("{} force sold on {} for {}".format(tick, last_day, last_price))
         return total_stock_profit
+
+    def get_NYSE_ticks(self, amount=50):
+        tick_list = []
+        with open("../Data/NYSE.txt") as f:
+            lines = list(f.readlines())
+            random.shuffle(lines)
+            for count, line in enumerate(lines):
+                cur_tick = line.split()[0]
+                tick_list.append(cur_tick)
+                if count == amount: break
+        return tick_list
 
     @staticmethod
     def stock_info_generator(date_dict):
@@ -102,10 +114,11 @@ class Backtesting:
 
 
 if __name__ == '__main__':
-    t = ["C", "T", "HOG", "HPQ",
-         "IBM", "A", "RNG",
-         "AMD", "TUP",
-         "GOOG", "KO", "LUV", "MMM",
-        "TGT", "WMT"]
-    historical_test = Backtesting(test_tickers=t, start_date="2019-01-01", end_date="2020-01-01")
-    historical_test.test_algorithm()
+    historical_test = Backtesting(start_date="2019-01-01", end_date="2020-01-01")
+    # tickers = historical_test.get_NYSE_ticks()
+    tickers = ["C", "T", "HOG", "HPQ",
+               "IBM", "A", "RNG",
+               "AMD", "TUP",
+               "GOOG", "KO", "LUV", "MMM",
+               "TGT", "WMT"]
+    historical_test.test_algorithm(tickers)

@@ -49,9 +49,10 @@ class TechnicalAnalysis:
         - self.boughStock[stock] = price
         """
         # TODO - Instead of curPrice going below 20EMA, check if curPrice is x less than previous 1-3 days.
-        numDays = 20
+        numDays = 100
         ema_iter = iter(twentyEMA)
         cur_date = next(ema_iter)
+        prev_date = next(ema_iter)
         # if timestamp is attached to current date
         if len(cur_date) > 10:
             # Remove timestamp and transform into a datetime object
@@ -70,6 +71,8 @@ class TechnicalAnalysis:
         todays_t_ema = float(twentyEMA[todays_date]["EMA"])
         todays_f_ema = float(fiftyEMA[todays_date]["EMA"])
         todays_price = float(prices[todays_date]["4. close"])
+        if todays_f_ema < todays_t_ema:
+            return False
         # Only check for last numDays amount of days
         while cur_date > end_date:
             # Ensure that given date is in fifty EMA and in prices
@@ -80,10 +83,11 @@ class TechnicalAnalysis:
             cur_twenty_ema = float(twentyEMA[cur_date]["EMA"])
             cur_fifty_ema = float(fiftyEMA[cur_date]["EMA"])
             cur_price = float(prices[cur_date]["4. close"])
+            prev_price = float(prices[prev_date]["4. close"])
             # Triple crossover strategy code
             if cur_twenty_ema < cur_fifty_ema:
                 return False
-            if cur_price < cur_twenty_ema:  # Change this to TODO
+            if cur_price < prev_price:  # Change this to TODO
                 dipFound = True
                 # New code between this and above comment
             elif dipFound and cur_price > cur_twenty_ema:
@@ -91,11 +95,13 @@ class TechnicalAnalysis:
                 dipFound = False
                 crossovers += 1
                 # Buy at 3rd dip.
-            cur_date = str(next(ema_iter))
-        if crossovers == 2 and todays_t_ema > todays_f_ema:
-            print("{} has been bought at {} on {}".format(tick, todays_price, todays_date))
-            self.boughtStocks[tick] = todays_price
-            return True
+            cur_date = prev_date
+            prev_date = str(next(ema_iter))
+            # is_buy = crossovers >= 2 # TODO - clean this up
+            if crossovers >= 2:
+                print("{} has been bought at {} on {}".format(tick, todays_price, todays_date))
+                self.boughtStocks[tick] = todays_price
+                return True
         return False
 
     def meetsCrossoverRequirements(self, twentyEMA: dict, fiftyEMA: dict, tick: str) -> bool:
@@ -130,7 +136,7 @@ class TechnicalAnalysis:
             return True
         return False
 
-    def checkSellStock(self, twentyEMA: dict, prices: dict, tick: str) -> float:
+    def checkSellStock(self, twentyEMA: dict, fiftyEMA: dict, prices: dict, tick: str) -> float:
         if tick not in self.boughtStocks:
             return 0.0
         cur_date = max(prices)
@@ -145,8 +151,9 @@ class TechnicalAnalysis:
             # print("No common date")
             return 0.0
         cur_twenty_ema = float(twentyEMA[cur_date]["EMA"])
+        cur_fifty_ema = float(fiftyEMA[cur_date]["EMA"])
         cur_price = float(prices[cur_date]["4. close"])
-        if tick in self.sellDip and cur_price >= cur_twenty_ema:
+        if tick in self.sellDip and cur_price < cur_fifty_ema:
             if cur_price - self.boughtStocks[tick] == 0:
                 return 0.0
             stock_profit = (cur_price - self.boughtStocks[tick]) / cur_price
@@ -165,6 +172,7 @@ class TechnicalAnalysis:
         # TODO - Make sure reversed() is correct
         ema_iter = iter(twentyEMA)  # Be careful with this !!!
         cur_date = next(ema_iter)
+        prev_date = next(ema_iter)
         # if timestamp is attached to current date
         if len(cur_date) > 10:
             # Remove timestamp and transform into a datetime object
@@ -184,11 +192,12 @@ class TechnicalAnalysis:
             cur_twenty_ema = float(twentyEMA[cur_date]["EMA"])
             cur_fifty_ema = float(fiftyEMA[cur_date]["EMA"])
             cur_price = float(prices[cur_date]["4. close"])
+            prev_price = float(prices[prev_date]["4. close"])
             if cur_twenty_ema > cur_fifty_ema:  # We won't want to sell if this is true
                 if tick in self.sellDip:
                     self.sellDip.remove(tick)
                 return False
-            if cur_price < cur_twenty_ema and cur_price < cur_fifty_ema:
+            if cur_price < cur_twenty_ema or cur_price < cur_fifty_ema: # and cur_price < cur_fifty_ema:
                 self.sellDip.add(tick)
                 return True
             cur_date = str(next(ema_iter))
