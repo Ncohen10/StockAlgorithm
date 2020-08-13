@@ -19,7 +19,7 @@ class Backtesting:
         self.buy_hold_stocks = {}
 
     def test_algorithm(self, test_tickers: List[str]):
-        api_call_count = 5
+        api_call_count = 1
         for ticker in test_tickers:
             if api_call_count % 5 == 0: time.sleep(70)
             api_call_count += 1
@@ -57,9 +57,10 @@ class Backtesting:
                     profit_percent = self.ta.checkSellStock(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, prices=cur_day_prices, tick=ticker)
                     if profit_percent != 0:
                         print(profit_percent)
-                        self.cash += (self.invest_amount * (1 + profit_percent))
+                        self.cash += (self.invest_amount * (1 + profit_percent)) - self.invest_amount
+                        print("updated cash: {}".format(self.cash))
             if ticker in self.ta.boughtStocks:
-                self.cash += self.invest_amount
+                #self.cash += self.invest_amount
                 self.force_sold_profit += self.force_sell(tick=ticker, prices_dict=prices)
             print("New total cash: {}, New forced profit: {}".format(self.cash, self.force_sold_profit))
             print('\n')

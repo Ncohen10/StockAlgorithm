@@ -34,7 +34,7 @@ class TechnicalAnalysis:
         cur_thund_ema = float(twoHundEMA[cur_date]["EMA"])
         cur_price = float(prices[cur_date]["4. close"])
 
-        stock_profit = (cur_price - self.boughtStocks[tick][0]) / self.boughtStocks[tick][0]
+        stock_profit = (cur_price - self.boughtStocks[tick][0]) / cur_price
         if cur_twenty_ema < cur_thund_ema:
             print("{} has been sold at {} on {}\n".format(tick, cur_price, cur_date))
             del self.boughtStocks[tick]
@@ -149,7 +149,6 @@ class TechnicalAnalysis:
         pass
 
     def basicCrossoverTest(self, prices: dict, twentyEMA: dict, fiftyEMA: dict, tick: str) -> bool:
-
         if tick in self.boughtStocks:
             return False
         if not twentyEMA or not fiftyEMA:
@@ -159,8 +158,6 @@ class TechnicalAnalysis:
         if todays_date not in twentyEMA or todays_date not in fiftyEMA:
             print("date not in 20 EMA or not in 50 EMA")
             return False
-        todays_t_ema = float(twentyEMA[todays_date]["EMA"])
-        todays_f_ema = float(fiftyEMA[todays_date]["EMA"])
         todays_price = float(prices[todays_date]["4. close"])
         ema_iter = iter(twentyEMA)
         curDate = next(ema_iter)
@@ -204,7 +201,7 @@ class TechnicalAnalysis:
             return 0.0
         if cur_twenty_ema < cur_fifty_ema and heldForTwoMonths:
             print("{} has been sold at {} on {}\n".format(tick, cur_price, cur_date))
-            stock_profit = (cur_price - self.boughtStocks[tick][0]) / self.boughtStocks[tick][0]
+            stock_profit = (cur_price - self.boughtStocks[tick][0]) / cur_price
             del self.boughtStocks[tick]
             self.soldStocks[tick] = cur_price
             return stock_profit
