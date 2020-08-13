@@ -4,7 +4,6 @@ import datetime as dt
 from selenium.common.exceptions import NoSuchWindowException, WebDriverException
 from WebScrapers.YahooSymbolScraper import YahooSymbolScraper
 
-
 class TechnicalAnalysis:
 
     # TODO - Put Alphavantage API call methods into separate class.
@@ -16,6 +15,32 @@ class TechnicalAnalysis:
         self.soldStocks = {}  # map of stocks to price sold
         self.sellDip = set()  # Set of stocks that have experienced a sell dip.
         self.profit = 0
+
+    def deathCross(self, tick, prices, twentyEMA, twoHundEMA):
+        if tick not in self.boughtStocks:
+            return 0.0
+        cur_date = max(prices)
+        # cur_date = next(iter(twentyEMA))
+        if len(cur_date) > 10:
+            # Remove timestamp and transform into a datetime object
+            cur_date = dt.datetime.strptime(cur_date, "%Y-%m-%d %H:%M:%S").date()
+        else:
+            cur_date = dt.datetime.strptime(cur_date, "%Y-%m-%d").date()
+        cur_date = str(cur_date)
+        if cur_date not in twentyEMA:
+            print("No common date")
+            return 0.0
+        cur_twenty_ema = float(twentyEMA[cur_date]["EMA"])
+        cur_thund_ema = float(twoHundEMA[cur_date]["EMA"])
+        cur_price = float(prices[cur_date]["4. close"])
+
+        stock_profit = (cur_price - self.boughtStocks[tick][0]) / self.boughtStocks[tick][0]
+        if cur_twenty_ema < cur_thund_ema:
+            print("{} has been sold at {} on {}\n".format(tick, cur_price, cur_date))
+            del self.boughtStocks[tick]
+            self.soldStocks[tick] = cur_price
+            return stock_profit
+
 
     def getEMA(self, symbol: str, timePeriod: str, interval: str = "daily") -> dict:  # Only set up for equity
         resp = requests.get("https://www.alphavantage.co/query?function=EMA&symbol="
@@ -85,33 +110,58 @@ class TechnicalAnalysis:
             cur_twenty_ema = float(twentyEMA[cur_date]["EMA"])
             cur_fifty_ema = float(fiftyEMA[cur_date]["EMA"])
             cur_price = float(prices[cur_date]["4. close"])
-            prev_price = float(prices[prev_date]["4. close"])
             # Triple crossover strategy code
             if cur_twenty_ema < cur_fifty_ema:
                 return False
-            if cur_price < prev_price:  # Change this to TODO
+            if cur_price < cur_twenty_ema and cur_price < cur_fifty_ema:
+                return False
+            five_day_max = self.get_five_day_max(prices=prices, start_date=cur_date)
+            max_dip_diff = (five_day_max - cur_price) / five_day_max
+            if max_dip_diff >= 0.005:  # Change this to TODO
                 dipFound = True
                 # New code between this and above comment
-            elif dipFound and cur_price > cur_twenty_ema:
+            if dipFound and cur_price > cur_twenty_ema: # todo - replace with dip diff
                 # print("crossover 1")
                 dipFound = False
                 crossovers += 1
                 # Buy at 3rd dip.
             if crossovers >= 2:
                 print("{} has been bought at {} on {}".format(tick, todays_price, todays_date))
-                self.boughtStocks[tick] = todays_price
+                self.boughtStocks[tick] = (todays_price, todays_date)
                 return True
             cur_date = prev_date
             prev_date = str(next(ema_iter))
             # is_buy = crossovers >= 2 # TODO - clean this up
         return False
 
-    def meetsCrossoverRequirements(self, twentyEMA: dict, fiftyEMA: dict, tick: str) -> bool:
+    @staticmethod
+    def get_five_day_max(prices: dict, start_date: str) -> float:
+        start = dt.datetime.strptime(start_date, "%Y-%m-%d").date()
+        five_day_max = "0"
+        for day in range(5):
+            cur_date = str(start - dt.timedelta(day))
+            if cur_date not in prices: continue
+            five_day_max = max(five_day_max, prices[cur_date]["4. close"])
+        return float(five_day_max)
+
+
+    def basicSell(self, prices: dict, twentyEMA: dict, fiftyEMA: dict, tick: str) -> bool:
+        pass
+
+    def basicCrossoverTest(self, prices: dict, twentyEMA: dict, fiftyEMA: dict, tick: str) -> bool:
+
         if tick in self.boughtStocks:
             return False
         if not twentyEMA or not fiftyEMA:
             print("How is this happening")
             return False
+        todays_date = max(prices)
+        if todays_date not in twentyEMA or todays_date not in fiftyEMA:
+            print("date not in 20 EMA or not in 50 EMA")
+            return False
+        todays_t_ema = float(twentyEMA[todays_date]["EMA"])
+        todays_f_ema = float(fiftyEMA[todays_date]["EMA"])
+        todays_price = float(prices[todays_date]["4. close"])
         ema_iter = iter(twentyEMA)
         curDate = next(ema_iter)
         if curDate not in fiftyEMA:
@@ -126,17 +176,11 @@ class TechnicalAnalysis:
                 return False
         latest_twenty_ema = float(twentyEMA[curDate]["EMA"])
         latest_fifty_ema = float(fiftyEMA[curDate]["EMA"])
-
-        # if latest_twenty_ema > latest_fifty_ema:
-        #     return False
-        # Ensure the difference of the fifty and twenty ema are within 5% of eachother
-        diff = abs(latest_fifty_ema - latest_twenty_ema) / latest_fifty_ema
-        # print("difference of twenty and fifty EMA: {}".format(diff))
-        tolerance = 0.05  # Make higher to be less selective but also have less accurate predictions
-        if diff <= tolerance:
-            # print("within tolerance")
-            return True
-        return False
+        if latest_twenty_ema > latest_fifty_ema:
+            print("{} has been bought at {} on {}".format(tick, todays_price, todays_date))
+            self.boughtStocks[tick] = (todays_price, todays_date)
+        else:
+            return False
 
     def checkSellStock(self, twentyEMA: dict, fiftyEMA: dict, prices: dict, tick: str) -> float:
         if tick not in self.boughtStocks:
@@ -155,23 +199,20 @@ class TechnicalAnalysis:
         cur_twenty_ema = float(twentyEMA[cur_date]["EMA"])
         cur_fifty_ema = float(fiftyEMA[cur_date]["EMA"])
         cur_price = float(prices[cur_date]["4. close"])
-        if tick in self.sellDip and cur_price < cur_fifty_ema:
-            if cur_price - self.boughtStocks[tick] == 0:
-                return 0.0
-            stock_profit = (cur_price - self.boughtStocks[tick]) / self.boughtStocks[tick]
-            # print("cur price: {}, bough[tick]: {}".format(cur_price, self.boughtStocks[tick]))
+        heldForTwoMonths = self.boughtStocks[tick][1] <= str(dt.datetime.strptime(cur_date, "%Y-%m-%d").date() - dt.timedelta(60))
+        if cur_price - self.boughtStocks[tick][0] == 0:
+            return 0.0
+        if cur_twenty_ema < cur_fifty_ema and heldForTwoMonths:
             print("{} has been sold at {} on {}\n".format(tick, cur_price, cur_date))
+            stock_profit = (cur_price - self.boughtStocks[tick][0]) / self.boughtStocks[tick][0]
             del self.boughtStocks[tick]
             self.soldStocks[tick] = cur_price
             return stock_profit
         return 0.0
 
     def checkSellDip(self, twentyEMA: dict, fiftyEMA: dict, prices: dict, tick: str):
-        # TODO - Perhaps just sell when 20EMA crosses below 50EMA. Or when price trades below 20EMA/50EMA
         # TODO - Deal with duplicate code.
-        # TODO - Maybe fix this?
         numDays = 30
-        # TODO - Make sure reversed() is correct
         ema_iter = iter(twentyEMA)
         cur_date = next(ema_iter)
         prev_date = next(ema_iter)
@@ -184,8 +225,6 @@ class TechnicalAnalysis:
         # end date is current date - numDays
         end_date = str(cur_date - dt.timedelta(numDays))
         cur_date = str(cur_date)
-        # print("cur: {}".format(cur_date))
-        # print("end: {}".format(end_date))
         while cur_date > end_date:
             if cur_date not in fiftyEMA or cur_date not in prices:
                 cur_date = next(ema_iter)
@@ -194,12 +233,12 @@ class TechnicalAnalysis:
             cur_twenty_ema = float(twentyEMA[cur_date]["EMA"])
             cur_fifty_ema = float(fiftyEMA[cur_date]["EMA"])
             cur_price = float(prices[cur_date]["4. close"])
-            prev_price = float(prices[prev_date]["4. close"])
+            # prev_price = float(prices[prev_date]["4. close"])
             if cur_twenty_ema > cur_fifty_ema:  # We won't want to sell if this is true
                 if tick in self.sellDip:
                     self.sellDip.remove(tick)
                 return False
-            if cur_price < cur_fifty_ema: # and cur_price < cur_fifty_ema:
+            if cur_price < cur_fifty_ema and cur_price < cur_fifty_ema:
                 self.sellDip.add(tick)
                 return True
             cur_date = str(next(ema_iter))

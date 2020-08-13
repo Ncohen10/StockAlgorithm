@@ -1,4 +1,3 @@
-Symbol	Description
 A	Agilent Technologies
 AA	Alcoa Corp
 AAN	Aaron's Inc
