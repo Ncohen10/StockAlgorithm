@@ -19,23 +19,23 @@ class Backtesting:
         self.buy_hold_stocks = {}
 
     def test_algorithm(self, test_tickers: List[str]):
-        api_call_count = 1
+        api_call_count = 0
         for ticker in test_tickers:
             if api_call_count % 5 == 0: time.sleep(70)
             api_call_count += 1
-            twenty_ema = self.ta.getEMA(symbol=ticker, timePeriod="20", interval="daily")
+            twenty_ema = self.ta.getEMA(symbol=ticker, timePeriod="50", interval="daily")
             twenty_ema = self.filter_dates(twenty_ema)
             if api_call_count % 5 == 0: time.sleep(70)
             api_call_count += 1
-            fifty_ema = self.ta.getEMA(symbol=ticker, timePeriod="50", interval="daily")
+            fifty_ema = self.ta.getEMA(symbol=ticker, timePeriod="20", interval="daily")
             fifty_ema = self.filter_dates(fifty_ema)
             if api_call_count % 5 == 0: time.sleep(70)
             api_call_count += 1
             prices = self.ta.getPrice(symbol=ticker, fullOutput=True)
             prices = self.filter_dates(prices)
-            # if api_call_count % 5 == 0: time.sleep(70)
-            # api_call_count += 1
-            # two_hund_ema = self.ta.getEMA(symbol=ticker, timePeriod="200", interval="daily")
+            if api_call_count % 5 == 0: time.sleep(70)
+            api_call_count += 1
+            two_hund_ema = self.ta.getEMA(symbol=ticker, timePeriod="200", interval="daily")
             print("testing: {}".format(ticker))
             self.buy_and_hold_invest(tick=ticker, prices_dict=prices)
             twenty_ema_gen = self.stock_info_generator(date_dict=twenty_ema)
@@ -50,17 +50,17 @@ class Backtesting:
                 # TODO - Unnecessary to do max()
                 # if self.ta.meetsCrossoverRequirements(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, tick=ticker):
                 # if self.ta.isTripleCrossover(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, prices=cur_day_prices, tick=ticker):
-                if self.ta.basicCrossoverTest(prices=cur_day_prices, twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, tick=ticker):
+                if self.ta.basicCrossoverTest(prices=cur_day_prices, twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, twohundEMA=two_hund_ema, tick=ticker):
                     self.cash -= self.invest_amount
                 if ticker in self.ta.boughtStocks:
                     # self.ta.checkSellDip(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, prices=cur_day_prices, tick=ticker)
                     profit_percent = self.ta.checkSellStock(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, prices=cur_day_prices, tick=ticker)
                     if profit_percent != 0:
                         print(profit_percent)
-                        self.cash += (self.invest_amount * (1 + profit_percent)) - self.invest_amount
+                        self.cash += (self.invest_amount * (1 + profit_percent))
                         print("updated cash: {}".format(self.cash))
             if ticker in self.ta.boughtStocks:
-                #self.cash += self.invest_amount
+                self.cash += self.invest_amount
                 self.force_sold_profit += self.force_sell(tick=ticker, prices_dict=prices)
             print("New total cash: {}, New forced profit: {}".format(self.cash, self.force_sold_profit))
             print('\n')
@@ -85,6 +85,7 @@ class Backtesting:
     def buy_and_hold_invest(self, tick, prices_dict):
         try:
             if tick not in self.buy_hold_stocks:
+                self.buy_hold_money -= self.invest_amount
                 buy_date = min(prices_dict)
                 buy_price = prices_dict[buy_date]["4. close"]
                 self.buy_hold_stocks[tick] = float(buy_price)
@@ -137,13 +138,14 @@ class Backtesting:
 
 
 if __name__ == '__main__':
-    historical_test = Backtesting(start_date="2013-01-01", end_date="2020-01-01")
-    tickers = historical_test.get_NYSE_ticks(amount=100)
-    print(tickers)
-    # PACD is outlier...
-    # tickers = ["C", "T", "HOG", "HPQ",
-    #            "IBM", "A", "RNG",
-    #            "AMD", "TUP",
-    #            "GOOG", "KO", "LUV", "MMM",
-    #            "TGT", "WMT"]
-    historical_test.test_algorithm(tickers)
+    avg = 0
+    total = 0
+    for i in range(1, 11):
+        historical_test = Backtesting(start_date="2013-01-01", end_date="2020-01-01")
+        tickers = historical_test.get_NYSE_ticks(amount=100)
+        print(tickers)
+        # PACD is outlier...
+        tickers = ['BBDC', 'PAYC', 'AIZP', 'BV', 'TRT-C', 'BYD', 'PLT', 'NM-G', 'RRD', 'JPC', 'DG', 'ARL', 'DMB', 'ATO', 'LHC.U', 'LTC', 'NEU', 'RNR-F', 'RES', 'SPE-B', 'INSI', 'ABT', 'PEO', 'ANF', 'HEXO', 'BLD', 'CPG', 'LHX', 'CEIX', 'UZA', 'MH-A', 'ADC', 'GMRE', 'TPC', 'ETR', 'JEF', 'AM', 'IRM', 'GGT-E', 'ATC-G', 'JRO', 'HYB', 'EURN', 'SPN', 'GBAB', 'NGS', 'SWZ', 'AIG', 'RPM', 'PEB-F', 'VAC', 'ALUS', 'MDLA', 'CMSC', 'TRT-A', 'CAL', 'SID', 'SOLN', 'RGR', 'TCO', 'SCD', 'DELL', 'NMR', 'JE-A', 'AIV', 'MFV', 'EDU', 'SFT.U', 'HRI', 'BKI', 'NOW', 'UTL', 'HCR', 'ICL', 'PBFX', 'HCC', 'RLI', 'NYCB', 'QTS-A', 'LITB', 'ENZ', 'AVAL', 'GLEO', 'MET', 'STZ', 'AFGD', 'OCFT', 'ALT.W', 'DESP', 'BRBR', 'QSR', 'ASB-C', 'BTA', 'CLN-I', 'PPR', 'GFL', 'GIK.U', 'KEX', 'PCI', 'CDAY', 'MTG']
+        historical_test.test_algorithm(tickers)
+        total += historical_test.cash
+        avg = print("cash avg for {} iteration".format(total / i))
