@@ -19,42 +19,42 @@ class Backtesting:
         self.buy_hold_stocks = {}
 
     def test_algorithm(self, test_tickers: List[str]):
-        api_call_count = 1
+        api_call_count = 0
         for ticker in test_tickers:
             if api_call_count % 5 == 0: time.sleep(70)
             api_call_count += 1
-            twenty_ema = self.ta.getEMA(symbol=ticker, timePeriod="50", interval="daily")
+            twenty_ema = self.ta.getEMA(symbol=ticker, timePeriod="20", interval="daily")
             twenty_ema = self.filter_dates(twenty_ema)
             if api_call_count % 5 == 0: time.sleep(70)
             api_call_count += 1
-            fifty_ema = self.ta.getEMA(symbol=ticker, timePeriod="20", interval="daily")
-            fifty_ema = self.filter_dates(fifty_ema)
+            five_ema = self.ta.getEMA(symbol=ticker, timePeriod="5", interval="daily")
+            five_ema = self.filter_dates(five_ema)
             if api_call_count % 5 == 0: time.sleep(70)
             api_call_count += 1
             prices = self.ta.getPrice(symbol=ticker, fullOutput=True)
             prices = self.filter_dates(prices)
             if api_call_count % 5 == 0: time.sleep(70)
             api_call_count += 1
-            two_hund_ema = self.ta.getEMA(symbol=ticker, timePeriod="200", interval="daily")
+            # two_hund_ema = self.ta.getEMA(symbol=ticker, timePeriod="200", interval="daily")
             print("testing: {}".format(ticker))
             self.buy_and_hold_invest(tick=ticker, prices_dict=prices)
             twenty_ema_gen = self.stock_info_generator(date_dict=twenty_ema)
-            fifty_ema_gen = self.stock_info_generator(date_dict=fifty_ema)
+            five_ema_gen = self.stock_info_generator(date_dict=five_ema)
             price_gen = self.stock_info_generator(date_dict=prices)
 
-            max_days = len(min(twenty_ema, fifty_ema, prices, key=len)) - 101
+            max_days = len(min(twenty_ema, five_ema, prices, key=len)) - 101
             for day in range(max_days):
                 cur_t_ema = next(twenty_ema_gen)
-                cur_f_ema = next(fifty_ema_gen)
+                cur_f_ema = next(five_ema_gen)
                 cur_day_prices = next(price_gen)
                 # TODO - Unnecessary to do max()
                 # if self.ta.meetsCrossoverRequirements(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, tick=ticker):
                 # if self.ta.isTripleCrossover(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, prices=cur_day_prices, tick=ticker):
-                if self.ta.basicCrossoverTest(prices=cur_day_prices, twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, twohundEMA=two_hund_ema, tick=ticker):
+                if self.ta.basicCrossoverTest(prices=cur_day_prices, twentyEMA=cur_t_ema, fiveEMA=cur_f_ema,  tick=ticker):
                     self.cash -= self.invest_amount
                 if ticker in self.ta.boughtStocks:
                     # self.ta.checkSellDip(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, prices=cur_day_prices, tick=ticker)
-                    profit_percent = self.ta.checkSellStock(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, twoHundEMA=two_hund_ema, prices=cur_day_prices, tick=ticker)
+                    profit_percent = self.ta.checkSellStock(twentyEMA=cur_t_ema, fiveEMA=cur_f_ema, prices=cur_day_prices, tick=ticker)
                     if profit_percent != 0:
                         print(profit_percent)
                         self.cash += (self.invest_amount * profit_percent)
@@ -145,7 +145,7 @@ if __name__ == '__main__':
     SPY = "../Data/SPY.txt"
     # for i in range(1, 11):
     historical_test = Backtesting(start_date="2019-01-01", end_date="2020-08-14")
-    tickers = historical_test.get_random_ticks(file=SPY, amount=500)
+    tickers = historical_test.get_random_ticks(file=NYSE, amount=500)
     print(tickers)
     # PACD is outlier...
     # tickers = ['BBDC', 'PAYC', 'AIZP', 'BV', 'TRT-C', 'BYD', 'PLT', 'NM-G', 'RRD', 'JPC', 'DG', 'ARL', 'DMB', 'ATO', 'LHC.U', 'LTC', 'NEU', 'RNR-F', 'RES', 'SPE-B', 'INSI', 'ABT', 'PEO', 'ANF', 'HEXO', 'BLD', 'CPG', 'LHX', 'CEIX', 'UZA', 'MH-A', 'ADC', 'GMRE', 'TPC', 'ETR', 'JEF', 'AM', 'IRM', 'GGT-E', 'ATC-G', 'JRO', 'HYB', 'EURN', 'SPN', 'GBAB', 'NGS', 'SWZ', 'AIG', 'RPM', 'PEB-F', 'VAC', 'ALUS', 'MDLA', 'CMSC', 'TRT-A', 'CAL', 'SID', 'SOLN', 'RGR', 'TCO', 'SCD', 'DELL', 'NMR', 'JE-A', 'AIV', 'MFV', 'EDU', 'SFT.U', 'HRI', 'BKI', 'NOW', 'UTL', 'HCR', 'ICL', 'PBFX', 'HCC', 'RLI', 'NYCB', 'QTS-A', 'LITB', 'ENZ', 'AVAL', 'GLEO', 'MET', 'STZ', 'AFGD', 'OCFT', 'ALT.W', 'DESP', 'BRBR', 'QSR', 'ASB-C', 'BTA', 'CLN-I', 'PPR', 'GFL', 'GIK.U', 'KEX', 'PCI', 'CDAY', 'MTG']
