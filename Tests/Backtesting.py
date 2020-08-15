@@ -12,9 +12,8 @@ class Backtesting:
         self.end_date = end_date
         self.ta = TechnicalAnalysis("MA6YR6D5TVXK1W67")
         self.total_profit = 0
-        self.force_sold_profit = 1000
         self.cash = 1000
-        self.invest_amount = 500
+        self.invest_amount = 200
         self.buy_hold_money = 1000
         self.buy_hold_stocks = {}
 
@@ -35,7 +34,6 @@ class Backtesting:
             prices = self.filter_dates(prices)
             if api_call_count % 5 == 0: time.sleep(70)
             api_call_count += 1
-            # two_hund_ema = self.ta.getEMA(symbol=ticker, timePeriod="200", interval="daily")
             print("testing: {}".format(ticker))
             self.buy_and_hold_invest(tick=ticker, prices_dict=prices)
             twenty_ema_gen = self.stock_info_generator(date_dict=twenty_ema)
@@ -61,13 +59,11 @@ class Backtesting:
                         print("updated cash: {}".format(self.cash))
 
             if ticker in self.ta.boughtStocks:
-                self.cash += self.invest_amount
-                self.force_sold_profit += self.force_sell(tick=ticker, prices_dict=prices)
-            print("New total cash: {}, New forced profit: {}".format(self.cash, self.force_sold_profit))
+                self.cash += self.invest_amount * self.force_sell(tick=ticker, prices_dict=prices)
+            print("New total cash: {}".format(self.cash))
             print('\n')
             self.buy_and_hold_invest(tick=ticker, prices_dict=prices)
         print("TOTAL PROFIT: {}".format(self.ta.profit))
-        print("TOTAL FORCE SOLD PROFIT: {}".format(self.force_sold_profit))
         return self.ta.profit
 
     def filter_dates(self, date_dict):
@@ -83,6 +79,7 @@ class Backtesting:
                 date_filtered_dict[date] = date_dict[date]  # Map date to its original data
         return date_filtered_dict
 
+
     def buy_and_hold_invest(self, tick, prices_dict):
         try:
             if tick not in self.buy_hold_stocks:
@@ -96,17 +93,17 @@ class Backtesting:
                 sell_price = float(prices_dict[sell_date]["4. close"])
                 profit = sell_price / self.buy_hold_stocks[tick]
                 print("{} sold from buy and hold at {} on {}".format(tick, sell_price, sell_date))
-                self.buy_hold_money += self.invest_amount * profit
+                self.buy_hold_money += (self.invest_amount * profit)
                 print("new buy hold profit: {}".format(self.buy_hold_money))
                 del self.buy_hold_stocks[tick]
-        except:
+        except Exception as e:
+            print(e)
             pass
 
     def force_sell(self, tick, prices_dict):
         last_day = max(prices_dict)
         last_price = float(prices_dict[last_day]["4. close"])
         total_stock_profit = last_price / self.ta.boughtStocks[tick][0]
-        total_stock_profit *= self.invest_amount
         print("{} force sold on {} for {}".format(tick, last_day, last_price))
         return total_stock_profit
 
@@ -143,12 +140,16 @@ if __name__ == '__main__':
     total = 0
     NYSE = "../Data/NYSE.txt"
     SPY = "../Data/SPY.txt"
-    # for i in range(1, 11):
-    historical_test = Backtesting(start_date="2019-01-01", end_date="2020-08-14")
-    tickers = historical_test.get_random_ticks(file=NYSE, amount=500)
-    print(tickers)
-    # PACD is outlier...
-    # tickers = ['BBDC', 'PAYC', 'AIZP', 'BV', 'TRT-C', 'BYD', 'PLT', 'NM-G', 'RRD', 'JPC', 'DG', 'ARL', 'DMB', 'ATO', 'LHC.U', 'LTC', 'NEU', 'RNR-F', 'RES', 'SPE-B', 'INSI', 'ABT', 'PEO', 'ANF', 'HEXO', 'BLD', 'CPG', 'LHX', 'CEIX', 'UZA', 'MH-A', 'ADC', 'GMRE', 'TPC', 'ETR', 'JEF', 'AM', 'IRM', 'GGT-E', 'ATC-G', 'JRO', 'HYB', 'EURN', 'SPN', 'GBAB', 'NGS', 'SWZ', 'AIG', 'RPM', 'PEB-F', 'VAC', 'ALUS', 'MDLA', 'CMSC', 'TRT-A', 'CAL', 'SID', 'SOLN', 'RGR', 'TCO', 'SCD', 'DELL', 'NMR', 'JE-A', 'AIV', 'MFV', 'EDU', 'SFT.U', 'HRI', 'BKI', 'NOW', 'UTL', 'HCR', 'ICL', 'PBFX', 'HCC', 'RLI', 'NYCB', 'QTS-A', 'LITB', 'ENZ', 'AVAL', 'GLEO', 'MET', 'STZ', 'AFGD', 'OCFT', 'ALT.W', 'DESP', 'BRBR', 'QSR', 'ASB-C', 'BTA', 'CLN-I', 'PPR', 'GFL', 'GIK.U', 'KEX', 'PCI', 'CDAY', 'MTG']
-    historical_test.test_algorithm(tickers)
-    total += historical_test.cash
-        # avg = print("cash avg for {} iteration".format(total / i))
+    for i in range(1, 11):
+        historical_test = Backtesting(start_date="2007-01-01", end_date="2020-01-01")
+        tickers = historical_test.get_random_ticks(file=NYSE, amount=30)
+        while "GOL" in tickers:  # GOL outlier that messes too much with testing
+            historical_test.get_random_ticks(file=NYSE, amount=30)
+        print(tickers)
+        # GOL = outlier
+        # tickers = ['BBDC', 'PAYC', 'AIZP', 'BV', 'TRT-C', 'BYD', 'PLT', 'NM-G', 'RRD', 'JPC', 'DG', 'ARL', 'DMB', 'ATO', 'LHC.U', 'LTC', 'NEU', 'RNR-F', 'RES', 'SPE-B', 'INSI', 'ABT', 'PEO', 'ANF', 'HEXO', 'BLD', 'CPG', 'LHX', 'CEIX', 'UZA', 'MH-A', 'ADC', 'GMRE', 'TPC', 'ETR', 'JEF', 'AM', 'IRM', 'GGT-E', 'ATC-G', 'JRO', 'HYB', 'EURN', 'SPN', 'GBAB', 'NGS', 'SWZ', 'AIG', 'RPM', 'PEB-F', 'VAC', 'ALUS', 'MDLA', 'CMSC', 'TRT-A', 'CAL', 'SID', 'SOLN', 'RGR', 'TCO', 'SCD', 'DELL', 'NMR', 'JE-A', 'AIV', 'MFV', 'EDU', 'SFT.U', 'HRI', 'BKI', 'NOW', 'UTL', 'HCR', 'ICL', 'PBFX', 'HCC', 'RLI', 'NYCB', 'QTS-A', 'LITB', 'ENZ', 'AVAL', 'GLEO', 'MET', 'STZ', 'AFGD', 'OCFT', 'ALT.W', 'DESP', 'BRBR', 'QSR', 'ASB-C', 'BTA', 'CLN-I', 'PPR', 'GFL', 'GIK.U', 'KEX', 'PCI', 'CDAY', 'MTG']
+        historical_test.test_algorithm(tickers)
+        total += historical_test.cash
+        avg = print("cash avg for {} iteration".format(total / i))
+
+# TODO - Fix buy and hold

@@ -98,16 +98,16 @@ class TechnicalAnalysis:
         cur_five_ema = float(fiveEMA[cur_date]["EMA"])
         cur_twenty_ema = float(twentyEMA[cur_date]["EMA"])
         cur_price = float(prices[cur_date]["4. close"])
-        stop_loss_threshold = 0.75
+        stop_loss_threshold = 0.65
         # buy_threshold = 0.25
         stock_profit = cur_price / self.boughtStocks[tick][0]
 
 
-        # if stock_profit <= stop_loss_threshold:
-        #     print("{} has been stop-loss sold at {} on {}\n".format(tick, cur_price, cur_date))
-        #     del self.boughtStocks[tick]
-        #     self.soldStocks[tick] = cur_price
-        #     return stock_profit
+        if stock_profit <= stop_loss_threshold:
+            print("{} has been stop-loss sold at {} on {}\n".format(tick, cur_price, cur_date))
+            del self.boughtStocks[tick]
+            self.soldStocks[tick] = cur_price
+            return stock_profit
         heldForTwoMonths = self.boughtStocks[tick][1] <= str(dt.datetime.strptime(cur_date, "%Y-%m-%d").date() - dt.timedelta(60))
         if cur_five_ema < cur_twenty_ema:
             if stock_profit <= 1.0:
