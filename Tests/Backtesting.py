@@ -12,9 +12,9 @@ class Backtesting:
         self.end_date = end_date
         self.ta = TechnicalAnalysis("MA6YR6D5TVXK1W67")
         self.total_profit = 0
-        self.cash = 1000
-        self.invest_amount = 200
-        self.buy_hold_money = 1000
+        self.cash = 10000
+        self.invest_amount = 500
+        self.buy_hold_money = 10000
         self.buy_hold_stocks = {}
 
     def test_algorithm(self, test_tickers: List[str]):
@@ -22,12 +22,12 @@ class Backtesting:
         for ticker in test_tickers:
             if api_call_count % 5 == 0: time.sleep(70)
             api_call_count += 1
-            twenty_ema = self.ta.getEMA(symbol=ticker, timePeriod="20", interval="daily")
-            twenty_ema = self.filter_dates(twenty_ema)
+            thirty_ema = self.ta.getEMA(symbol=ticker, timePeriod="30", interval="daily")
+            thirty_ema = self.filter_dates(thirty_ema)
             if api_call_count % 5 == 0: time.sleep(70)
             api_call_count += 1
-            five_ema = self.ta.getEMA(symbol=ticker, timePeriod="5", interval="daily")
-            five_ema = self.filter_dates(five_ema)
+            ninety_ema = self.ta.getEMA(symbol=ticker, timePeriod="90", interval="daily")
+            ninety_ema = self.filter_dates(ninety_ema)
             if api_call_count % 5 == 0: time.sleep(70)
             api_call_count += 1
             prices = self.ta.getPrice(symbol=ticker, fullOutput=True)
@@ -36,29 +36,30 @@ class Backtesting:
             api_call_count += 1
             print("testing: {}".format(ticker))
             self.buy_and_hold_invest(tick=ticker, prices_dict=prices)
-            twenty_ema_gen = self.stock_info_generator(date_dict=twenty_ema)
-            five_ema_gen = self.stock_info_generator(date_dict=five_ema)
+            thirty_ema_gen = self.stock_info_generator(date_dict=thirty_ema)
+            ninety_ema_gen = self.stock_info_generator(date_dict=ninety_ema)
             price_gen = self.stock_info_generator(date_dict=prices)
 
-            max_days = len(min(twenty_ema, five_ema, prices, key=len)) - 101
+            max_days = len(min(thirty_ema, ninety_ema, prices, key=len)) - 101
             for day in range(max_days):
-                cur_t_ema = next(twenty_ema_gen)
-                cur_f_ema = next(five_ema_gen)
+                cur_t_ema = next(thirty_ema_gen)
+                cur_n_ema = next(ninety_ema_gen)
                 cur_day_prices = next(price_gen)
                 # TODO - Unnecessary to do max()
                 # if self.ta.meetsCrossoverRequirements(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, tick=ticker):
                 # if self.ta.isTripleCrossover(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, prices=cur_day_prices, tick=ticker):
-                if self.ta.basicCrossoverTest(prices=cur_day_prices, twentyEMA=cur_t_ema, fiveEMA=cur_f_ema,  tick=ticker):
+                if self.ta.basicCrossoverTest(prices=cur_day_prices, thirtyEMA=cur_t_ema, ninetyEMA=cur_n_ema,  tick=ticker):
                     self.cash -= self.invest_amount
                 if ticker in self.ta.boughtStocks:
                     # self.ta.checkSellDip(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, prices=cur_day_prices, tick=ticker)
-                    profit_percent = self.ta.checkSellStock(twentyEMA=cur_t_ema, fiveEMA=cur_f_ema, prices=cur_day_prices, tick=ticker)
+                    profit_percent = self.ta.checkSellStock(thirtyEMA=cur_t_ema, ninetyEMA=cur_n_ema, prices=cur_day_prices, tick=ticker)
                     if profit_percent != 0:
                         print(profit_percent)
                         self.cash += (self.invest_amount * profit_percent)
                         print("updated cash: {}".format(self.cash))
 
             if ticker in self.ta.boughtStocks:
+                print("")
                 self.cash += self.invest_amount * self.force_sell(tick=ticker, prices_dict=prices)
             print("New total cash: {}".format(self.cash))
             print('\n')
@@ -79,26 +80,24 @@ class Backtesting:
                 date_filtered_dict[date] = date_dict[date]  # Map date to its original data
         return date_filtered_dict
 
-
     def buy_and_hold_invest(self, tick, prices_dict):
-        try:
-            if tick not in self.buy_hold_stocks:
-                self.buy_hold_money -= self.invest_amount
-                buy_date = min(prices_dict)
-                buy_price = prices_dict[buy_date]["4. close"]
-                self.buy_hold_stocks[tick] = float(buy_price)
-                print("{} entered buy and hold at {} on {}".format(tick, buy_price, buy_date))
-            else:
-                sell_date = max(prices_dict)
-                sell_price = float(prices_dict[sell_date]["4. close"])
-                profit = sell_price / self.buy_hold_stocks[tick]
-                print("{} sold from buy and hold at {} on {}".format(tick, sell_price, sell_date))
-                self.buy_hold_money += (self.invest_amount * profit)
-                print("new buy hold profit: {}".format(self.buy_hold_money))
-                del self.buy_hold_stocks[tick]
-        except Exception as e:
-            print(e)
-            pass
+        if not tick or not prices_dict:
+            print("Unable to buy and hold invest")
+            return
+        if tick not in self.buy_hold_stocks:
+            self.buy_hold_money -= self.invest_amount
+            buy_date = min(prices_dict)
+            buy_price = prices_dict[buy_date]["4. close"]
+            self.buy_hold_stocks[tick] = float(buy_price)
+            print("{} entered buy and hold at {} on {}".format(tick, buy_price, buy_date))
+        else:
+            sell_date = max(prices_dict)
+            sell_price = float(prices_dict[sell_date]["4. close"])
+            profit = sell_price / self.buy_hold_stocks[tick]
+            print("{} sold from buy and hold at {} on {}".format(tick, sell_price, sell_date))
+            self.buy_hold_money += (self.invest_amount * profit)
+            print("new buy hold profit: {}".format(self.buy_hold_money))
+            del self.buy_hold_stocks[tick]
 
     def force_sell(self, tick, prices_dict):
         last_day = max(prices_dict)
@@ -107,7 +106,8 @@ class Backtesting:
         print("{} force sold on {} for {}".format(tick, last_day, last_price))
         return total_stock_profit
 
-    def get_random_ticks(self, file,  amount=50):
+    @staticmethod
+    def get_random_ticks(file,  amount=50):
         tick_list = []
         with open(file) as f:
             lines = list(f.readlines())
@@ -140,14 +140,15 @@ if __name__ == '__main__':
     total = 0
     NYSE = "../Data/NYSE.txt"
     SPY = "../Data/SPY.txt"
+    PENNY = "../Data/PENNY.txt"  # Data is biased for penny stock info.
+    USA = "../Data/USA.txt"
     for i in range(1, 11):
-        historical_test = Backtesting(start_date="2007-01-01", end_date="2020-01-01")
-        tickers = historical_test.get_random_ticks(file=NYSE, amount=30)
+        historical_test = Backtesting(start_date="2007-01-01", end_date="2015-01-01")
+        tickers = historical_test.get_random_ticks(file=NYSE, amount=100)
         while "GOL" in tickers:  # GOL outlier that messes too much with testing
-            historical_test.get_random_ticks(file=NYSE, amount=30)
+            tickers = historical_test.get_random_ticks(file=NYSE, amount=100)
         print(tickers)
         # GOL = outlier
-        # tickers = ['BBDC', 'PAYC', 'AIZP', 'BV', 'TRT-C', 'BYD', 'PLT', 'NM-G', 'RRD', 'JPC', 'DG', 'ARL', 'DMB', 'ATO', 'LHC.U', 'LTC', 'NEU', 'RNR-F', 'RES', 'SPE-B', 'INSI', 'ABT', 'PEO', 'ANF', 'HEXO', 'BLD', 'CPG', 'LHX', 'CEIX', 'UZA', 'MH-A', 'ADC', 'GMRE', 'TPC', 'ETR', 'JEF', 'AM', 'IRM', 'GGT-E', 'ATC-G', 'JRO', 'HYB', 'EURN', 'SPN', 'GBAB', 'NGS', 'SWZ', 'AIG', 'RPM', 'PEB-F', 'VAC', 'ALUS', 'MDLA', 'CMSC', 'TRT-A', 'CAL', 'SID', 'SOLN', 'RGR', 'TCO', 'SCD', 'DELL', 'NMR', 'JE-A', 'AIV', 'MFV', 'EDU', 'SFT.U', 'HRI', 'BKI', 'NOW', 'UTL', 'HCR', 'ICL', 'PBFX', 'HCC', 'RLI', 'NYCB', 'QTS-A', 'LITB', 'ENZ', 'AVAL', 'GLEO', 'MET', 'STZ', 'AFGD', 'OCFT', 'ALT.W', 'DESP', 'BRBR', 'QSR', 'ASB-C', 'BTA', 'CLN-I', 'PPR', 'GFL', 'GIK.U', 'KEX', 'PCI', 'CDAY', 'MTG']
         historical_test.test_algorithm(tickers)
         total += historical_test.cash
         avg = print("cash avg for {} iteration".format(total / i))
