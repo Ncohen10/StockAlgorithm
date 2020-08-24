@@ -958,7 +958,6 @@ JNNDF	Japan Display Inc	$ 0.45	Summary | Guru Trades | 10-Y Financials | Analysi
 JPDYY	Japan Display Inc	$ 4.46	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
 JPXGY	Japan Exchange Group Inc	$ 12.77	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
 OSCUF	Japan Exchange Group Inc	$ 25.95	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
-JFOOF	Japan Foods Holding Ltd	$ 0.51	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
 JGLDF	Japan Gold Corp	$ 0.28	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
 NIPOF	Japan Hotel REIT Investment Corp	$ 478.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
 JLFNF	Japan Lifeline Co Ltd	$ 11.88	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider

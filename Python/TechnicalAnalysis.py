@@ -53,10 +53,6 @@ class TechnicalAnalysis:
         todays_price = float(prices[todays_date]["4. close"])
         latest_thirty_ema = float(thirtyEMA[todays_date]["EMA"])
         latest_ninety_ema = float(ninetyEMA[todays_date]["EMA"])
-        if todays_price < 5.0:  # Penny stocks are too volatile for this.
-            return False
-        # ema_diff = latest_five_ema / latest_twenty_ema
-        # print("difference of twenty and fifty EMA: {}".format(diff))
         if latest_thirty_ema < latest_ninety_ema:
             print("{} has been bought at {} on {}".format(tick, todays_price, todays_date))
             self.boughtStocks[tick] = (todays_price, todays_date)
@@ -114,11 +110,6 @@ class TechnicalAnalysis:
 
 if __name__ == '__main__':
     ta = TechnicalAnalysis("MA6YR6D5TVXK1W67")
-    # p = ta.getPrice("IBM")
-    # tEMA = ta.getEMA("IBM", "20")
-    # print(p)
-    # print(tEMA)
-
     att = 0
     fail = True
     ticks = []
@@ -129,7 +120,6 @@ if __name__ == '__main__':
                                          "../geckodriver.exe",
                                          "https://finance.yahoo.com/screener/predefined/growth_technology_stocks")
             ticks = scraper.generateTickers()
-            # ticks = ta.get_random_ticks(file="../Data/PENNY.txt", amount=25)
         except (NoSuchWindowException, WebDriverException) as e:
             att += 1
             print(e)
@@ -160,7 +150,7 @@ if __name__ == '__main__':
         print("current 30 EMA is: {}".format(currentTEMA["EMA"]))
         print("current 90 EMA is: {}".format(currentNEMA["EMA"]))
 
-        if ta.basicCrossoverTest(prices=priceDict, thirtyEMA=tEMA, ninetyEMA=nEMA, tick=tick):
+        if ta.checkBuyStock(prices=priceDict, thirtyEMA=tEMA, ninetyEMA=nEMA, tick=tick):
             boughStocks.append(tick)
         ta.checkSellStock(prices=priceDict, thirtyEMA=tEMA, ninetyEMA=nEMA, tick=tick)
 

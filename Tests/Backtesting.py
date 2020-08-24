@@ -6,23 +6,28 @@ from Python.TechnicalAnalysis import TechnicalAnalysis
 
 class Backtesting:
 
-    """ Just run main"""
-
     # dates must be in form "YYYY-MM-DD"
     def __init__(self, start_date: str, end_date: str, api_key: str):
         self.start_date = start_date
         self.end_date = end_date
         self.ta = TechnicalAnalysis("MA6YR6D5TVXK1W67")
-        self.total_profit = 0
         self.cash = 10000
         self.invest_amount = 200
         self.buy_hold_money = 10000
         self.buy_hold_stocks = {}
+        self.stock_profit_percent_sum = 0
+        self.trades_count = 0
+        self.buy_hold_trades_count = 0
+        self.buy_hold_profit_percent_sum = 0
 
     def test_algorithm(self, test_tickers: List[str]):
-        api_call_count = 1
+        """
+        - Retrieves stock EMA info and prices
+        - Tests if it
+        """
+        api_call_count = 0
         for ticker in test_tickers:
-            if api_call_count % 5 == 0:
+            if api_call_count % 5 == 0:  # 5 API calls allowed per min
                 time.sleep(70)
             api_call_count += 1
             thirty_ema = self.ta.getEMA(symbol=ticker, timePeriod="30", interval="daily")
@@ -40,8 +45,9 @@ class Backtesting:
             if api_call_count % 5 == 0:
                 time.sleep(70)
             api_call_count += 1
-            print("testing: {}".format(ticker))
+            print("\ntesting: {}".format(ticker))
             self.buy_and_hold_invest(tick=ticker, prices_dict=prices)
+            # Use generator function to simulate receiving stock info one day at a time.
             thirty_ema_gen = self.stock_info_generator(date_dict=thirty_ema)
             ninety_ema_gen = self.stock_info_generator(date_dict=ninety_ema)
             price_gen = self.stock_info_generator(date_dict=prices)
@@ -50,25 +56,34 @@ class Backtesting:
                 cur_t_ema = next(thirty_ema_gen)
                 cur_n_ema = next(ninety_ema_gen)
                 cur_day_prices = next(price_gen)
-                # TODO - Unnecessary to do max()
                 if self.ta.checkBuyStock(prices=cur_day_prices, thirtyEMA=cur_t_ema, ninetyEMA=cur_n_ema,  tick=ticker):
                     self.cash -= self.invest_amount
                 if ticker in self.ta.boughtStocks:
                     # self.ta.checkSellDip(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, prices=cur_day_prices, tick=ticker)
                     profit_percent = self.ta.checkSellStock(thirtyEMA=cur_t_ema, ninetyEMA=cur_n_ema, prices=cur_day_prices, tick=ticker)
                     if profit_percent != 0:
-                        print(profit_percent)
+                        print("{}'s stock profit: {:.5f}%".format(ticker, profit_percent))
                         self.cash += (self.invest_amount * profit_percent)
-                        print("updated cash: {}".format(self.cash))
-
+                        print("updated cash: {:.2f}".format(self.cash))
+                        self.stock_profit_percent_sum += profit_percent
+                        self.trades_count += 1
+            # If we've hit the end date, and we haven't sold the stock
+            # Then force sell it.
             if ticker in self.ta.boughtStocks:
-                print("")
-                self.cash += self.invest_amount * self.force_sell(tick=ticker, prices_dict=prices)
+                force_sold_profit = self.force_sell(tick=ticker, prices_dict=prices)
+                self.cash += self.invest_amount * force_sold_profit
+                self.stock_profit_percent_sum += force_sold_profit
+                self.trades_count += 1
+            self.buy_and_hold_invest(tick=ticker, prices_dict=prices)  # Sell the buy and hold money if we bought it.
             print("new buy hold profit: {}".format(self.buy_hold_money))
             print("New total cash: {}".format(self.cash))
-            print('\n')
-            self.buy_and_hold_invest(tick=ticker, prices_dict=prices)
-        print("TOTAL PROFIT: {}".format(self.ta.profit))
+        print("_" * 150)
+        print("Info for this historical test: ")
+        print("STOCK ALGORITHM TRADES EXECUTED: {}".format(self.trades_count))
+        print("TOTAL STOCK ALGORITHM PROFIT: {}".format(self.ta.profit))
+        print("AVERAGE STOCK ALGORITHM PROFIT PERCENT: {:.5f}".format(self.stock_profit_percent_sum / self.trades_count))
+        print("AVERAGE BUY AND HOLD PROFIT PERCENT: {:.5f}".format(self.buy_hold_profit_percent_sum / self.buy_hold_trades_count))
+        print("_" * 150)
         return self.ta.profit
 
     def filter_dates(self, date_dict):
@@ -100,9 +115,14 @@ class Backtesting:
             profit = sell_price / self.buy_hold_stocks[tick]
             print("{} sold from buy and hold at {} on {}".format(tick, sell_price, sell_date))
             self.buy_hold_money += (self.invest_amount * profit)
+            self.buy_hold_trades_count += 1
+            self.buy_hold_profit_percent_sum += profit
             del self.buy_hold_stocks[tick]
 
     def force_sell(self, tick, prices_dict):
+        """
+        If a stock has been bought and we've hit the end date, then sell it at the current stock's price
+        """
         last_day = max(prices_dict)
         last_price = float(prices_dict[last_day]["4. close"])
         total_stock_profit = last_price / self.ta.boughtStocks[tick][0]
@@ -118,7 +138,7 @@ class Backtesting:
             for count, line in enumerate(lines):
                 cur_tick = line.split()[0]
                 tick_list.append(cur_tick)
-                if count == amount: break
+                if count == amount - 1: break
         return tick_list
 
     @staticmethod
@@ -127,31 +147,60 @@ class Backtesting:
         - Generator function to simulate receiving stock info on a daily basis.
         - Given a dictionary of day->price, yields the dictionary's day by day prices.
             - Starts at earliest date + 100.
-
         """
-        data_up_to_date = date_dict.copy()
-        data_up_to_date = dict(sorted(data_up_to_date.items(), reverse=True))
+        data_up_to_date = {}
+        for count, day in enumerate(date_dict):
 
-        for count, day in enumerate(data_up_to_date):
             data_up_to_date[day] = date_dict[day]
             if count > 100:
                 # TODO - Definitely a better way to do this.
                 yield data_up_to_date
+# 2014-08-07
 
 if __name__ == '__main__':
-    avg = 0
-    total = 0
+    avg_algo_cash = 0
+    total_algo_cash = 0
     NYSE = "../Data/NYSE.txt"
     SPY = "../Data/SPY.txt"
     PENNY = "../Data/PENNY.txt"  # Data is biased for penny stock info.
     USA = "../Data/USA.txt"
     API_KEY = "MA6YR6D5TVXK1W67"
+    total_avg_stock_profit_sum = 0
+    total_algo_trades = 0
+    total_buy_hold_profit = 0
+    total_buy_hold_pct = 0
+    total_buy_hold_trades = 0
     for i in range(1, 11):
         historical_test = Backtesting(start_date="2007-01-01", end_date="2015-01-01", api_key=API_KEY)
-        tickers = historical_test.get_random_ticks(file=USA, amount=50)
+        tickers = historical_test.get_random_ticks(file=SPY, amount=3)
         print(tickers)
-        # GOL = outlier
         historical_test.test_algorithm(tickers)
-        total += historical_test.cash
-        avg = total / i
-        print("Total cash average for {} iterations: {}".format(i, avg))
+        total_algo_cash += historical_test.cash
+        avg_algo_cash = total_algo_cash / i
+        total_algo_trades += historical_test.trades_count
+        total_avg_stock_profit_sum += historical_test.stock_profit_percent_sum
+        print("Info for all iterations so far: ".format(i))
+
+
+        print("Algorithm trades executed for {} iterations: {}".format(i, total_algo_trades))
+        print("Total algorithm cash average for {} iterations: {}".format(i, avg_algo_cash))
+        avg_pct = total_avg_stock_profit_sum / total_algo_trades
+        print("Average algorithm profit based on ${} investments for {} iterations: {}".format(historical_test.invest_amount, i, avg_pct))
+        print("Commencing next iteration...")
+        print("*" * 150)
+    print("Backtest complete.")
+
+    """
+    ______________________________________________________________________________________________________________________________________________________
+    Info for this historical test: 
+    STOCK ALGORITHM TRADES EXECUTED: 41
+    TOTAL STOCK ALGORITHM PROFIT: 0
+    AVERAGE STOCK ALGORITHM PROFIT PERCENT: 1.08210
+    AVERAGE BUY AND HOLD PROFIT PERCENT: 2.84248
+    ______________________________________________________________________________________________________________________________________________________
+    Info for all iterations so far: 
+    Trades executed for 2 iterations: 64
+    Total cash average for 2 iterations: 10416.13843464239
+    Average stock profit for 2 iterations: 1.0650216304128732
+    Commencing to next iteration...
+    """
