@@ -12,12 +12,10 @@ class TechnicalAnalysis:
 
     def __init__(self, api_key):
         self.ALPHA_VANTAGE_API_KEY = api_key
-        # self.boughtStocks = {"RNG": 261.0, "AMD": 55.71, "UMC": 2.44, "IMOS": 20.34, "VNET": 13.89}  # map of stocks to price bought
         self.boughtStocks = {}
         self.soldStocks = {}  # map of stocks to price sold
         self.sellDip = set()  # Set of stocks that have experienced a sell dip.
         self.profit = 0
-
 
     def getEMA(self, symbol: str, timePeriod: str, interval: str = "daily") -> dict:  # Only set up for equity
         resp = requests.get("https://www.alphavantage.co/query?function=EMA&symbol="
@@ -28,7 +26,7 @@ class TechnicalAnalysis:
         data = resp.json()
         dictOfEMA = data.get("Technical Analysis: EMA")
         if not dictOfEMA:
-            print("getEMA() is returning an empty dictionary for some reason. May be too many API calls.")
+            print("getEMA() is returning an empty dictionary. May be too many API calls or there isn't data for these dates.")
         return dictOfEMA
 
     def getPrice(self, symbol: str, fullOutput=False) -> dict:  # TODO - make sure the API call is correct
@@ -44,7 +42,7 @@ class TechnicalAnalysis:
         dictOfPrices = data.get("Time Series (Daily)")
         return dictOfPrices
 
-    def basicCrossoverTest(self, prices: dict, thirtyEMA: dict, ninetyEMA: dict, tick: str) -> bool:
+    def checkBuyStock(self, prices: dict, thirtyEMA: dict, ninetyEMA: dict, tick: str) -> bool:
         if tick in self.boughtStocks:
             return False
         todays_date = max(prices)
@@ -55,6 +53,8 @@ class TechnicalAnalysis:
         todays_price = float(prices[todays_date]["4. close"])
         latest_thirty_ema = float(thirtyEMA[todays_date]["EMA"])
         latest_ninety_ema = float(ninetyEMA[todays_date]["EMA"])
+        if todays_price < 5.0:  # Penny stocks are too volatile for this.
+            return False
         # ema_diff = latest_five_ema / latest_twenty_ema
         # print("difference of twenty and fifty EMA: {}".format(diff))
         if latest_thirty_ema < latest_ninety_ema:

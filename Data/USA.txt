@@ -198,3 +198,900 @@ PCVX	Vaxcyte Inc	$ 51.39	Summary | Guru Trades | 10-Y Financials | Analysis | Fi
 SEEEF	Vaxil Bio Ltd	$ 0.02	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
 VXLLF	Vaxil Bio Ltd	$ 0.09	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
 VBIV	VBI Vaccines Inc
+CCLHF	C C Land Holdings Ltd	$ 0.36	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CMRDF	C Mer Industries Ltd	$ 5.20	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CCGGY	C&C Group PLC	$ 7.89	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CGPZF	C&C Group PLC	$ 2.50	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CFFI	C&F Financial Corp	$ 33.05	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CJ	C&J Energy Services Inc	$ 7.36	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CBNT	C-Bond Systems Inc	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CYSNF	C-Com Satellite Systems Inc	$ 2.08	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CUBG	C-Cube Genetics Inc	$ 3.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CTAIF	C. P. Lotus Corp	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CUYRF	C. Uyemura & Co Ltd	$ 60.50	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CHRW	C.H. Robinson Worldwide Inc	$ 96.49	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CPKPF	C.P. Pokphand Co Ltd	$ 0.10	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CPKPY	C.P. Pokphand Co Ltd	$ 2.54	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+BNK	C1 Financial Inc	$ 23.39	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CXXIF	C21 Investments Inc	$ 0.57	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CARCF	C3 Metals Inc	$ 0.05	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CAIAF	CA Immobilien Anlagen AG	$ 32.29	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CAIAF	CA Immobilien Anlagen AG	$ 32.29	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CA	CA Inc	$ 44.44	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CABF	CAB Financial Corp	$ 16.83	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CABA	Cabaletta Bio Inc	$ 11.99	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CAB	Cabela′s Inc	$ 61.50	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CWIXF	Cable & Wireless Communications PLC	$ 1.10	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CABO	Cable One Inc	$ 1826.30	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CVHSY	Cablevision Holding SA	$ 3.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CVC	Cablevision Systems Corp	$ 34.87	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CBT	Cabot Corp	$ 38.39	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+NNPTF	Cabot Energy PLC	$ 0.06	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CCMP	Cabot Microelectronics Corp	$ 157.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+COG	Cabot Oil & Gas Corp	$ 19.52	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CBGZF	Cabral Gold Inc	$ 0.34	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CEXPF	Cache Exploration Inc	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CACH	Cache Inc	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CACI	CACI International Inc	$ 232.13	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+WHD	Cactus Inc	$ 22.75	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+OJSY	CAD Dental Holdings Inc	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CADAF	Cadan Resources Corp	$ 0.03	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CADE	Cadence Bancorp	$ 8.96	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CDNS	Cadence Design Systems Inc	$ 110.57	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+RARMF	Cadence Minerals PLC	$ 0.11	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KDNCY	Cadence Minerals PLC	$ 0.95	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CADIF	Cadillac Ventures Inc	$ 0.02	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CDZI	Cadiz Inc	$ 10.20	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KDUS	Cadus Corp	$ 1.60	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CAE	CAE Inc	$ 14.55	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+AXVEF	Caelan Capital Inc	$ 0.07	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CACQ	Caesars Acquisition Co	$ 21.25	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CZR	Caesars Entertainment Inc	$ 44.70	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CSTE	Caesarstone Ltd	$ 10.86	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CFCGF	Cafe de Coral Holdings Ltd	$ 2.02	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+COFE	Cafe Holdings Inc	$ 0.07	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CAFS	Cafe Serendipity Holdings Inc	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+PRSS	CafePress Inc	$ 1.47	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CAI	CAI International Inc	$ 21.64	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CRNCY	Cairn Energy PLC	$ 3.62	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CRNZF	Cairn Energy PLC	$ 1.74	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CRRNF	Cairn Homes PLC	$ 1.43	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CAMYF	Caisse Regionale de Credit Agricole Mutuel de Pari	$ 91.50	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CRDMF	Caisse Regionale du Credit Agricole Mutuel du Lang	$ 65.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CAIXY	CaixaBank SA	$ 0.76	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CIXPF	CaixaBank SA	$ 2.36	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CALM	Cal-Maine Foods Inc	$ 42.22	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CLBS	Caladrius Biosciences Inc	$ 2.18	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CLMS	Calamos Asset Management Inc	$ 8.28	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CHY	Calamos Convertible & High Income Fund	$ 12.43	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CHI	CALAMOS CONVERTIBLE OPPORTUNITIES & INCOME FUND	$ 11.63	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CCD	Calamos Dynamic Convertible and Income Fund	$ 23.20	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CHW	Calamos Global Dynamic Income Fund	$ 8.17	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CGO	Calamos Global Total Return Fund	$ 12.54	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CSQ	Calamos Strategic Total Return Fund	$ 13.96	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CAMP	CalAmp Corp	$ 8.38	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CAA	CalAtlantic Group Inc	$ 53.12	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CVGW	Calavo Growers Inc	$ 62.12	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CBCFF	CALBEE Inc	$ 31.20	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CLBEY	CALBEE Inc	$ 7.82	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ALLXF	Caldas Gold Corp	$ 1.78	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CWLPF	Caldwell Partners International Inc	$ 0.58	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CMCL	Caledonia Mining Corp PLC	$ 18.96	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CMND	Caleminder Inc	$ 1.19	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CAL	Caleres Inc	$ 6.43	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+BUUZ	CalEthos Inc	$ 0.12	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CFWFF	Calfrac Well Services Ltd	$ 0.12	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CLNFF	Calian Group Ltd	$ 45.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CLBGF	Calibre Group Ltd	$ 0.07	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CXBMF	Calibre Mining Corp	$ 1.38	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CVXHF	Calico Resources Corp	$ 0.13	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CALRF	Calidus Resources Ltd	$ 0.35	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CALB	California Bancorp	$ 13.40	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CABC	California Bank of Commerce	$ 19.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CBHR	California Beach Restaurants Inc	$ 0.14	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CABB	California Business Bank	$ 0.05	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CFNB	California First National Bancorp	$ 15.32	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CFGMF	California Gold Mining Inc	$ 0.13	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CAIB	California International Bank NA	$ 0.07	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CLMC	California Mines Corp	$ 0.20	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CANOF	California Nanotechnologies Corp	$ 0.04	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CAOX	California Orchards Co	$ 1274.95	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CRPB	California Republic Bancorp	$ 37.17	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DLNDY	D&L Industries Inc	$ 2.71	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DALQF	D&L Industries Inc	$ 0.17	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DMCOF	d′Amico International Shipping SA	$ 0.53	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DNBD	D'Angelo Brands Inc	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DBOXF	D-Box Technologies Inc	$ 0.10	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DHI	D.R. Horton Inc	$ 76.97	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DFORF	D4t4 Solutions PLC	$ 2.63	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DGIF	D7 Enterprises Inc	$ 0.18	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DAAT	DAC Technologies Group International Inc	$ 0.32	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DCCNF	Dacian Gold Ltd	$ 0.23	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DBIN	Dacotah Banks Inc	$ 27.25	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DADA	Dada Nexus Ltd	$ 29.26	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DGDH	Dadongnan Holding Co	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DAEG	Daegis Inc	$ 0.80	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DATWY	Daetwyler Holding AG	$ 77.20	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DAHCF	Dah Chong Hong Holdings Ltd	$ 0.47	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DAHCY	Dah Chong Hong Holdings Ltd	$ 5.17	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DHSBF	Dah Sing Banking Group Ltd	$ 1.95	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DAHSF	Dah Sing Financial Holdings Ltd	$ 3.70	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DSFGY	Dah Sing Financial Holdings Ltd	$ 8.59	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DHUA	Dahua Inc	$ 0.05	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DNPCF	Dai Nippon Printing Co Ltd	$ 21.10	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DNPLY	Dai Nippon Printing Co Ltd	$ 10.55	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DCNSF	Dai-ichi Life Holdings Inc	$ 13.90	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DLICY	Dai-ichi Life Holdings Inc	$ 13.02	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DIBUF	Daibiru Corp	$ 8.70	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DIBUY	Daibiru Corp	$ 14.20	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DACHF	Daicel Corp	$ 9.52	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DADSF	Daido Steel Co Ltd	$ 6.87	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DAIUF	Daifuku Co Ltd	$ 91.65	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DFKCY	Daifuku Co Ltd	$ 22.30	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DHTMF	Daihatsu Motor Co Ltd	$ 14.85	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DHTMY	Daihatsu Motor Co Ltd	$ 28.60	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DSKYF	Daiichi Sankyo Co Ltd	$ 91.90	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DSNKY	Daiichi Sankyo Co Ltd	$ 90.52	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DKNMF	Daiken Medical Co Ltd	$ 6.80	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DKILF	Daikin Industries Ltd	$ 184.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DKILY	Daikin Industries Ltd	$ 18.36	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DKYOF	Daikyo Inc	$ 1.70	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DJCO	Daily Journal Corp	$ 286.90	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DMTGF	Daily Mail and General Trust PLC	$ 8.87	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DMTGY	Daily Mail and General Trust PLC	$ 10.38	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DDAIF	Daimler AG	$ 48.59	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DDAIY	Daimler AG	$ 73.83	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DMLRY	Daimler AG	$ 12.08	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DRCSY	Dairy Crest Group PLC	$ 0.50	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DFIHY	Dairy Farm International Holdings Ltd	$ 20.71	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DFILF	Dairy Farm International Holdings Ltd	$ 4.17	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DLYT	Dais Corp	$ 0.15	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DSKIF	Daiseki Co Ltd	$ 24.50	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DIFTY	Daito Trust Construction Co Ltd	$ 21.16	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DITTF	Daito Trust Construction Co Ltd	$ 83.10	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DWAHF	Daiwa House Industry Co Ltd	$ 21.80	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DWAHY	Daiwa House Industry Co Ltd	$ 26.28	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DRVTF	Daiwa House REIT Investment Corp	$ 2100.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DAWIF	Daiwa Industries Ltd	$ 10.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DSECF	Daiwa Securities Group Inc	$ 4.44	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DSEEY	Daiwa Securities Group Inc	$ 4.47	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JRHIF	Daiwa Securities Living Investment Corp	$ 750.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DJIFF	Dajin Lithium Corp	$ 0.05	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DTRC	Dakota Territory Resource Corp	$ 0.40	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DAKT	Daktronics Inc	$ 3.82	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DLTTF	Dalata Hotel Group PLC	$ 3.26	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DLXXF	Dalet SA	$ 13.18	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DLPTF	Dalian Port (PDA) Co Ltd	$ 0.09	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DWNDF	Dalian Wanda Commercial Properties Co Ltd	$ 6.84	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DFCO	Dalrada Financial Corp	$ 0.08	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DRLDF	Dalradian Resources Inc	$ 1.11	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+SLMZF	Damara Gold Corp	$ 0.03	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DMSQ	Damariscotta Bankshares Inc	$ 26.50	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DPBSF	Dampskibsselskabet NORDEN A/S	$ 12.80	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DAHLF	Damstra Holdings Ltd	$ 0.91	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DANHF	Dan Hotels Ltd	$ 5.27	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DAN	Dana Inc	$ 13.66	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DHR	Danaher Corp	$ 207.80	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DNKLY	Danakali Ltd	$ 0.36	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+SBMSF	Danakali Ltd	$ 0.35	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DAC	Danaos Corp	$ 5.18	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+PORS	Dane Exploration Inc	$ 0.13	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DNIYY	Danieli & C. Officine Meccaniche SpA	$ 8.34	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DNIEF	Danieli & C. Officine Meccaniche SpA	$ 8.10	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DNIEF	Danieli & C. Officine Meccaniche SpA	$ 8.39	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DCAC	Daniels Corporate Advisory Co Inc	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DANOY	Danone SA	$ 13.14	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GPDNF	Danone SA	$ 66.16	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DNKEY	Danske Bank A/S	$ 7.78	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DNSKF	Danske Bank A/S	$ 16.26	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DPNEF	Daphne International Holdings Ltd	$ 0.04	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DPNEY	Daphne International Holdings Ltd	$ 0.56	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DQ	Daqo New Energy Corp	$ 123.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DARA	DARA Biosciences Inc	$ 0.88	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DRI	Darden Restaurants Inc	$ 82.71	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DARE	Dare Bioscience Inc	$ 1.14	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DRWB	Darien Rowayton Bank	$ 7.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DRIO	DarioHealth Corp	$ 18.61	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DAR	Darling Ingredients Inc	$ 32.36	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DRTF	Dart Financial Corp	$ 6.25	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DRTGF	Dart Group PLC	$ 8.90	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KESAF	Darty PLC	$ 2.17	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DZSI	DASAN Zhone Solutions Inc	$ 10.53	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EMGR	E & M Group Inc	$ 0.02	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ERMG	E Record Management Inc	$ 0.03	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ETFC	E*TRADE Financial Corp	$ 52.98	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DANG	E-Commerce China Dangdang Inc	$ 6.63	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EJ	E-House China Holdings Ltd	$ 6.79	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ELFIF	E-L Financial Corp Ltd	$ 486.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EQUR	E-Qure Corp	$ 0.08	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ETPPF	e-Therapeutics PLC	$ 0.16	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EWST	E-Waste Corp	$ 0.60	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ELF	e.l.f. Beauty Inc	$ 18.55	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ENAKF	E.ON SE	$ 11.64	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EONGY	E.ON SE	$ 11.55	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ETVVF	e2v technologies PLC	$ 3.35	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EEMMF	E3 Metals Corp	$ 0.23	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EACO	EACO Corp	$ 17.38	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EGBN	Eagle Bancorp Inc	$ 28.99	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EBMT	Eagle Bancorp Montana Inc	$ 17.50	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EGLE	Eagle Bulk Shipping Inc	$ 2.47	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GRF	Eagle Capital Growth Fund Inc	$ 7.15	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EGRGF	Eagle Energy Inc	$ 0.05	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EGXP	Eagle Exploration Co	$ 0.03	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EFBI	Eagle Financial Bancorp Inc	$ 16.15	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EFSI	Eagle Financial Services Inc	$ 26.25	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ECCE	Eagle Ford Oil & Gas Corp	$ 0.03	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+APMFF	Eagle Graphite Inc	$ 0.05	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EGIF	Eagle Growth and Income Opportunities Fund	$ 12.55	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EXP	Eagle Materials Inc	$ 81.81	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EMTC	Eagle Mountain Corp	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EGRX	Eagle Pharmaceuticals Inc	$ 41.23	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EGPLF	Eagle Plains Resources Ltd	$ 0.13	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ECC	Eagle Point Credit Co Inc	$ 7.93	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EROC	Eagle Rock Energy Partners LP	$ 1.74	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EAXR	Ealixir Inc	$ 3.90	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EACR	EARN-A-CAR Inc	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EACTF	Earth Alive Clean Technologies Inc	$ 0.09	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EGBB	Earth Gen-Biofuel Inc	$ 0.06	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CLTS	Earth Life Sciences Inc	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ETST	Earth Science Tech Inc	$ 0.03	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ELNK	EarthLink Holdings Corp	$ 5.63	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EPCUF	Earthport PLC	$ 0.85	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+VVIVF	EarthRenew Inc	$ 0.22	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+VVIVF	EarthRenew Inc	$ 0.22	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ETHS	Earthshine International Ltd	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ESTE	Earthstone Energy Inc	$ 2.93	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EAATF	Earthworks Industries Inc	$ 0.20	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EFRMF	East Africa Metals Inc	$ 0.13	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EAIAF	East Asia Minerals Corp	$ 0.12	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EJPRF	East Japan Railway Co	$ 62.75	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EJPRY	East Japan Railway Co	$ 10.58	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EKGRU	East Kansas Agri Energy LLC	$ 1250.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EMHI	East Morgan Holdings Inc	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ESDF	East Side Financial	$ 0.10	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ESSC	East Stone Acquisition Corp	$ 9.85	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EWBC	East West Bancorp Inc	$ 36.03	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EWPMF	East West Petroleum Corp	$ 0.04	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+TCLVF	EastCoal Inc	$ 3.75	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DEA	Easterly Government Properties Inc	$ 24.60	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EGDD	Eastern Goldfields Inc	$ 0.02	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ELCI	Eastern Light Capital Inc	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EFIN	Eastern Michigan Financial Corp	$ 26.40	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ELRFF	Eastern Platinum Ltd	$ 0.30	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EPHGF	Eastern Property Holdings Ltd	$ 32.85	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ESRI	Eastern Resources Inc	$ 0.04	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EAST	Eastern Security & Protection Services Inc	$ 1.46	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EVBS	Eastern Virginia Bankshares Inc	$ 11.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ETFLF	Eastfield Resources Ltd	$ 0.03	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EGP	EastGroup Properties Inc	$ 133.20	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EANRF	Eastmain Resources Inc	$ 0.19	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EMN	Eastman Chemical Co	$ 70.80	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KODK	Eastman Kodak Co	$ 6.88	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EASB	Easton Bancorp Inc	$ 85.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EAST	Eastside Distilling Inc	$ 1.46	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HBOSF	EastWest Bioscience Inc	$ 0.02	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EWOOF	Eastwood Bio-Medical Canada Inc	$ 1.13	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EYSI	Easy Scripts Inc	$ 0.03	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ESYYF	Easy Software AG	$ 10.33	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EMYSF	Easy Technologies Inc	$ 0.13	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ESZYF	easyHotel PLC	$ 1.61	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EJTTF	easyJet PLC	$ 7.35	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ESYJY	easyJet PLC	$ 7.55	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ETN	Eaton Corp PLC	$ 100.59	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CEV	Eaton Vance CA Muni Income Trust	$ 13.82	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EVM	Eaton Vance California Municipal Bond Fund	$ 11.62	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EV	Eaton Vance Corp	$ 38.41	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EOI	Eaton Vance Enhanced Equity Income Fund	$ 15.69	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EOS	Eaton Vance Enhanced Equity Income Fund II	$ 19.28	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EFL	Eaton Vance Floating-Rate 2022 Target Term Trust	$ 8.77	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EFT	Eaton Vance Floating-rate Income Trust	$ 11.96	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EHT	Eaton Vance High Income 2021 Target Term Trust	$ 9.73	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EVV	Eaton Vance Ltd Duration Income Fund	$ 11.70	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EIM	Eaton Vance Municipal Bond Fund	$ 13.13	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ETX	Eaton Vance Municipal Income 2028 Term Trust	$ 21.45	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EVN	Eaton Vance Municipal Income Trust	$ 12.86	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EOT	Eaton Vance National Municipal Opportunities Trust	$ 20.61	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ENX	Eaton Vance New York Municipal Bond Fund	$ 11.91	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EVY	Eaton Vance NY Muni Income Trust	$ 13.16	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ETJ	Eaton Vance Risk-Managed Diversified Equity Income	$ 10.22	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EFR	Eaton Vance Senior Floating Rate Trust	$ 11.85	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EVF	Eaton Vance Senior Income Trust	$ 5.82	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EVG	Eaton Vance Short Duration Diversified Income Fund	$ 11.40	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FMOO	F & M Bancorp Ohio	$ 66.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FMBM	F & M Bank Corp	$ 19.10	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FJBHF	F J Benjamin Holdings Ltd	$ 0.04	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FBIP	F N B Bancorp Inc	$ 113.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FNB	F N B Corp	$ 7.35	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FXLG	F S Bancorp	$ 50.11	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FSOYF	F-Secure Corp	$ 2.55	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FHLIF	F.H.L. I. Kyriakidis Marbles - Granites S.A	$ 1.89	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FFIV	F5 Networks Inc	$ 135.32	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FBSFF	Fabasoft AG	$ 29.14	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FBGGF	Fabege AB	$ 11.59	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FBGBY	Fabege AB	$ 26.31	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FN	Fabrinet	$ 69.12	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FBBCF	FACB Industries Inc Bhd	$ 0.28	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FB	Facebook Inc	$ 267.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FDVRF	Facedrive Inc	$ 14.80	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FAKC	Facekey Corp	$ 0.53	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FDS	FactSet Research Systems Inc	$ 356.10	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ARSUF	Fagron SA	$ 21.80	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FAHE	Fahey Banking Co	$ 1815.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FICO	Fair Isaac Corp	$ 421.60	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FCS	Fairchild Semiconductor International Inc	$ 19.86	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FRCGF	Faircourt Gold Income Corp	$ 3.11	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FFXXF	Fairfax Africa Holdings Corp	$ 3.15	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FRFHF	Fairfax Financial Holdings Ltd	$ 307.40	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FFXDF	Fairfax India Holdings Corp	$ 7.55	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FFXLF	Fairfax Media Ltd	$ 0.75	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FRP	FairPoint Communications Inc	$ 15.95	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FWMHQ	Fairway Group Holdings Corp	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FRWDF	Fairwood Holdings Ltd	$ 2.20	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FAITF	Faith Inc	$ 5.35	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FVLEF	Faiveley Transport SA	$ 98.60	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FKRNF	Falck Renewables SpA	$ 1.85	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FPRGF	Falco Resources Ltd	$ 0.36	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FGLDF	Falcon Gold Corp	$ 0.14	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FLMN	Falcon Minerals Corp	$ 2.82	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FOLGF	Falcon Oil & Gas Ltd	$ 0.10	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FALC	FalconStor Software Inc	$ 4.75	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FLKOF	Falkland Oil & Gas Ltd	$ 0.14	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FMPR	Fame Productions Inc	$ 0.35	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FMYR	Family Room Entertainment Corp	$ 0.10	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FMZNF	Family Zone Cyber Safety Ltd	$ 0.36	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FYRTF	FamilyMart Co Ltd	$ 17.81	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FYRTY	FamilyMart Co Ltd	$ 22.20	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FMBRF	Famous Brands Ltd	$ 1.80	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FMBRY	Famous Brands Ltd	$ 10.50	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FCMUF	Fan Communications Inc	$ 8.27	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FNCJF	Fancamp Exploration Ltd	$ 0.06	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FDMSF	Fandom Sports Media Corp	$ 0.11	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+SFUN	Fang Holdings Ltd	$ 11.49	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DUO	Fangdd Network Group Ltd	$ 7.73	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FANH	Fanhua Inc	$ 20.90	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FNMA	Fannie Mae	$ 2.18	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FFZY	Fansfrenzy Corp	$ 0.02	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FUNFF	Fansunite Entertainment Inc	$ 0.19	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FHDXF	Fantasia Holdings Group Co Ltd	$ 0.18	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+BRKSL	Fantex Inc	$ 9.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JEFFL	Fantex Inc	$ 11.50	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JKMTL	Fantex Inc	$ 12.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+SANUL	Fantex Inc	$ 11.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+VNDSL	Fantex Inc	$ 7.90	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FANUF	Fanuc Corp	$ 178.04	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FANUY	Fanuc Corp	$ 17.64	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FRTCF	Far East Consortium International Ltd	$ 0.32	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FEHZY	Far East Horizon Ltd	$ 13.56	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FREWF	Far Eastern New Century Corp	$ 8.55	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FEOTF	Far EasTone Telecommunications Co Ltd	$ 1.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FETLF	Far EasTone Telecommunications Co Ltd	$ 34.85	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FARYF	FAR Ltd	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FPAC	Far Point Acquisition Corp	$ 9.83	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FRRSF	Far Resources Ltd	$ 0.06	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FTCH	Farfetch Ltd	$ 29.32	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FLAF	Farm Lands of Africa Inc	$ 0.23	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FARM	Farmer Bros Co	$ 7.10	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FMCB	Farmers & Merchants Bancorp	$ 702.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FMAO	Farmers & Merchants Bancorp Inc	$ 21.52	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FMBA	Farmers & Merchants Bancorp Inc	$ 20.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FMBL	Farmers & Merchants Bank of Long Beach	$ 6245.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FMBN	Farmers and Merchants Bancshares Inc	$ 22.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FMFG	Farmers and Merchants Bancshares Inc (MD)	$ 13.35	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FABP	Farmers Bancorp	$ 36.75	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FBPA	Farmers Bank of Appomattox	$ 26.95	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FBVA	Farmers Bankshares Inc	$ 12.65	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FFKT	Farmers Capital Bank Corp	$ 56.90	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FMNB	Farmers National Banc Corp	$ 12.10	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FMHS	Farmhouse Inc	$ 1.25	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FPI	Farmland Partners Inc	$ 6.87	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FPIpB	Farmland Partners Inc	$ 24.35	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FAMI	Farmmi Inc	$ 0.71	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FARO	Faro Technologies Inc	$ 57.38	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FFRRF	Faroe Petroleum PLC	$ 2.02	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FPHAF	Faron Pharmaceuticals Oy	$ 6.44	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GFGVF	Fast Line Holding Inc	$ 4.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FRCOF	Fast Retailing Co Ltd	$ 580.80	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FRCOY	Fast Retailing Co Ltd	$ 57.70	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FBSE	Fastbase Inc	$ 6.25	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FAST	Fastenal Co	$ 48.54	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FSJPF	FastJet PLC	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FSLY	Fastly Inc	$ 85.05	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FAT	FAT Brands Inc	$ 5.06	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GK	G & K Services Inc	$ 97.49	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GMMVF	G Medical Innovations Holdings Ltd	$ 0.10	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GIII	G-III Apparel Group Ltd	$ 10.04	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GGPXF	G-Resources Group Ltd	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+WILC	G. Willi-Food International Ltd	$ 19.62	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GTHX	G1 Therapeutics Inc	$ 15.38	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+LGDRF	G2 Goldfields Inc	$ 0.47	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GRDGF	G3 Exploration Ltd	$ 0.85	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GFSZF	G4S PLC	$ 1.85	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GFSZY	G4S PLC	$ 9.23	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GENTF	G5 Entertainment AB	$ 20.05	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GPHBF	G6 Materials Corp	$ 0.04	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GCV	GABELLI CONVERTIBLE & INCOME SECURITIES FUND INC	$ 5.61	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GDV	Gabelli Dividend & Income Trust	$ 19.02	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GAB	Gabelli Equity Trust Inc	$ 5.43	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GLU	Gabelli Global Utility & Income Trust	$ 16.48	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GRX	Gabelli Healthcare & WellnessRx Trust	$ 10.73	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GGT	Gabelli Multimedia Trust Inc	$ 7.10	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GUT	Gabelli Utility Trust	$ 7.78	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GBRRF	Gabriel Resources Ltd	$ 0.34	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GABLF	Gaby Inc	$ 0.04	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FCRE	Gadsden Properties Inc	$ 0.10	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GADS	Gadsden Properties Inc	$ 0.06	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GEGR	Gaensel Energy Group Inc	$ 1.10	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GFASY	Gafisa SA	$ 2.20	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GFFSF	Gafisa SA	$ 1.47	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GFSAY	Gafisa SA	$ 129.17	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GGFHF	Gagfah SA	$ 18.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GAIA	Gaia Inc	$ 11.64	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+RGDCF	Gaia Metals Corp	$ 0.11	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GAILF	GAIL (India) Ltd	$ 7.80	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GCAP	GAIN Capital Holdings Inc	$ 6.04	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GCTY	Gain Cities Ltd	$ 450.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GNYPF	Gainey Capital Corp	$ 0.03	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GANS	Gainsco Inc	$ 38.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GGGOF	Galane Gold Ltd	$ 0.22	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GALKF	Galantas Gold Corp	$ 0.29	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GLPG	Galapagos NV	$ 137.16	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GLPGF	Galapagos NV	$ 183.77	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+BRPHF	Galaxy Digital Holdings Ltd	$ 2.84	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GXYEF	Galaxy Entertainment Group Ltd	$ 7.98	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GXYEY	Galaxy Entertainment Group Ltd	$ 26.30	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GXYYY	Galaxy Entertainment Group Ltd	$ 39.79	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GLXZ	Galaxy Gaming Inc	$ 1.27	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GAXY	Galaxy Next Generation Inc	$ 0.02	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GALXF	Galaxy Resources Ltd	$ 0.85	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GALT	Galectin Therapeutics Inc	$ 2.86	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GLFH	Galenfeha Inc	$ 0.02	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GRTX	Galera Therapeutics Inc	$ 7.94	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GAU	Galiano Gold Inc	$ 1.63	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GLEO	Galileo Acquisition Corp	$ 9.87	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+PLORF	Galileo Petroleum Ltd	$ 0.03	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CYBXF	Gallagher Security Corp	$ 0.06	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GLVNF	Gallant Venture Ltd	$ 0.08	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+PNCKF	Galleon Gold Corp	$ 0.10	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GALLF	Galliford Try Holdings PLC	$ 8.55	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GLMD	Galmed Pharmaceuticals Ltd	$ 4.77	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GALOF	Galore Resources Inc	$ 0.02	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GLPEF	Galp Energia SGPS SA	$ 10.69	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GLPEY	Galp Energia SGPS SA	$ 5.22	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GAYGF	Galway Gold Inc	$ 0.17	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GAYMF	Galway Metals Inc	$ 1.12	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GMHLF	GAM Holding AG	$ 2.46	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GMHLY	GAM Holding AG	$ 0.46	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CDNMF	Gambier Gold Corp	$ 0.09	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GGN	GAMCO Global Gold Natural Resources & Income Trust	$ 3.63	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GBL	GAMCO Investors Inc	$ 13.14	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GNT	GAMCO Natural Resources, Gold & Income Trust	$ 5.18	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GPLH	Game Plan Holdings Inc	$ 0.02	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GPLA	Game Plan Inc	$ 0.13	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GHIFF	Gamehost Inc	$ 4.27	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GLOFF	Gameloft SE	$ 8.95	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GLOFY	Gameloft SE	$ 34.16	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GMNNF	Gamenet Group SpA	$ 9.92	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GMWKF	Games Workshop Group PLC	$ 115.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GME	GameStop Corp	$ 5.03	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JKPTF	Gamesys Group PLC	$ 14.50	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GMDA	Gamida Cell Ltd	$ 4.15	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GLPI	Gaming and Leisure Properties Inc	$ 36.98	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GMNZF	Gaming Nation Inc	$ 0.72	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+PSDMF	Gaming Realms PLC	$ 0.27	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GAMCF	Gamma Communications PLC	$ 15.60	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GMUAF	Gamuda Bhd	$ 0.82	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GAN	GAN Ltd	$ 20.68	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GMMNF	GAN PLC	$ 2.85	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GNENF	Ganfeng Lithium Co Ltd	$ 5.30	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GCI	Gannett Co Inc	$ 1.55	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GPS	Gap Inc	$ 14.43	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GCCO	Garden City Co	$ 1100.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GGIFF	Garibaldi Resources Corp	$ 0.49	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GRMN	Garmin Ltd	$ 102.43	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GGAC	Garnero Group Acquisition Co	$ 10.05	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GTX	Garrett Motion Inc	$ 6.68	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GARS	Garrison Capital Inc	$ 3.37	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IT	Gartner Inc	$ 128.14	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+EGAS	Gas Natural Inc	$ 13.10	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GASE	GASE Energy Inc	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GLOG	GasLog Ltd	$ 3.05	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GLOP	GasLog Partners LP	$ 3.87	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GGRUF	gategroup Holding AG	$ 53.24	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+MRCHF	H U Group Holdings Inc	$ 24.30	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HEES	H&E Equipment Services Inc	$ 19.93	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HRB	H&R Block Inc	$ 14.62	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HRUFF	H&R Real Estate Investment Trust	$ 7.62	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HTZZF	H&T Group PLC	$ 4.55	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HCYT	H-CYTE Inc	$ 0.06	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HDIH	H-D International Holdings Group	$ 0.05	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HHFFF	H-FARM S.p.A.	$ 1.02	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HSCHF	H-Source Holdings Ltd	$ 0.03	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HLUKF	H. Lundbeck A/S	$ 32.94	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HLUYY	H. Lundbeck A/S	$ 33.50	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FUL	H.B. Fuller Co	$ 47.83	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HISJF	H.I.S. Co Ltd	$ 16.83	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HCCC	H/Cell Energy Corp	$ 0.27	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HEOFF	H2O Innovation Inc	$ 0.79	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HABC	Habersham Bancorp	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HACBF	Hachijuni Bank Ltd	$ 3.60	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HACBY	Hachijuni Bank Ltd	$ 37.73	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HOMJF	Haci Omer Sabanci Holding AS	$ 4.02	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HADSY	Hadasit Bio Holdings Ltd	$ 0.81	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HSITF	Hadasit Bio Holdings Ltd	$ 0.85	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HAIPF	Hadera Paper Ltd	$ 42.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HAE	Haemonetics Corp	$ 86.69	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HFIAF	Hafnia Ltd	$ 1.60	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HFSUF	Hafslund ASA	$ 7.75	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HGWEF	Hagiwara Electric Holdings Co Ltd	$ 14.94	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+WSSXF	Hague and London Oil PLC	$ 0.04	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HDALF	Haidilao International Holding Ltd	$ 4.80	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HRELF	Haier Electronics Group Co Ltd	$ 3.81	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HRELY	Haier Electronics Group Co Ltd	$ 37.75	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HLG	Hailiang Education Group Inc	$ 49.14	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HMCTF	Hainan Meilan International Airport Co Ltd	$ 6.02	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HAIIF	Haitian International Holdings Ltd	$ 2.10	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HNGFF	Haitong International Securities Group Ltd	$ 0.60	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HAITY	Haitong Securities Co Ltd	$ 9.40	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HTNGF	Haitong Securities Co Ltd	$ 0.91	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HKUOF	Hakuhodo DY Holdings Inc	$ 14.35	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HKUOY	Hakuhodo DY Holdings Inc	$ 24.42	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HALFF	HAL Trust	$ 134.16	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HALB	Halberd Corp	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HKRSQ	Halcon Resources Corp	$ 0.07	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HLDXF	Haldex AB	$ 12.38	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HLFDF	Halfords Group PLC	$ 2.06	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HLFDY	Halfords Group PLC	$ 4.45	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HOFV	Hall Of Fame Resort & Entertainment Co	$ 4.44	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HTEE	Hall Tees Inc	$ 0.75	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HNRG	Hallador Energy Co	$ 0.82	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HAL	Halliburton Co	$ 15.74	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HALL	Hallmark Financial Services Inc	$ 3.34	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HLLK	Hallmark Venture Group Inc	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HLMAF	Halma PLC	$ 29.31	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HLMLY	Halma PLC	$ 40.40	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HALMY	Halma PLC	$ 57.71	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HALN	Halo Companies Inc	$ 0.38	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+AGEEF	Halo Labs Inc	$ 0.09	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HGENF	Halogen Software Inc	$ 9.23	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HALO	Halozyme Therapeutics Inc	$ 28.15	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HPHTF	Hamamatsu Photonics KK	$ 45.76	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HPHTY	Hamamatsu Photonics KK	$ 10.20	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HANBF	Hamborner REIT AG	$ 8.39	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HMBG	Hamburg Industries Inc	$ 2.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HHULF	Hamburger Hafen und Logistik AG	$ 18.30	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HHULY	Hamburger Hafen und Logistik AG	$ 7.84	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HBK	Hamilton Bancorp Inc	$ 15.76	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HBB	Hamilton Beach Brands Holding Co	$ 18.31	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HLNE	Hamilton Lane Inc	$ 69.82	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HMBH	Hamilton State Bancshares Inc	$ 9.50	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HTLZF	Hamilton Thorne Ltd	$ 1.11	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HMPMF	Hamlet Pharma AB	$ 3.76	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HMLN	Hamlin Bank and Trust Co	$ 280.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HMMR	Hammer Fiber Optics Holdings Corp	$ 0.14	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HMRRF	Hammer Metals Ltd	$ 0.03	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HMSNF	Hammerson PLC	$ 0.68	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HAMT	Hammett J L Co	$ 0.10	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HMFAF	Hammond Manufacturing Co Ltd	$ 0.91	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HMDPF	Hammond Power Solutions Inc	$ 5.11	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HAMPQ	Hampshire Group Ltd	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HMPR	Hampton Roads Bankshares Inc	$ 2.05	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HLXH	Hamptons Luxury Homes Inc	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HTTI	Han Tang Technology Inc	$ 0.11	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HMICF	Hana Microelectronics PCL	$ 0.91	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HJLI	Hancock Jaffe Laboratories Inc	$ 0.46	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HWC	Hancock Whitney Corp	$ 19.53	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+NWHAF	Handa Mining Corp	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HNDI	Handeni Gold Inc	$ 0.08	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HNH	Handy & Harman Ltd	$ 30.30	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HNGSF	Hanergy Thin Film Power Group Ltd	$ 0.28	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HBI	Hanesbrands Inc	$ 15.68	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HNLGF	Hang Lung Group Ltd	$ 2.26	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HNLGY	Hang Lung Group Ltd	$ 11.97	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HLPPF	Hang Lung Properties Ltd	$ 2.70	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HLPPY	Hang Lung Properties Ltd	$ 13.61	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HSNGF	Hang Seng Bank Ltd	$ 17.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HSNGY	Hang Seng Bank Ltd	$ 15.47	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HNGR	Hanger Inc	$ 18.30	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HACOF	Hanison Construction Holdings Ltd	$ 0.16	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+PHJMF	Hanjaya Mandala Sampoerna Tbk	$ 0.12	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+HYUHF	Hankyu Hanshin Holdings Inc	$ 41.20	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ICABY	i-CABLE Communications Ltd	$ 0.14	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IMAB	I-MAB	$ 29.50	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IMAHF	I-Minerals Inc	$ 0.02	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IONI	I-ON Digital Corp	$ 0.13	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IWMG	I-Wellness Marketing Group Inc	$ 0.02	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+BLITF	i3 Interactive Inc	$ 0.46	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IIIV	i3 Verticals Inc	$ 28.51	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IAFNF	iA Financial Corp	$ 31.20	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IAA	IAA Inc	$ 48.83	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IAC	IAC/InterActiveCorp	$ 127.37	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IAHL	IAHL Corp	$ 0.22	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IAG	Iamgold Corp	$ 4.19	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ITHUF	iAnthus Capital Holdings Inc	$ 0.07	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IARSF	IAR Systems Group AB	$ 24.90	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IAALF	IBC Advanced Alloys Corp	$ 0.15	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IBDRY	Iberdrola SA	$ 50.83	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IBDSF	Iberdrola SA	$ 12.65	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IBKC	IBERIABANK Corp	$ 43.08	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IBXM	IBEX Advanced Mortgage Technology Inc	$ 0.25	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IBEX	IBEX Holdings Ltd	$ 16.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IBXNF	Ibex Technologies Inc	$ 0.17	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IBIBF	IBI Group Inc	$ 4.63	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IBIDF	Ibiden Co Ltd	$ 29.42	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IBIO	iBio Inc	$ 1.70	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IBJHF	Ibstock PLC	$ 2.05	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IBWC	IBW Financial Corp	$ 31.25	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ICCGF	ICA Gruppen AB	$ 49.13	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ICAD	icad Inc	$ 10.40	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CDMGF	Icade	$ 66.67	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IEP	Icahn Enterprises LP	$ 52.26	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ICNAF	Icanic Brands Co Inc	$ 0.20	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ICCH	ICC Holdings Inc	$ 11.63	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+WLDCF	ICC International Cannabis Corp	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ICCLF	ICC Labs Inc	$ 1.23	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ICUSF	Icecure Medical Ltd	$ 0.22	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ICFI	ICF International Inc	$ 67.94	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ICHIF	Ichigo Inc	$ 2.74	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FCRQF	Ichigo Office REIT Investment Corp	$ 585.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ICHSF	Ichiyoshi Securities Co Ltd	$ 8.50	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ICHR	Ichor Holdings Ltd	$ 26.76	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IBN	ICICI Bank Ltd	$ 10.17	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ICL	ICL Group Ltd	$ 3.71	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ICLK	iClick Interactive Asia Group Ltd	$ 8.95	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ICOTF	iCo Therapeutics Inc	$ 0.03	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ICTQ	ICON ECI Fund Fifteen LP	$ 414.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ICNOF	Icon Energy Ltd	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ICNQU	ICON Equipment & Corporate Infrastructure Fund Fou	$ 303.50	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ICEVL	ICON Leasing Fund Eleven LLC	$ 3.12	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ICLR	Icon PLC	$ 186.84	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ICNB	Iconic Brands Inc	$ 0.51	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+BVTEF	Iconic Minerals Ltd	$ 0.09	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ICON	Iconix Brand Group Inc	$ 0.89	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ICCT	iCoreConnect Inc	$ 0.10	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ICPWQ	ICPW Liquidation Corp	$ 0.11	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ICTG	ICTC Group Inc	$ 64.33	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ICTSF	ICTS International NV	$ 3.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ICUI	ICU Medical Inc	$ 180.85	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IDPE	ID Perfumes Inc	$ 0.02	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IDWAF	ID Watchdog Inc	$ 0.40	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IDA	Idacorp Inc	$ 88.14	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+GLDRF	Idaho Champion Gold Mines Canada Inc	$ 0.19	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IDFB	Idaho First Bank	$ 5.80	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IIBK	Idaho Independent Bank	$ 20.20	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IDAM	Idarado Mining Co	$ 2.18	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IDBZF	IDB Development Corp Ltd	$ 0.53	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IDBJF	Idb Holding Corp Ltd	$ 0.04	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IPWR	Ideal Power Inc	$ 6.75	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IDEX	Ideanomics Inc	$ 1.23	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IDYA	IDEAYA Biosciences Inc	$ 11.22	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IDKOF	Idemitsu Kosan Co Ltd	$ 21.20	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IDKOY	Idemitsu Kosan Co Ltd	$ 10.25	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IDTA	IDenta Corp	$ 0.36	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IDTLF	Identillect Technologies Corp	$ 0.05	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+INVE	Identiv Inc	$ 5.07	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IDRA	Idera Pharmaceuticals Inc	$ 1.93	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IDXAF	IDEX Biometrics ASA	$ 0.18	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IEX	IDEX Corp	$ 178.85	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IDXX	IDEXX Laboratories Inc	$ 383.46	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IDLM	Idle Media Inc	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ILMCF	IDM International Ltd	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+ILMCY	IDM International Ltd	$ 0.51	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IDMMF	IDM Mining Ltd	$ 0.05	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IDRSF	Idorsia Ltd	$ 29.65	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IDPUF	IDP Education Ltd	$ 9.60	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+DSKY	iDreamSky Technology Ltd	$ 13.93	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IDT	IDT Corp	$ 6.64	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IDWM	IDW Media Holdings Inc	$ 3.46	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IEC	IEC Electronics Corp	$ 8.45	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IEHC	IEH Corp	$ 17.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IENT	iEntertainment Network Inc	$ 0.02	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IESC	IES Holdings Inc	$ 29.12	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IROQ	IF Bancorp Inc	$ 16.40	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+FYSSY	ifa systems AG	$ 4.75	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IFABF	iFabric Corp	$ 3.84	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IFBH	Ifb Holdings Inc	$ 65.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IFCI	IFCI International Corp	$ 0.02	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CTCLY	IFM Investments Ltd	$ 0.13	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IFMK	iFresh Inc	$ 0.97	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IFXC	IFX Corp	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IGGHY	IG Group Holdings PLC	$ 10.60	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JFROF	J Front Retailing Co Ltd	$ 11.65	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JJSF	J&J Snack Foods Corp	$ 132.55	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JAX	J. Alexander's Holdings Inc	$ 4.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+MAYS	J. W. Mays Inc	$ 19.10	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JILL	J.Jill Inc	$ 0.37	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JOJMF	J.O.E.L. Jerusalem Oil Exploration Ltd	$ 37.30	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JCOM	J2 Global Inc	$ 69.82	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JASO	JA Solar Holdings Co Ltd	$ 7.49	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JBL	Jabil Inc	$ 34.22	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JCDAF	Jacada Ltd	$ 5.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JKHY	Jack Henry & Associates Inc	$ 165.85	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JACK	Jack In The Box Inc	$ 83.15	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JPOTF	Jackpot Digital Inc	$ 0.07	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JKSM	Jacksam Corp	$ 0.23	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JAXB	Jacksonville Bancorp Inc	$ 16.45	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JXSB	Jacksonville Bancorp Inc	$ 33.65	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JCLY	Jaclyn Inc	$ 7.90	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+J	Jacobs Engineering Group Inc	$ 88.82	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JFGI	Jacobs Financial Group Inc	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JQTMF	Jacquet Metal Service	$ 12.53	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JADA	Jade Art Group Inc	$ 0.17	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JADG	Jade Global Holdings Inc	$ 0.30	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+MCKRF	Jade Leader Corp	$ 0.05	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+TNSTF	Jade Power Trust	$ 0.13	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JADSF	Jadestone Energy Inc	$ 0.81	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+BDRGF	Jaeger Resources Corp	$ 0.03	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JFKOF	JAFCO Co Ltd	$ 46.65	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JAG	Jagged Peak Energy Inc	$ 8.23	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JGPK	Jagged Peak Inc	$ 0.96	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JGFCF	Jaguar Financial Corp	$ 0.20	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JAGX	Jaguar Health Inc	$ 0.45	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JAGGF	Jaguar Mining Inc	$ 0.64	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JGGRF	Jaguar Resources Inc	$ 0.44	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+PJIHF	Jakarta International Hotels & Development Tbk	$ 0.08	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JAKK	Jakks Pacific Inc	$ 4.66	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JKRO	Jakroo Inc	$ 0.58	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JMBA	Jamba Inc	$ 13.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JMCCF	Jamco Corp	$ 25.25	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JMBRF	James Bay Resources Ltd	$ 0.05	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JMHSF	James Halstead PLC	$ 4.45	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JHX	James Hardie Industries PLC	$ 22.67	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JHIUF	James Hardie Industries PLC	$ 23.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JMTM	James Maritime Holdings Inc	$ 1.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JRCCQ	James River Coal Co	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JRVR	James River Group Holdings Ltd	$ 48.28	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JRIV	James River Holdings Corp	$ 0.05	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JAMF	Jamf Holding Corp	$ 40.13	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JANL	Janel World Trade Ltd.	$ 8.31	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JAN	JanOne Inc	$ 7.15	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JNS	Janus Capital Group Inc	$ 14.17	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JHG	Janus Henderson Group PLC	$ 20.21	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JUHDY	Janus Henderson Group PLC	$ 24.40	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JAPSY	Japan Airlines Co Ltd	$ 9.67	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JPNRF	Japan Airlines Co Ltd	$ 18.60	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JAIRF	Japan Airport Terminal Co Ltd	$ 32.35	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JTTRY	Japan Airport Terminal Co Ltd	$ 20.84	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JAIVF	Japan Asia Investment Co Ltd	$ 1.15	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JASSF	Japan Asset Marketing Co Ltd	$ 0.80	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JPAVF	Japan Aviation Electronics Industry Ltd	$ 13.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JNNDF	Japan Display Inc	$ 0.45	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JPDYY	Japan Display Inc	$ 4.46	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JPXGY	Japan Exchange Group Inc	$ 12.77	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+OSCUF	Japan Exchange Group Inc	$ 25.95	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JFOOF	Japan Foods Holding Ltd	$ 0.51	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JGLDF	Japan Gold Corp	$ 0.28	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+NIPOF	Japan Hotel REIT Investment Corp	$ 478.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JLFNF	Japan Lifeline Co Ltd	$ 11.88	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JPTXF	Japan Petroleum Exploration Co Ltd	$ 17.25	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JPSTF	Japan Post Bank Co Ltd	$ 8.23	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JPHLF	Japan Post Holdings Co Ltd	$ 7.35	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JPPHY	Japan Post Holdings Co Ltd	$ 9.18	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JPPIF	Japan Post Insurance Co Ltd	$ 12.03	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JPRRF	Japan Prime Realty Investment Corp	$ 2835.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JREIF	Japan Real Estate Investment Corp	$ 5480.72	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JNRFY	Japan Retail Fund Investment Corp	$ 11.21	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JRFIF	Japan Retail Fund Investment Corp	$ 1820.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JSFNF	Japan Securities Finance Co Ltd	$ 5.10	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JOF	Japan Smaller Capitalization Fund Inc	$ 8.06	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JAPAF	Japan Tobacco Inc	$ 19.07	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JAPAY	Japan Tobacco Inc	$ 9.46	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JAH	Jarden Corp	$ 58.97	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JCYCF	Jardine Cycle & Carriage Ltd	$ 14.32	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JCYGY	Jardine Cycle & Carriage Ltd	$ 27.18	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+LLTHF	Jardine Lloyd Thompson Group PLC	$ 24.30	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JARLF	Jardine Matheson Holdings Ltd	$ 40.65	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JMHLY	Jardine Matheson Holdings Ltd	$ 39.98	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JDSHF	Jardine Strategic Holdings Ltd	$ 20.27	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JSHLY	Jardine Strategic Holdings Ltd	$ 9.94	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JRDN	Jardinier Corp	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JASMY	Jasmine International PCL	$ 1.74	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JASUF	Jasmine International PCL	$ 0.10	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JASNQ	Jason Industries Inc	$ 0.02	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JSPRF	Jasper Investments Ltd	$ 0.06	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JAMGF	Jasper Mining Corp	$ 0.04	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JASTY	Jastrzebska Spolka Weglowa SA	$ 6.35	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JTLDF	Jatcorp Ltd	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JMI	JAVELIN Mortgage Investment Corp	$ 7.18	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JWS	Jaws Acquisition Corp	$ 10.15	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JXMNF	Jaxon Mining Inc	$ 0.06	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+JAXAF	Jaxsta Ltd	$ 0.02	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KWHAF	K Wah International Holdings Ltd	$ 0.43	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KPLUF	K+S AG	$ 6.67	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KPLUY	K+S AG	$ 3.92	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KBRLF	K-Bro Linen Inc	$ 20.06	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KTLI	K-Tel International Inc	$ 0.09	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KOVTF	k1 Ventures Ltd	$ 0.14	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+LRN	K12 Inc	$ 41.75	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KTGDF	K2 Gold Corp	$ 0.40	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KTWO	K2M Group Holdings Inc	$ 27.50	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KNTNF	K92 Mining Inc	$ 5.16	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KANP	Kaanapali Land LLC	$ 28.08	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KBDHF	Kabel Deutschland Holding AG	$ 134.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KBDHY	Kabel Deutschland Holding AG	$ 51.80	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+TRWRF	KABN Systems NA Holdings Corp	$ 0.15	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KAI	Kadant Inc	$ 115.90	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KDHOF	Kader Holdings Co Ltd	$ 0.07	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KDNG	Kading Companies SA	$ 0.02	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KDMN	Kadmon Holdings Inc	$ 4.35	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KGRZF	Kagara Ltd	$ 0.10	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KGMEF	Kagome Co Ltd	$ 26.30	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KHSHF	Kagoshima Bank Ltd	$ 7.30	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KAHL	Kahala Corp	$ 300.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KHOTF	Kahoot AS	$ 4.45	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KNNNF	Kainos Group PLC	$ 14.20	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+MPJFF	Kairos Minerals Ltd	$ 0.03	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KALU	Kaiser Aluminum Corp	$ 63.96	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KGHI	Kaiser Group Holdings Inc	$ 2.10	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KAVL	Kaival Brands Innovations Group Inc	$ 0.72	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KXIN	Kaixin Auto Holdings	$ 0.93	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CCNCF	Kaizen Discovery Inc	$ 0.03	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KAJMF	Kajima Corp	$ 12.20	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KAJMY	Kajima Corp	$ 12.54	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KKKUF	Kakaku.com Inc	$ 24.97	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KALA	Kala Pharmaceuticals Inc	$ 8.93	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KAMRF	Kalamazoo Resources Ltd	$ 0.51	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KLDO	Kaleido Biosciences Inc	$ 8.26	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KSLLF	Kalera AS	$ 2.25	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KLXC	Kalex Corp	$ 0.05	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KLR	Kaleyra Inc	$ 6.19	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KALO	Kallo Inc	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KALV	KalVista Pharmaceuticals Inc	$ 13.30	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KMDA	Kamada Ltd	$ 10.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KAMN	Kaman Corp	$ 45.76	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KMBIF	Kambi Group PLC	$ 24.25	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KMGIF	Kamigumi Co Ltd	$ 21.66	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KMKGF	Kaminak Gold Corp	$ 2.07	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KNCQF	Kancera AB	$ 0.08	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KNDI	Kandi Technologies Group Inc	$ 6.98	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KNBIF	Kane Biotech Inc	$ 0.12	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KANKF	Kaneka Corp	$ 28.10	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KGNR	Kange Corp	$ 0.11	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KLFE	Kannalife Inc	$ 0.81	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KAEPF	Kansai Electric Power Co Inc	$ 9.30	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KAEPY	Kansai Electric Power Co Inc	$ 4.91	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KSANF	Kansai Paint Co Ltd	$ 22.62	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KCLI	Kansas City Life Insurance Co	$ 30.50	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KSU	Kansas City Southern	$ 182.78	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KTHGF	Kantone Holdings Ltd	$ 0.05	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KAOCF	Kao Corp	$ 76.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KAOOY	Kao Corp	$ 15.28	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+LNGB	Kaopu Group Inc	$ 4.95	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+CSSDF	Kape Technologies PLC	$ 0.90	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KPSHF	Kapsch TrafficCom AG	$ 17.88	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KS	KapStone Paper And Packaging Corp	$ 34.95	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KAR	KAR Auction Services Inc	$ 17.24	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KMMIF	Karam Minerals Inc	$ 0.30	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KRDXF	Kardex Holding AG	$ 172.00	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KRXBF	Karex Bhd	$ 0.30	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KRMEF	Karmin Exploration Inc	$ 0.75	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KRLTF	Karnalyte Resources Inc	$ 0.20	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KARBF	Karo Pharma AB	$ 6.31	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KDEVF	Karolinska Development AB	$ 0.61	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KRNGF	Karoon Energy Ltd	$ 0.49	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KRNGY	Karoon Energy Ltd	$ 1.45	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KRRGD	Karora Resources Inc	$ 2.64	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KRTX	Karuna Therapeutics Inc	$ 82.56	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KPTI	Karyopharm Therapeutics Inc	$ 14.20	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KASBF	Kasbah Resources Ltd	$ 0.02	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KSNIF	Kasen International Holdings Ltd	$ 0.15	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KPCKF	Kasikornbank Public Co Ltd	$ 5.35	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KPCPF	Kasikornbank Public Co Ltd	$ 2.83	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KPCPY	Kasikornbank Public Co Ltd	$ 10.67	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KPCUF	Kasikornbank Public Co Ltd	$ 2.87	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KTHN	Katahdin Bankshares Corp	$ 17.70	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KKRAF	Katakura Industries Co Ltd	$ 11.55	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KATFF	Katanga Mining Ltd	$ 0.12	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KATE	Kate Spade & Co	$ 18.49	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KTHDY	Kathmandu Holdings Ltd	$ 0.20	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KTPPF	Katipult Technology Corp	$ 0.24	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KATOF	Kato Sangyo Co Ltd	$ 32.80	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KATYQ	Katy Industries Inc	$ 0.07	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KFMNF	Kaufman & Broad SA	$ 37.25	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KVGOF	Kavango Resources PLC	$ 0.01	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+IMSU	Kavtek Software Corp	$ 5.75	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KGBGF	Kawagishi Bridge Works Co Ltd	$ 3.60	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KWHIF	Kawasaki Heavy Industries Ltd	$ 14.64	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KWHIY	Kawasaki Heavy Industries Ltd	$ 5.68	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KAIKY	Kawasaki Kisen Kaisha Ltd	$ 5.15	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KAKKF	Kawasaki Kisen Kaisha Ltd	$ 9.83	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider
+KAYS	Kaya Holdings Inc	$ 0.03	Summary | Guru Trades | 10-Y Financials | Analysis | Financial Charts | Insider

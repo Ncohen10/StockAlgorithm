@@ -6,49 +6,52 @@ from Python.TechnicalAnalysis import TechnicalAnalysis
 
 class Backtesting:
 
+    """ Just run main"""
+
     # dates must be in form "YYYY-MM-DD"
-    def __init__(self, start_date: str, end_date: str):
+    def __init__(self, start_date: str, end_date: str, api_key: str):
         self.start_date = start_date
         self.end_date = end_date
         self.ta = TechnicalAnalysis("MA6YR6D5TVXK1W67")
         self.total_profit = 0
         self.cash = 10000
-        self.invest_amount = 500
+        self.invest_amount = 200
         self.buy_hold_money = 10000
         self.buy_hold_stocks = {}
 
     def test_algorithm(self, test_tickers: List[str]):
-        api_call_count = 0
+        api_call_count = 1
         for ticker in test_tickers:
-            if api_call_count % 5 == 0: time.sleep(70)
+            if api_call_count % 5 == 0:
+                time.sleep(70)
             api_call_count += 1
             thirty_ema = self.ta.getEMA(symbol=ticker, timePeriod="30", interval="daily")
             thirty_ema = self.filter_dates(thirty_ema)
-            if api_call_count % 5 == 0: time.sleep(70)
+            if api_call_count % 5 == 0:
+                time.sleep(70)
             api_call_count += 1
             ninety_ema = self.ta.getEMA(symbol=ticker, timePeriod="90", interval="daily")
             ninety_ema = self.filter_dates(ninety_ema)
-            if api_call_count % 5 == 0: time.sleep(70)
+            if api_call_count % 5 == 0:
+                time.sleep(70)
             api_call_count += 1
             prices = self.ta.getPrice(symbol=ticker, fullOutput=True)
             prices = self.filter_dates(prices)
-            if api_call_count % 5 == 0: time.sleep(70)
+            if api_call_count % 5 == 0:
+                time.sleep(70)
             api_call_count += 1
             print("testing: {}".format(ticker))
             self.buy_and_hold_invest(tick=ticker, prices_dict=prices)
             thirty_ema_gen = self.stock_info_generator(date_dict=thirty_ema)
             ninety_ema_gen = self.stock_info_generator(date_dict=ninety_ema)
             price_gen = self.stock_info_generator(date_dict=prices)
-
             max_days = len(min(thirty_ema, ninety_ema, prices, key=len)) - 101
             for day in range(max_days):
                 cur_t_ema = next(thirty_ema_gen)
                 cur_n_ema = next(ninety_ema_gen)
                 cur_day_prices = next(price_gen)
                 # TODO - Unnecessary to do max()
-                # if self.ta.meetsCrossoverRequirements(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, tick=ticker):
-                # if self.ta.isTripleCrossover(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, prices=cur_day_prices, tick=ticker):
-                if self.ta.basicCrossoverTest(prices=cur_day_prices, thirtyEMA=cur_t_ema, ninetyEMA=cur_n_ema,  tick=ticker):
+                if self.ta.checkBuyStock(prices=cur_day_prices, thirtyEMA=cur_t_ema, ninetyEMA=cur_n_ema,  tick=ticker):
                     self.cash -= self.invest_amount
                 if ticker in self.ta.boughtStocks:
                     # self.ta.checkSellDip(twentyEMA=cur_t_ema, fiftyEMA=cur_f_ema, prices=cur_day_prices, tick=ticker)
@@ -61,6 +64,7 @@ class Backtesting:
             if ticker in self.ta.boughtStocks:
                 print("")
                 self.cash += self.invest_amount * self.force_sell(tick=ticker, prices_dict=prices)
+            print("new buy hold profit: {}".format(self.buy_hold_money))
             print("New total cash: {}".format(self.cash))
             print('\n')
             self.buy_and_hold_invest(tick=ticker, prices_dict=prices)
@@ -96,7 +100,6 @@ class Backtesting:
             profit = sell_price / self.buy_hold_stocks[tick]
             print("{} sold from buy and hold at {} on {}".format(tick, sell_price, sell_date))
             self.buy_hold_money += (self.invest_amount * profit)
-            print("new buy hold profit: {}".format(self.buy_hold_money))
             del self.buy_hold_stocks[tick]
 
     def force_sell(self, tick, prices_dict):
@@ -120,20 +123,20 @@ class Backtesting:
 
     @staticmethod
     def stock_info_generator(date_dict):
-        # TODO - Make sure the dates are being generated in reverse order
-        data_up_to_date = {}
-        for count, day in enumerate(date_dict):
+        """
+        - Generator function to simulate receiving stock info on a daily basis.
+        - Given a dictionary of day->price, yields the dictionary's day by day prices.
+            - Starts at earliest date + 100.
+
+        """
+        data_up_to_date = date_dict.copy()
+        data_up_to_date = dict(sorted(data_up_to_date.items(), reverse=True))
+
+        for count, day in enumerate(data_up_to_date):
             data_up_to_date[day] = date_dict[day]
             if count > 100:
                 # TODO - Definitely a better way to do this.
-                yield dict(sorted(data_up_to_date.items(), reverse=True))
-
-    """
-    1) Given x amount of tickers, get historical data of tickers from alphavantage's API.
-    2) Preprocess data by selecting only EMA and price ticker data from start date to end date.
-    3) Pass in data to triplecrossover strategy
-   """
-
+                yield data_up_to_date
 
 if __name__ == '__main__':
     avg = 0
@@ -142,15 +145,13 @@ if __name__ == '__main__':
     SPY = "../Data/SPY.txt"
     PENNY = "../Data/PENNY.txt"  # Data is biased for penny stock info.
     USA = "../Data/USA.txt"
+    API_KEY = "MA6YR6D5TVXK1W67"
     for i in range(1, 11):
-        historical_test = Backtesting(start_date="2007-01-01", end_date="2015-01-01")
-        tickers = historical_test.get_random_ticks(file=NYSE, amount=100)
-        while "GOL" in tickers:  # GOL outlier that messes too much with testing
-            tickers = historical_test.get_random_ticks(file=NYSE, amount=100)
+        historical_test = Backtesting(start_date="2007-01-01", end_date="2015-01-01", api_key=API_KEY)
+        tickers = historical_test.get_random_ticks(file=USA, amount=50)
         print(tickers)
         # GOL = outlier
         historical_test.test_algorithm(tickers)
         total += historical_test.cash
-        avg = print("cash avg for {} iteration".format(total / i))
-
-# TODO - Fix buy and hold
+        avg = total / i
+        print("Total cash average for {} iterations: {}".format(i, avg))
