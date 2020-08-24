@@ -69,21 +69,21 @@ class Backtesting:
                         self.trades_count += 1
             # If we've hit the end date, and we haven't sold the stock
             # Then force sell it.
+            print("New total cash: {}".format(self.cash))
+            self.buy_and_hold_invest(tick=ticker, prices_dict=prices)  # Sell the buy and hold money if we bought it.
+            print("new buy hold profit: {}".format(self.buy_hold_money))
             if ticker in self.ta.boughtStocks:
                 force_sold_profit = self.force_sell(tick=ticker, prices_dict=prices)
                 self.cash += self.invest_amount * force_sold_profit
                 self.stock_profit_percent_sum += force_sold_profit
                 self.trades_count += 1
-            self.buy_and_hold_invest(tick=ticker, prices_dict=prices)  # Sell the buy and hold money if we bought it.
-            print("new buy hold profit: {}".format(self.buy_hold_money))
-            print("New total cash: {}".format(self.cash))
         print("_" * 150)
         print("Info for this historical test: ")
         print("STOCK ALGORITHM TRADES EXECUTED: {}".format(self.trades_count))
-        print("TOTAL STOCK ALGORITHM PROFIT: {}".format(self.ta.profit))
+        print("TOTAL STOCK ALGORITHM CASH: {}".format(self.cash))
         print("AVERAGE STOCK ALGORITHM PROFIT PERCENT: {:.5f}".format(self.stock_profit_percent_sum / self.trades_count))
         print("AVERAGE BUY AND HOLD PROFIT PERCENT: {:.5f}".format(self.buy_hold_profit_percent_sum / self.buy_hold_trades_count))
-        print("_" * 150)
+        print("*" * 150)
         return self.ta.profit
 
     def filter_dates(self, date_dict):
@@ -155,52 +155,3 @@ class Backtesting:
             if count > 100:
                 # TODO - Definitely a better way to do this.
                 yield data_up_to_date
-# 2014-08-07
-
-if __name__ == '__main__':
-    avg_algo_cash = 0
-    total_algo_cash = 0
-    NYSE = "../Data/NYSE.txt"
-    SPY = "../Data/SPY.txt"
-    PENNY = "../Data/PENNY.txt"  # Data is biased for penny stock info.
-    USA = "../Data/USA.txt"
-    API_KEY = "MA6YR6D5TVXK1W67"
-    total_avg_stock_profit_sum = 0
-    total_algo_trades = 0
-    total_buy_hold_profit = 0
-    total_buy_hold_pct = 0
-    total_buy_hold_trades = 0
-    for i in range(1, 11):
-        historical_test = Backtesting(start_date="2007-01-01", end_date="2015-01-01", api_key=API_KEY)
-        tickers = historical_test.get_random_ticks(file=SPY, amount=3)
-        print(tickers)
-        historical_test.test_algorithm(tickers)
-        total_algo_cash += historical_test.cash
-        avg_algo_cash = total_algo_cash / i
-        total_algo_trades += historical_test.trades_count
-        total_avg_stock_profit_sum += historical_test.stock_profit_percent_sum
-        print("Info for all iterations so far: ".format(i))
-
-
-        print("Algorithm trades executed for {} iterations: {}".format(i, total_algo_trades))
-        print("Total algorithm cash average for {} iterations: {}".format(i, avg_algo_cash))
-        avg_pct = total_avg_stock_profit_sum / total_algo_trades
-        print("Average algorithm profit based on ${} investments for {} iterations: {}".format(historical_test.invest_amount, i, avg_pct))
-        print("Commencing next iteration...")
-        print("*" * 150)
-    print("Backtest complete.")
-
-    """
-    ______________________________________________________________________________________________________________________________________________________
-    Info for this historical test: 
-    STOCK ALGORITHM TRADES EXECUTED: 41
-    TOTAL STOCK ALGORITHM PROFIT: 0
-    AVERAGE STOCK ALGORITHM PROFIT PERCENT: 1.08210
-    AVERAGE BUY AND HOLD PROFIT PERCENT: 2.84248
-    ______________________________________________________________________________________________________________________________________________________
-    Info for all iterations so far: 
-    Trades executed for 2 iterations: 64
-    Total cash average for 2 iterations: 10416.13843464239
-    Average stock profit for 2 iterations: 1.0650216304128732
-    Commencing to next iteration...
-    """
