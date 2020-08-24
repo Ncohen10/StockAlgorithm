@@ -1,7 +1,7 @@
 import time
 import random
 from typing import List
-from Python.TechnicalAnalysis import TechnicalAnalysis
+from CrossoverStrategy.TechnicalAnalysis import TechnicalAnalysis
 
 
 class Backtesting:
@@ -64,14 +64,14 @@ class Backtesting:
                     if profit_percent != 0:
                         print("{}'s stock profit: {:.5f}%".format(ticker, profit_percent))
                         self.cash += (self.invest_amount * profit_percent)
-                        print("updated cash: {:.2f}".format(self.cash))
+                        print("updated cash: {:.2f}\n".format(self.cash))
                         self.stock_profit_percent_sum += profit_percent
                         self.trades_count += 1
             # If we've hit the end date, and we haven't sold the stock
             # Then force sell it.
             print("New total cash: {}".format(self.cash))
             self.buy_and_hold_invest(tick=ticker, prices_dict=prices)  # Sell the buy and hold money if we bought it.
-            print("new buy hold profit: {}".format(self.buy_hold_money))
+            print("new buy hold profit: {}\n\n".format(self.buy_hold_money))
             if ticker in self.ta.boughtStocks:
                 force_sold_profit = self.force_sell(tick=ticker, prices_dict=prices)
                 self.cash += self.invest_amount * force_sold_profit
@@ -83,7 +83,7 @@ class Backtesting:
         print("TOTAL STOCK ALGORITHM CASH: {}".format(self.cash))
         print("AVERAGE STOCK ALGORITHM PROFIT PERCENT: {:.5f}".format(self.stock_profit_percent_sum / self.trades_count))
         print("AVERAGE BUY AND HOLD PROFIT PERCENT: {:.5f}".format(self.buy_hold_profit_percent_sum / self.buy_hold_trades_count))
-        print("*" * 150)
+        print("_" * 150)
         return self.ta.profit
 
     def filter_dates(self, date_dict):
@@ -108,7 +108,7 @@ class Backtesting:
             buy_date = min(prices_dict)
             buy_price = prices_dict[buy_date]["4. close"]
             self.buy_hold_stocks[tick] = float(buy_price)
-            print("{} entered buy and hold at {} on {}".format(tick, buy_price, buy_date))
+            print("{} entered buy and hold at {} on {}\n".format(tick, buy_price, buy_date))
         else:
             sell_date = max(prices_dict)
             sell_price = float(prices_dict[sell_date]["4. close"])
@@ -155,3 +155,6 @@ class Backtesting:
             if count > 100:
                 # TODO - Definitely a better way to do this.
                 yield data_up_to_date
+
+    def visualize_data(self):
+        pass

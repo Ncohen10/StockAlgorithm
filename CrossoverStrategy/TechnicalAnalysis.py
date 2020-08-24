@@ -82,7 +82,7 @@ class TechnicalAnalysis:
         stock_profit = cur_price / self.boughtStocks[tick][0]
 
         if stock_profit <= stop_loss_threshold:
-            print("{} has been stop-loss sold at {} on {}".format(tick, cur_price, cur_date))
+            print("{} has been sold at {} on {}".format(tick, cur_price, cur_date))
             del self.boughtStocks[tick]
             self.soldStocks[tick] = cur_price
             return stock_profit
