@@ -12,13 +12,16 @@ class Backtesting:
         self.end_date = end_date
         self.ta = TechnicalAnalysis("MA6YR6D5TVXK1W67")
         self.cash = 10000
+        self.initial_money = self.cash
         self.invest_amount = 200
         self.buy_hold_money = 10000
         self.buy_hold_stocks = {}
-        self.stock_profit_percent_sum = 0
+        self.stock_trade_percent_sum = 0
         self.trades_count = 0
         self.buy_hold_trades_count = 0
         self.buy_hold_profit_percent_sum = 0
+        self.algo_portfolio_profit = 0
+        self.buy_hold_portfolio_profit = 0
 
     def test_algorithm(self, test_tickers: List[str]):
         """
@@ -65,7 +68,7 @@ class Backtesting:
                         print("{}'s stock profit: {:.5f}%".format(ticker, profit_percent))
                         self.cash += (self.invest_amount * profit_percent)
                         print("updated cash: {:.2f}\n".format(self.cash))
-                        self.stock_profit_percent_sum += profit_percent
+                        self.stock_trade_percent_sum += profit_percent
                         self.trades_count += 1
             # If we've hit the end date, and we haven't sold the stock
             # Then force sell it.
@@ -75,14 +78,16 @@ class Backtesting:
             if ticker in self.ta.boughtStocks:
                 force_sold_profit = self.force_sell(tick=ticker, prices_dict=prices)
                 self.cash += self.invest_amount * force_sold_profit
-                self.stock_profit_percent_sum += force_sold_profit
+                self.stock_trade_percent_sum += force_sold_profit
                 self.trades_count += 1
         print("_" * 150)
         print("Info for this historical test: ")
+        self.algo_portfolio_profit = self.cash / self.initial_money
+        self.buy_hold_portfolio_profit = self.cash / self.initial_money
         print("STOCK ALGORITHM TRADES EXECUTED: {}".format(self.trades_count))
         print("TOTAL STOCK ALGORITHM CASH: {}".format(self.cash))
-        print("AVERAGE STOCK ALGORITHM PROFIT PERCENT: {:.5f}".format(self.stock_profit_percent_sum / self.trades_count))
-        print("AVERAGE BUY AND HOLD PROFIT PERCENT: {:.5f}".format(self.buy_hold_profit_percent_sum / self.buy_hold_trades_count))
+        print("STOCK ALGORITHM TOTAL PROFIT: {}".format(self.algo_portfolio_profit))
+        print("TOTAL BUY AND HOLD PROFIT: {}".format(self.buy_hold_portfolio_profit))
         print("_" * 150)
         return self.ta.profit
 
