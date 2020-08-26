@@ -12,6 +12,7 @@ py -m pip install -r requirements.txt
 * Get an Alpha Vantage API key from [here](https://www.alphavantage.co/support/#api-key).
 * Run main on the Tests/RunBacktest.py file.
 * Paste your API key in console and hit enter.
+
 *Dates can be taken as parameters for the RunTest() function in the RunBacktest file. They must be entererd in the form YYYY-MM-DD*
 
 ## Scan for Stocks to Buy
