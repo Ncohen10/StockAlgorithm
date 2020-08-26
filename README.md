@@ -3,10 +3,10 @@
 A profitable stock trading algorithm based on a exponential moving average (EMA) crossover strategy.
 
 ## Download and Install
-'''
+```
 git clone https://github.com/Ncohen10/StockAlgorithm
 py -m pip install -r requirements.txt
-'''
+```
 
 ## Run a Backtest
 * Get an Alpha Vantage API key from [here](https://www.alphavantage.co/support/#api-key).
