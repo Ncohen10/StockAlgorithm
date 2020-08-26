@@ -13,9 +13,9 @@ py -m pip install -r requirements.txt
 * Run main on the Tests/RunBacktest.py file.
 * Paste your API key in console and hit enter.
 
-*Dates can be taken as parameters for the RunTest() function in the RunBacktest file. They must be entererd in the form YYYY-MM-DD*
+*Dates can be taken as parameters for the RunTest() function in the RunBacktest file. They must be entererd in the form YYYY-MM-DD*.
 
 ## Scan for Stocks to Buy
-* Install [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/) and [geckodriver](https://github.com/mozilla/geckodriver/releases).
+* Install [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/) and [geckodriver](https://github.com/mozilla/geckodriver/releases)
 * Put the geckodriver.exe file in the root directory
 * Run main on CrossoverStrategy/TechnicalAnalysis.py
