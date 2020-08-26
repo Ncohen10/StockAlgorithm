@@ -19,3 +19,4 @@ py -m pip install -r requirements.txt
 * Install [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/) and [geckodriver](https://github.com/mozilla/geckodriver/releases)
 * Put the geckodriver.exe file in the root directory
 * Run main on CrossoverStrategy/TechnicalAnalysis.py
+* Paste Alpha Vantage API key in console (explained above) and hit enter
