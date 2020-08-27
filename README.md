@@ -13,7 +13,7 @@ py -m pip install -r requirements.txt
 * Run main on the Tests/RunBacktest.py file.
 * Paste your API key in console and hit enter.
 
-*Note - you can only make 500 requests per day using Alpha Vantage's API*.
+*Note - Alpha Vantage claims you can make 500 requests per day. I have been able to more than that however.*
 
 **Dates can be taken as parameters for the RunTest() function in the RunBacktest file. They must be entererd in the form YYYY-MM-DD**.
 
