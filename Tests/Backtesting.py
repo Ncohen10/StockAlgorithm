@@ -67,12 +67,12 @@ class Backtesting:
                     if profit_percent != 0:
                         print("{}'s stock profit: {:.5f}".format(ticker, profit_percent))
                         self.cash += (self.invest_amount * profit_percent)
-                        print("updated cash: {:.2f}\n".format(self.cash))
+                        print("updated stock algo cash: {:.2f}\n".format(self.cash))
                         self.stock_trade_percent_sum += profit_percent
                         self.trades_count += 1
             # If we've hit the end date, and we haven't sold the stock
             # Then force sell it.
-            print("New total cash: {:.2f}".format(self.cash))
+            print("New total stock algo cash: {:.2f}".format(self.cash))
             self.buy_and_hold_invest(tick=ticker, prices_dict=prices)  # Sell the buy and hold money if we bought it.
             print("new buy hold profit: {:.2f}\n\n".format(self.buy_hold_money))
             if ticker in self.ta.boughtStocks:
