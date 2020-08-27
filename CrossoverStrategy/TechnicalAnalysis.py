@@ -109,7 +109,8 @@ class TechnicalAnalysis:
         return tick_list
 
 if __name__ == '__main__':
-    ta = TechnicalAnalysis("MA6YR6D5TVXK1W67")
+    API_KEY = input("Paste your API key: ")
+    ta = TechnicalAnalysis(API_KEY)
     att = 0
     fail = True
     ticks = []
