@@ -70,16 +70,16 @@ class Backtesting:
                         print("updated stock algo cash: {:.2f}\n".format(self.cash))
                         self.stock_trade_percent_sum += profit_percent
                         self.trades_count += 1
-            # If we've hit the end date, and we haven't sold the stock
-            # Then force sell it.
-            print("New total stock algo cash: {:.2f}".format(self.cash))
-            self.buy_and_hold_invest(tick=ticker, prices_dict=prices)  # Sell the buy and hold money if we bought it.
-            print("new buy hold profit: {:.2f}\n\n".format(self.buy_hold_money))
             if ticker in self.ta.boughtStocks:
                 force_sold_profit = self.force_sell(tick=ticker, prices_dict=prices)
                 self.cash += self.invest_amount * force_sold_profit
                 self.stock_trade_percent_sum += force_sold_profit
                 self.trades_count += 1
+            print("New total stock algo cash: {:.2f}".format(self.cash))
+            # If we've hit the end date, and we haven't sold the stock
+            # Then force sell it.
+            self.buy_and_hold_invest(tick=ticker, prices_dict=prices)  # Sell the buy and hold money if we bought it.
+            print("new buy hold profit: {:.2f}\n\n".format(self.buy_hold_money))
         print("_" * 150)
         print("Info for this historical test: ")
         self.algo_portfolio_profit = self.cash / self.initial_money
