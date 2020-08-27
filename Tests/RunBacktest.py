@@ -32,7 +32,7 @@ def PrintBuyHoldMetrics(iteration_count, bh_cash, bh_trades, bh_avg_stock_profit
     print("Total average profit percentage for buy and hold: {:.5f}".format(avg_portfolio_profit))
     print("_" * 150)
 
-def RunTest(start_date="2007-01-01", end_date="2015-01-01", iterations=1):
+def RunTest(start_date="2007-01-01", end_date="2015-01-01", iterations=10):
     # Can choose which market to test on.
     NYSE = "../Data/NYSE.txt"
     SPY = "../Data/SPY.txt"
