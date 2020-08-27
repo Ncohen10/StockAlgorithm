@@ -13,7 +13,7 @@ class YahooSymbolScraper:
         self.profile = webdriver.FirefoxProfile()
         self.profile.set_preference('permissions.default.desktop-notification', 1)
         self.options = Options()
-        self.options.headless = True
+        self.options.headless = False
         self.driver = webdriver.Firefox(
             firefox_binary=self.binary,
             firefox_profile=self.profile,
@@ -72,7 +72,7 @@ class YahooSymbolScraper:
 
 
 if __name__ == '__main__':
-    webScraper = seleniumStockScraper("C:\\Program Files\\Mozilla Firefox\\firefox.exe",
+    webScraper = YahooSymbolScraper("C:\\Program Files\\Mozilla Firefox\\firefox.exe",
                                       "../geckodriver.exe",
                                       "https://finance.yahoo.com/screener/predefined/growth_technology_stocks")
     print(webScraper.generateTickers())
