@@ -40,7 +40,7 @@ def RunTest(start_date="2007-01-01", end_date="2015-01-01", iterations=10):
     PENNY = "../Data/PENNY.txt"  # Data is biased for penny stock info.
     USA = "../Data/USA.txt"
 
-    API_KEY = "MA6YR6D5TVXK1W67"
+    API_KEY = input("Paste your Alpha Vantage API key: ")
 
     total_algo_cash = 0
     total_avg_stock_profit_sum = 0

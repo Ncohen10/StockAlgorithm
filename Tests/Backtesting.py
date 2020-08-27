@@ -28,7 +28,7 @@ class Backtesting:
         - Retrieves stock EMA info and prices
         - Tests if it
         """
-        api_call_count = 0
+        api_call_count = 1
         for ticker in test_tickers:
             if api_call_count % 5 == 0:  # 5 API calls allowed per min
                 time.sleep(70)
