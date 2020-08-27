@@ -95,7 +95,7 @@ class TechnicalAnalysis:
             self.soldStocks[tick] = cur_price
             return stock_profit
         return 0.0
-
+#TODO -  Put API key in naughty folder
     @staticmethod
     def get_random_ticks(file,  amount=50):
         tick_list = []

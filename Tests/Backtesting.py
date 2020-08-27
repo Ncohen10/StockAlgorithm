@@ -10,7 +10,7 @@ class Backtesting:
     def __init__(self, start_date: str, end_date: str, api_key: str):
         self.start_date = start_date
         self.end_date = end_date
-        self.ta = TechnicalAnalysis("MA6YR6D5TVXK1W67")
+        self.ta = TechnicalAnalysis(api_key)
         self.cash = 10000
         self.initial_money = self.cash
         self.invest_amount = 200
@@ -26,9 +26,9 @@ class Backtesting:
     def test_algorithm(self, test_tickers: List[str]):
         """
         - Retrieves stock EMA info and prices
-        - Tests if it
+        - Tests if it meets crossover requirements
         """
-        api_call_count = 1
+        api_call_count = 0
         for ticker in test_tickers:
             if api_call_count % 5 == 0:  # 5 API calls allowed per min
                 time.sleep(70)
@@ -155,7 +155,6 @@ class Backtesting:
         """
         data_up_to_date = {}
         for count, day in enumerate(date_dict):
-
             data_up_to_date[day] = date_dict[day]
             if count > 100:
                 # TODO - Definitely a better way to do this.

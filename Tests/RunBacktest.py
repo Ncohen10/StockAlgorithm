@@ -29,11 +29,10 @@ def PrintBuyHoldMetrics(iteration_count, bh_cash, bh_trades, bh_avg_stock_profit
         avg_bh_pct = bh_avg_stock_profit_sum / bh_trades
     print("Average buy and hold trade profit: {:.5f}".format(avg_bh_pct))
     avg_portfolio_profit = bh_portfolio_profit / iteration_count
-    print("Total average profit percentage for buy and hold: {:.5f}%".format(avg_portfolio_profit))
+    print("Total average profit percentage for buy and hold: {:.5f}".format(avg_portfolio_profit))
     print("_" * 150)
 
-
-def RunTest(start_date="2007-01-01", end_date="2015-01-01", iterations=10):
+def RunTest(start_date="2007-01-01", end_date="2015-01-01", iterations=1):
     # Can choose which market to test on.
     NYSE = "../Data/NYSE.txt"
     SPY = "../Data/SPY.txt"
@@ -71,7 +70,7 @@ def RunTest(start_date="2007-01-01", end_date="2015-01-01", iterations=10):
         PrintBuyHoldMetrics(i, bh_cash=total_bh_cash,
                             bh_trades=total_bh_trades,
                             bh_avg_stock_profit_sum=total_avg_bh_profit_sum,
-                            bh_portfolio_profit=total_algo_portfolio_sum)
+                            bh_portfolio_profit=total_bh_portfolio_sum)
         PrintStockAlgoMetrics(i, algo_cash=total_algo_cash,
                               algo_trades=total_algo_trades,
                               avg_stock_profit_sum=total_avg_stock_profit_sum,
