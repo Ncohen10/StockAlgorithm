@@ -3,7 +3,7 @@ import random
 import datetime as dt
 import time
 from selenium.common.exceptions import NoSuchWindowException, WebDriverException
-from WebScrapers.YahooSymbolScraper import YahooSymbolScraper
+from StockAlgorithm.WebScrapers.YahooSymbolScraper import YahooSymbolScraper
 
 
 class TechnicalAnalysis:

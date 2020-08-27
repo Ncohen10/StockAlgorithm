@@ -1,4 +1,4 @@
-from Tests.Backtesting import Backtesting
+from StockAlgorithm.Tests.Backtesting import Backtesting
 
 
 def PrintStockAlgoMetrics(iteration_count, algo_cash, algo_trades, avg_stock_profit_sum, algo_portfolio_profit):
@@ -53,7 +53,7 @@ def RunTest(start_date="2007-01-01", end_date="2015-01-01", iterations=10):
 
     for i in range(1, iterations + 1):
         historical_test = Backtesting(start_date=start_date, end_date=end_date, api_key=API_KEY)
-        tickers = historical_test.get_random_ticks(file=USA, amount=50)
+        tickers = historical_test.get_random_ticks(file=USA, amount=1)
         print(tickers)
         historical_test.test_algorithm(tickers)
 

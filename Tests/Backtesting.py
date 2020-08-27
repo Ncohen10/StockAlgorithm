@@ -1,7 +1,7 @@
 import time
 import random
 from typing import List
-from CrossoverStrategy.TechnicalAnalysis import TechnicalAnalysis
+from StockAlgorithm.CrossoverStrategy.TechnicalAnalysis import TechnicalAnalysis
 
 
 class Backtesting:
@@ -11,10 +11,10 @@ class Backtesting:
         self.start_date = start_date
         self.end_date = end_date
         self.ta = TechnicalAnalysis(api_key)
-        self.cash = 10000
+        self.cash = 10000  # Starting cash is 10000
         self.initial_money = self.cash
         self.invest_amount = 200
-        self.buy_hold_money = 10000
+        self.buy_hold_money = 10000  # Buy and hold cash
         self.buy_hold_stocks = {}
         self.stock_trade_percent_sum = 0
         self.trades_count = 0
