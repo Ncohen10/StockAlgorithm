@@ -53,7 +53,7 @@ def RunTest(start_date="2007-01-01", end_date="2015-01-01", iterations=10):
 
     for i in range(1, iterations + 1):
         historical_test = Backtesting(start_date=start_date, end_date=end_date, api_key=API_KEY)
-        tickers = historical_test.get_random_ticks(file=USA, amount=1)
+        tickers = historical_test.get_random_ticks(file=USA, amount=50)
         print(tickers)
         historical_test.test_algorithm(tickers)
 
