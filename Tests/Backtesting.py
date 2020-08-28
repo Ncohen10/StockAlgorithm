@@ -29,6 +29,10 @@ class Backtesting:
         - Tests if it meets crossover requirements
         """
         api_call_count = 0
+        print("Starting aglorithm cash: ${}".format(self.cash))
+        print("Starting buy/hold cash: ${}".format(self.buy_hold_money))
+        print("Invest amount: ${}".format(self.invest_amount))
+        print("Commencing...")
         for ticker in test_tickers:
             if api_call_count % 5 == 0:  # 5 API calls allowed per min
                 time.sleep(70)
