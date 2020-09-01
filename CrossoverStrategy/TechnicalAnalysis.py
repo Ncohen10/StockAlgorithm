@@ -130,7 +130,6 @@ if __name__ == '__main__':
     count = 0
     print(ticks)
     print('\n')
-    time.sleep(28800)
     for tick in ticks:
         if count % 5 == 0: time.sleep(70)
         count += 1
