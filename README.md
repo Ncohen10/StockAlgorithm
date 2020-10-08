@@ -5,6 +5,7 @@ A profitable stock trading algorithm based on a exponential moving average (EMA)
 ## Download and Install
 ```
 git clone https://github.com/Ncohen10/StockAlgorithm
+cd StockAlgorithm
 py -m pip install -r requirements.txt
 ```
 
