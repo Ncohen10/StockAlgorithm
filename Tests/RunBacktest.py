@@ -1,4 +1,4 @@
-from StockAlgorithm.Tests.Backtesting import Backtesting
+from Tests.Backtesting import Backtesting
 
 
 def PrintStockAlgoMetrics(iteration_count, algo_cash, algo_trades, avg_stock_profit_sum, algo_portfolio_profit):

@@ -133,3 +133,6 @@ dmypy.json
 
 # Intellij IDE settings
 .idea/
+
+#API key
+naughty.txt

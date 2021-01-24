@@ -1,7 +1,7 @@
 import time
 import random
 from typing import List
-from StockAlgorithm.CrossoverStrategy.TechnicalAnalysis import TechnicalAnalysis
+from CrossoverStrategy.TechnicalAnalysis import TechnicalAnalysis
 
 
 class Backtesting:
