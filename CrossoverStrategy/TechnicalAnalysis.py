@@ -20,7 +20,7 @@ class TechnicalAnalysis:
     def getEMA(self, symbol: str, timePeriod: str, interval: str = "daily") -> dict:  # Only set up for equity
         resp = requests.get("https://www.alphavantage.co/query?function=EMA&symbol="
                             + symbol + "&interval=" + interval + "&time_period=" + timePeriod +
-                            "&series_type=open&apikey=" + self.ALPHA_VANTAGE_API_KEY)
+                            "&series_type=open&apikey=" + self.ALPHA_VANTAGE_API_KEY, timeout=30)
         if resp.status_code != 200:
             raise Exception("Error in request to Alpha Vantage. Response was:\n {}".format(resp))
         data = resp.json()
@@ -35,7 +35,7 @@ class TechnicalAnalysis:
             output_size = "full"
         resp = requests.get("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol="
                             + symbol + "&outputsize=" + output_size +
-                            "&interval=1min&apikey=" + self.ALPHA_VANTAGE_API_KEY)
+                            "&interval=1min&apikey=" + self.ALPHA_VANTAGE_API_KEY, timeout=30)
         if resp.status_code != 200:
             raise Exception("Error in request to Alpha Vantage. Response was:\n {}".format(resp))
         data = resp.json()
